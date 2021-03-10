@@ -10,7 +10,7 @@ export const Homepage = () => {
   return (
     <div>
       <div className="container-fluid">
-        <div className="row"> 
+        <div className="row" id='titleHomepage'> 
           <div className="col-12 col-md-9">
             <div id="r1">
               <h2> I see <mark>  People</mark> you see <mark> Rocks </mark> </h2>
@@ -22,7 +22,7 @@ export const Homepage = () => {
           </div>
         </div>
       </div>
-    <div className="row col-md-12" id="protocolli">
+        <div className="row col-md-12" id="protocolli" style={{zIndex:10}}>
       <ul className="horizontal-slide">
         <li className="child col-5 col-md-5">
           <div id="card"> 
@@ -56,12 +56,12 @@ export const Homepage = () => {
             <img alt='Not loaded'  className="image_dimension" src={Image_4} /> 
           </div>
           <h3 id="r3"> Algorithms are keen to adventures </h3>
-          <h4 id="r4"> About why one third of my personal pictures are recognized as adventure, <br /> expedition and holidays and what they look like. </h4>
+          <h4 id="r4" className="text-wrap" > About why one third of my personal pictures are recognized as adventure, expedition and holidays and what they look like.</h4>
         </li>
       </ul>
     </div>
-  </div>
-</div>
+      </div>
+   </div>
 )}
 
 export default Homepage

@@ -3,11 +3,12 @@ html,body
 	font-family:Akkurat;
 	/* font-weight: bold; */
 	background-color: white;
-    overflow:hidden;
+    /* overflow:hidden; */
+    overflow-x: hidden !important;
 }
 
 mark {
-    background-color: #efefef;
+    background-color: #efefef75;
     color: black;
     height: 2%;
     border-radius: 1vh;
@@ -15,6 +16,11 @@ mark {
     border-color:transparent;
     border-width: 1%;
 } 
+
+#titleHomepage {
+  z-index: 100;
+  position: relative;
+}
 
 
 mark:hover {
@@ -116,6 +122,8 @@ h4
     padding-top:2%;
     height:auto;
     text-align: left; /* orizzontale */
+    word-wrap: break-word;
+    /* overflow-wrap: break-word */
 
 }
 
@@ -301,6 +309,8 @@ ul.horizontal-slide li[class*="col"]:first-child {
     padding-top:0%;
     height:auto;
     text-align: left; /* orizzontale */
+    word-wrap: break-word;
+    /* overflow-wrap: break-word */
 
 }
 
