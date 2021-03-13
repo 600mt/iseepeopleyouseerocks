@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 
 import './resources/style.css'
 import Image_1 from './resources/img/1.png'
@@ -34,7 +35,10 @@ export const Homepage = () => {
           </div>
         </li>
         <li className="child col-5 col-md-5">
-          <div id="card"> 
+          <div 
+            id="card"
+           
+          > 
             <img alt='Not loaded'  className="image_dimension" src={Image_2} /> 
           </div>
           <div> 
