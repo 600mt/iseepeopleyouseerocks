@@ -58,9 +58,17 @@ h2
 h3
 {
     color:black;
+<<<<<<< HEAD
+    font-size:60%;
+=======
     font-size:120%;
+<<<<<<< HEAD
     line-height: 130%;
     font-family: "SF-medium";
+=======
+>>>>>>> 1dce4cc43b3093c8c0e8a4ac421a8c5ae2d6c710
+    line-height: 2%;
+>>>>>>> f449e6133908a087b312e0b67a5f5cc3a03f1682
 }
 
 h4
