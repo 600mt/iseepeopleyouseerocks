@@ -1,11 +1,11 @@
 @font-face {
     font-family: "SF-medium";
-    src: url("./font/SanFranciscoDisplay-Medium.otf") format("opentype");
+    src: url("./font/SF-Pro-Display-Medium.otf") format("opentype");
 }
 
 @font-face {
     font-family: "SF-regular";
-    src: url("./font/SanFranciscoDisplay-Regular.otf") format("opentype");
+    src: url("./font/SF-Pro-Display-Regular.otf") format("opentype");
 }
 
 html,body
@@ -58,23 +58,16 @@ h2
 h3
 {
     color:black;
-<<<<<<< HEAD
-    font-size:60%;
-=======
     font-size:120%;
-<<<<<<< HEAD
     line-height: 130%;
     font-family: "SF-medium";
-=======
->>>>>>> 1dce4cc43b3093c8c0e8a4ac421a8c5ae2d6c710
     line-height: 2%;
->>>>>>> f449e6133908a087b312e0b67a5f5cc3a03f1682
 }
 
 h4
 {
     color:grey;
-    font-size:120%;
+    font-size:100%;
     line-height: 130%;
     font-family: "SF-medium";
 }
@@ -124,7 +117,7 @@ h4
     padding-bottom:0%;
     padding-left:2%;
     padding-right:2%;
-    padding-top:3%;
+    padding-top:6%;
 }
 
 #r4 
@@ -135,7 +128,7 @@ h4
     padding-bottom:0%;
     padding-left:2%;
     padding-right:2%;
-    padding-top:0%;
+    padding-top:2%;
     height:auto;
     text-align: left; /* orizzontale */
     word-wrap: break-word;
