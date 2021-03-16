@@ -262,17 +262,11 @@ mark {
     h3
     {
         color:black;
-        font-size:100%;
+        font-size:115%;
         line-height: 100%;
         font-family: "SF-medium";
     }
     
-    h4
-    {
-        color:grey;
-        font-size:90%;
-        line-height: 100%;
-    }
     
     .image_dimension
     {
