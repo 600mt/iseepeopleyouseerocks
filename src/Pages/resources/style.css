@@ -250,19 +250,11 @@ mark {
     display:none;
 }
 
-mark:hover {
-    background-color: #d4d4d468;
-    color: black;
-    height: 2%;
-    border-radius: 1vh;
-    border-color:transparent;
-
-}
 
     h2
     {
         color:black;
-        font-size:160%;
+        font-size:140%;
         line-height: 150%;
         font-family: "SF-medium";
     }
@@ -289,6 +281,7 @@ mark:hover {
             border-radius: 3vh;
             height:83vh;
             object-fit:cover;
+            padding-top:3%;
     }
 
 #r1
