@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {AnimateSharedLayout } from 'framer-motion'
+import {Link} from 'react-router-dom'
 
 import './resources/style.css'
 import Image_1 from './resources/img/1.png'
@@ -53,7 +54,7 @@ export const Homepage = () => {
             id="card"
            
           > 
-            <img alt='Not loaded'  className="image_dimension" src={Image_2} /> 
+            <Link to='/protocollo-2'><img alt='Not loaded'  className="image_dimension" src={Image_2} /> </Link>
           </div>
           <div> 
             <h3 id="r3"> Algorithms are forgetful </h3>
