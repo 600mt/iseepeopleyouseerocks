@@ -18,8 +18,15 @@ html,body
 
 #aboutHomepage {
   max-width: 1500px;
-  max-height: 1000px;
+  max-height: 800px;
   background-color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.modal-header .close {
+ color: #2d64af;
+ font-size: 2.5rem;
 }
 
 mark {
@@ -47,7 +54,9 @@ mark:hover {
     border-color:transparent;
 
 }
-
+.modal-content {
+  background-color: black !important;
+}
 
 h3
 {
@@ -85,6 +94,15 @@ h4
     padding-top:2%;
     height:3%;
     text-align: left; /* orizzontale */
+}
+
+#r1-about {
+    background-color:transparent;
+    width:auto;
+    padding-bottom:0%;
+    padding-top:2%;
+    height:3%;
+    text-align: left; /* orizzontale *
 }
 
 #r2
