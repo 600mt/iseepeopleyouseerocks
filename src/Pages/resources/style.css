@@ -230,7 +230,7 @@ ul.horizontal-slide li[class*="col"] {
 @media (max-width: 800px) {
 
 mark {
-    background-color: #efefef75;
+    background-color: transparent;
     color: black;
     height: 1%;
     border-radius: 0.5vh;
@@ -311,7 +311,7 @@ mark {
     padding-bottom:4%;
     padding-left:4%;
     padding-right:2%;
-    padding-top:5%;
+    padding-top:7%;
     text-align:center;
 }
 

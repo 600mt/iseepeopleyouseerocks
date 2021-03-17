@@ -12,10 +12,10 @@ export const Homepage = () => {
     <div>
       <div className="container-fluid">
         <div className="row" id='titleHomepage'> 
-          <div className="col-sm-10 col-md-9" id="r1">
+          <div className="col-10 col-md-9" id="r1">
               <h2> I see <mark>  people</mark> you see <mark> rocks </mark> </h2>
           </div>
-        <div className="col-sm-2 col-md-3" id="r2">
+        <div className="col-2 col-md-3 text-right" id="r2">
              <h2 id="info_long"> <img src={info_logo} alt="info"></img> About </h2>
              <img id="info_short" src={info_logo} alt="info"></img>
         </div>
@@ -28,7 +28,7 @@ export const Homepage = () => {
           </div>
           <div> 
             <h3 id="r3"> Algorithms are explorers </h3> 
-            <h4 id="r4"> A demo archive for an object-driven past exploration </h4>
+            <h4 id="r4" className="text-wrap"> A demo archive for an object-driven past exploration </h4>
           </div>
         </li>
         <li className="child col-sm-2 col-md-5">
@@ -40,7 +40,7 @@ export const Homepage = () => {
           </div>
           <div> 
             <h3 id="r3"> Algorithms are forgetful </h3>
-            <h4 id="r4"> Automatic image annotation and pictures that you will never see again </h4>
+            <h4 id="r4" className="text-wrap"> Automatic image annotation and pictures that you will never see again </h4>
           </div>
         </li>
         <li className="child col-sm-2 col-md-5">
@@ -49,7 +49,7 @@ export const Homepage = () => {
           </div>
           <div> 
             <h3 id="r3"> Algorithms are curators </h3>
-            <h4 id="r4"> Photo memory books designed by iOS </h4>
+            <h4 id="r4" className="text-wrap"> Photo memory books designed by iOS </h4>
           </div>
         </li>
         <li className="child col-sm-2 col-md-5">
