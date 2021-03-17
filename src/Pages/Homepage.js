@@ -20,9 +20,16 @@ export const Homepage = () => {
           <div className="col-10 col-md-9" id="r1">
               <h2> I see <mark>  people</mark> you see <mark> rocks </mark> </h2>
           </div>
-        <div className="col-2 col-md-3 text-right" id="r2">
-             <h2 id="info_long" onClick={() => setModalShow(true)} style={{cursor: 'pointer'}}> <img src={info_logo} alt="info"></img> About </h2>
-             <img id="info_short" src={info_logo} alt="info"></img>
+        <div className="col-2 col-md-3" id="r2-long">
+             <h2 id="text-right" onClick={() => setModalShow(true)}> <img src={info_logo} alt="info"></img> About </h2>
+             <About
+                  show={modalShow}
+                  clickMe={() => {}}
+                  onHide={() => setModalShow(false)}
+              />
+        </div>
+        <div className="col-2 col-md-3" id="r2-short">
+             <img id="text-right" onClick={() => setModalShow(true)} src={info_logo} alt="info"></img>
              <About
                   show={modalShow}
                   clickMe={() => {}}

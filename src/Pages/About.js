@@ -11,8 +11,9 @@ export const About = (props) => {
         {...props}
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        style={{backgroundColor: 'black'}}
-      >
+        style={{backgroundColor: 'black'}}>
+
+
         <Modal.Header closeButton id="backgroundPopup" style={{backgroundColor: 'black', borderBottom: '1px solid black'}}>
           <Modal.Title id="contained-modal-title-vcenter">
               
@@ -20,7 +21,7 @@ export const About = (props) => {
 
               <Container fluid style={{backgroundColor: 'black'}}>
                   <Row>
-                      <div className="col-10 " style={{color:'#2d64af', fontSize:'18px'}}>
+                      <div id="r1" className="col-10" style={{color:'#2d64af', fontSize:'18px'}}>
                          {'< I see people, you see rocks'}
                       </div>
                   </Row>
@@ -29,13 +30,9 @@ export const About = (props) => {
         <Modal.Body style={{backgroundColor: 'black', borderBottom: '1px solid black'}}>
           
       <Container fluid style={{backgroundColor: 'black'}}>
-          {/* <Row>
-              <div className="col-12">
-                  <p><b>Vuoi procedere con l'invio della candidatura per questo progetto?</b></p>
-              </div>
-          </Row> */}
+          
           <Row>
-              <div className="col-12 text-white" style={{fontSize: '30px'}}>
+              <div className="col-12 text-white" style={{fontSize: '230%'}}>
                <p>I see  people  you see  rocks  is a research project investigating how algorithmic processes on an iOS device* can silently affect my memories by hierarchizing and curating pictures. Exploring both possibilities and limits of an algorithmic mediation through various qualitative observations, the project aims to open questions and create a space for further discussion. Four different approaches expose unexpected roles of algorithms in silently shaping users' memories.</p>    
               </div>
           </Row>
@@ -45,7 +42,7 @@ export const About = (props) => {
               </div>
           </Row>
           <Row>
-              <div className="col-10 offset-1 text-white" style={{fontSize: '17px'}}>
+              <div className="col-10 offset-1 text-white" style={{fontSize: '140%'}}>
               <p>I see  people  you see  rocks  is a research project investigating how algorithmic processes on an iOS device* can silently affect my memories by hierarchizing and curating pictures. Exploring both possibilities and limits of an algorithmic mediation through various qualitative observations, the project aims to open questions and create a space for further discussion. Four different approaches expose unexpected roles of algorithms in silently shaping users' memories.</p>    
               </div>
           </Row>
