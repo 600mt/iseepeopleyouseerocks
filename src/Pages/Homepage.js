@@ -7,6 +7,7 @@ import Image_2 from './resources/img/2.png'
 import Image_3 from './resources/img/3.png'
 import Image_4 from './resources/img/4.png'
 import info_logo from './resources/img/navbarInfo.svg'
+import Image_5  from './resources/img/5.png'
 
 import About  from './About'
 
@@ -53,7 +54,7 @@ export const Homepage = () => {
             id="card"
            
           > 
-            <img alt='Not loaded'  className="image_dimension" src={Image_2} /> 
+            <img alt='Not loaded'  className="image_dimension" src={Image_5} /> 
           </div>
           <div> 
             <h3 id="r3"> Algorithms are forgetful </h3>

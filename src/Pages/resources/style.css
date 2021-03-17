@@ -102,6 +102,17 @@ p {
 		border-radius: 3vh;
 }
 
+.image_dimension:hover
+{       
+		width: 100%;
+        filter: blur(1px);
+        object-fit:cover;
+        height:75vh;
+        transition:2s;
+
+		border-radius: 3vh;
+}
+
 
 #r1
 {
@@ -310,6 +321,17 @@ mark {
             object-fit:cover;
             padding-top:3%;
     }
+
+    .image_dimension:hover
+{       
+		width: 100%;
+        filter: blur(1px);
+        object-fit:cover;
+        height:83vh;
+        transition:2s;
+
+		border-radius: 3vh;
+}
 
 #r1
 {
