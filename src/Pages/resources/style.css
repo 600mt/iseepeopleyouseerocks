@@ -95,11 +95,13 @@ p {
 .image_dimension
 {       
 		width: 100%;
-		height: auto;
         filter: blur(5px);
+        object-fit:cover;
+        height:75vh;
 
-		border-radius: 5%;
+		border-radius: 3vh;
 }
+
 
 #r1
 {
@@ -281,7 +283,7 @@ mark {
     h2
     {
         color:black;
-        font-size:140%;
+        font-size:160%;
         line-height: 150%;
         font-family: "SF-medium";
     }
