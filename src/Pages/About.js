@@ -11,7 +11,7 @@ export const About = (props) => {
         {...props}
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        style={{backgroundColor: 'black', margin: 0, padding: 0}}>
+        style={{backgroundColor: 'black'}}>
 
 
         <Modal.Header closeButton id="backgroundPopup" style={{backgroundColor: 'black', borderBottom: '1px solid black', marginTop: 0, marginLeft: 0, paddingTop:0, paddingLeft: '2%' }}>
@@ -19,8 +19,8 @@ export const About = (props) => {
               
           </Modal.Title>
 
-              <Container fluid style={{backgroundColor: 'black', padding: 0}}>
-                  <Row id='titleHomepage' >
+              <Container fluid style={{backgroundColor: 'black'}}>
+                  <Row >
                         <div className="col-10" style={{color:'#2d64af', fontSize:'18px', margin: 0, padding: 0}}>
                             <h2>I see people you see rocks </h2>
                         </div>
@@ -28,7 +28,7 @@ export const About = (props) => {
               </Container>
         </Modal.Header>
         <Modal.Body style={{backgroundColor: 'black', borderBottom: '1px solid black', paddingLeft: '2%'}}>
-            <Container fluid style={{backgroundColor: 'black', padding: 0}}>
+            <Container fluid style={{backgroundColor: 'black'}}>
                 <Row>
                     <div className="col-12 text-white" style={{fontSize: '4vh', padding: 0}}>
                         <p>I see  people  you see  rocks  is a research project investigating how algorithmic processes on an iOS device* can silently affect my memories by hierarchizing and curating pictures. Exploring both possibilities and limits of an algorithmic mediation through various qualitative observations, the project aims to open questions and create a space for further discussion. Four different approaches expose unexpected roles of algorithms in silently shaping users' memories.</p>    
