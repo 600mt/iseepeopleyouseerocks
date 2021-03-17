@@ -54,7 +54,7 @@ export const About = (props) => {
               <Container fluid style={{backgroundColor: 'black'}}>
                       <Row>
                           <div className='col-3'>
-                              <img src={Logo} width='300' height='auto' />
+                              <img src={Logo} width='60%' height='auto' />
                           </div>
                       </Row>
               </Container>
