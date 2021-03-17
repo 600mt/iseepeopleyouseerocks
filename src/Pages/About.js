@@ -21,8 +21,10 @@ export const About = (props) => {
 
               <Container fluid style={{backgroundColor: 'black'}}>
                   <Row>
-                      <div id="r1" className="col-10" style={{color:'#2d64af', fontSize:'18px'}}>
-                         {'< I see people, you see rocks'}
+                      <div id='r1-about' className="col-10" style={{color:'#2d64af', fontSize:'18px'}}>
+                       
+                             <h2>I see people you see rocks </h2>
+                        
                       </div>
                   </Row>
               </Container>

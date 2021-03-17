@@ -20,23 +20,23 @@ export const Homepage = () => {
           <div className="col-10 col-md-9" id="r1">
               <h2> I see <mark>  people</mark> you see <mark> rocks </mark> </h2>
           </div>
-        <div className="col-2 col-md-3" id="r2-long">
+          <div className="col-2 col-md-3" id="r2-long">
              <h2 id="text-right" onClick={() => setModalShow(true)}> <img src={info_logo} alt="info"></img> About </h2>
              <About
                   show={modalShow}
                   clickMe={() => {}}
                   onHide={() => setModalShow(false)}
               />
-        </div>
-        <div className="col-2 col-md-3" id="r2-short">
+          </div>
+          <div className="col-2 col-md-3" id="r2-short">
              <img id="text-right" onClick={() => setModalShow(true)} src={info_logo} alt="info"></img>
              <About
                   show={modalShow}
                   clickMe={() => {}}
                   onHide={() => setModalShow(false)}
               />
+          </div>
         </div>
-      </div>
         <div className="row col-md-12" id="protocolli" style={{zIndex:10}}>
       <ul className="horizontal-slide">
         <li className="child col-sm-2 col-md-5">
