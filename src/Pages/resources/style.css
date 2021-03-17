@@ -7,6 +7,12 @@ html,body
     overflow-x: hidden !important;
 }
 
+#aboutHomepage {
+  max-width: 1500px;
+  max-height: 1000px;
+  background-color: black;
+}
+
 mark {
     background-color: #efefef75;
     color: black;
@@ -44,11 +50,7 @@ h2
 h3
 {
     color:black;
-<<<<<<< HEAD
-    font-size:60%;
-=======
     font-size:120%;
->>>>>>> 1dce4cc43b3093c8c0e8a4ac421a8c5ae2d6c710
     line-height: 2%;
 }
 

@@ -1,5 +1,5 @@
-import React from 'react'
-import {motion} from 'framer-motion'
+import React, {useState} from 'react'
+import {AnimateSharedLayout } from 'framer-motion'
 
 import './resources/style.css'
 import Image_1 from './resources/img/1.png'
@@ -7,8 +7,12 @@ import Image_2 from './resources/img/2.png'
 import Image_3 from './resources/img/3.png'
 import Image_4 from './resources/img/4.png'
 
+import About  from './About'
+
 export const Homepage = () => {
+  const [modalShow, setModalShow] = useState(false)
   return (
+    <AnimateSharedLayout type="crossfade">
     <div>
       <div className="container-fluid">
         <div className="row" id='titleHomepage'> 
@@ -19,7 +23,12 @@ export const Homepage = () => {
           </div>
         <div className="col-7 col-md-3">
           <div id="r2">
-            <h2> About </h2>
+            <h2 onClick={() => setModalShow(true)} style={{cursor: 'pointer'}}> About </h2>
+              <About
+                  show={modalShow}
+                  clickMe={() => {}}
+                  onHide={() => setModalShow(false)}
+              />
           </div>
         </div>
       </div>
@@ -64,8 +73,15 @@ export const Homepage = () => {
         </li>
       </ul>
     </div>
+    <div className="row">
+     <div className="col-12">
+        <About />
+     </div>
+    </div>
       </div>
    </div>
+   
+   </AnimateSharedLayout>
 )}
 
 export default Homepage
