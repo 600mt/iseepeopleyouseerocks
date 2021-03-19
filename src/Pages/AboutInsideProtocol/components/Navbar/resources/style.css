@@ -1,0 +1,71 @@
+#navbarFrameTwoPagesAbout {
+  /* Position*/
+  /* position: absolute; */
+  top: 0.5vh;
+  position: relative;
+
+  /* Dimension & background*/
+  width: 100%;
+
+  /* Inline */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+
+  background-color: white;
+  
+
+  /*READ MORE ABOUT*/
+  /* https://css-tricks.com/flexbox-like-just-put-elements-in-a-row-with-css-grid/ */
+}
+
+#navbarBack {
+  height: 10vh;
+
+  display: flex;
+  justify-content: left;
+
+  margin-left: 5vh;
+}
+
+#navbarText {
+  height: 7vh;
+  align-items: center;
+
+  font-size: 2vh;
+  text-align: center;
+  font-family:sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+#navbarInfo { 
+  height: 7vh;
+
+  display: flex;
+  justify-content: flex-end;
+
+  margin-right: 5vh;
+}
+
+#navbarBackSvg {
+  width: 2.5%;
+  height: auto;
+}
+
+#navbarInfoSvg {
+  width: 5%;
+  height: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  #navbarBackSvg {
+    width: 5%;
+    height: 'auto';
+  }
+
+  #navbarInfoSvg {
+    width: 15%;;
+    height: 'auto';
+  }
+}
