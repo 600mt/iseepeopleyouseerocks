@@ -48,7 +48,7 @@ export const About = (props) => {
               <Container fluid style={{backgroundColor: 'black'}}>
                       <Row>
                           <div className='col-3'>
-                              <img src={Logo} width='60%' height='auto' alt='logo_politecnico' />
+                              <img className="footer-loghi" src={Logo} alt='logo_politecnico' />
                           </div>
                       </Row>
               </Container>

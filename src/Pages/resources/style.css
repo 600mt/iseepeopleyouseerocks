@@ -258,6 +258,30 @@ ul.horizontal-slide li[class*="col"] {
     padding-bottom:1%;
 }
 
+.footer-loghi{
+    width:40%;
+    height:auto;
+    padding-bottom:100%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -470,5 +494,10 @@ ul.horizontal-slide li[class*="col"] {
     padding-top:0%;
 }
 
+.footer-loghi{
+    width:120%;
+    height:auto;
+    display:block;
+}
 
 }
