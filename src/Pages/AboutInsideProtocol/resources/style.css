@@ -7,11 +7,30 @@
 
  #aboutHomepage {
     overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+    height: 98vh;
     padding: 0;
     margin: 0;
+    width: 99vw;
+    left: 1vh;
+    top: 1vh;
+    border-radius: 8px;
+    
   }
+
+.modal-content {
+  background-color: white;
+  border-color: white;
+}
+
+  #fifthRightBorderAbout {
+    background-color: white;
+  
+    display: flex;
+  }
+
+.modal-backdrop {
+  background-color: transparent;
+}
 
 .modal-body {
   padding: 0
@@ -28,10 +47,12 @@ body {
 #secondMaskImageRealAbout {
     border-radius: 2%;
     overflow: hidden;
-    background-color: gray;
+    background-color: white;
     /* padding: 10px; */
     /* background-color: red;
     z-index: 102; */
+    padding-left: 3vw;
+    padding-right: 1vw;
     display: flex;
     height: 90%;
   }
@@ -49,6 +70,7 @@ height: 90%;
   background-color: transparent;
   display: flex;
   opacity: 0;
+  border-color: white;
 }
 
 #thirdCentralAbout {

@@ -19,13 +19,13 @@
   /* https://css-tricks.com/flexbox-like-just-put-elements-in-a-row-with-css-grid/ */
 }
 
-#navbarBack {
+#navbarBackAbout {
   height: 10vh;
 
   display: flex;
   justify-content: left;
 
-  margin-left: 5vh;
+  margin-left: 4vh;
 }
 
 #navbarText {
