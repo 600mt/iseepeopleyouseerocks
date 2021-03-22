@@ -68,10 +68,10 @@
   z-index: 10;
 }
 
-#secondPartMask {
+#secondPartMaskProtocolloDue {
   background-color: #ececec;
 
-  height: 3%;
+  height: 10%;
   width: 100%;
 }
 
@@ -133,8 +133,8 @@
   display: flex;
 }
 
-#imageAndMask {
-  height: 90%;
+#imageAndMaskProtocollo2 {
+  height: 98%;
   position: relative;
 }
 

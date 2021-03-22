@@ -27,7 +27,7 @@ export const FrameTwoPages = () => {
     <div id='framTwoPages'>
         <Navbar />
         <div id='firstTopImages' />
-        <div id='imageAndMask'>
+        <div id='imageAndMaskProtocollo2'>
           <div id='imageBackground'>
             <div id='firstLeftBorderImage' />
             <div id='secondMaskImageReal'>
@@ -48,7 +48,7 @@ export const FrameTwoPages = () => {
               <div id='fourthMaskImage' />
               <div id='fifthRightBorder' />
             </div>
-            <div id='secondPartMask'>
+            <div id='secondPartMaskProtocolloDue'>
               {/* <div id='thirdBottomImages' /> */}
             </div>
           </div>
