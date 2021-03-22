@@ -1,0 +1,34 @@
+
+ #backgroundJinx {
+  position: relative;
+  height: auto;
+  width: 100%;
+  background-image: url("./img/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+ }
+
+ #areaCielo {
+  border-width: 1px;
+  border-style: solid;
+  border-color: yellow;
+
+  left: 13vh;
+  position: absolute;
+  z-index: 100;
+  width: 62vh;
+  height: 46vh;
+ }
+
+#areaCappello {
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+
+  top: 71vh;
+  left: 39vh;
+  position: absolute;
+  z-index: 100;
+  width: 28vh;
+  height: 14vh;
+}

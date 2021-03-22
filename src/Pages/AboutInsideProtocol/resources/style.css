@@ -1,0 +1,103 @@
+#framTwoPagesAbout {
+    background-color: #ececec;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+ #aboutHomepage {
+    overflow: hidden;
+    height: 98vh;
+    padding: 0;
+    margin: 0;
+    width: 99vw;
+    left: 1vh;
+    top: 1vh;
+    border-radius: 8px;
+    
+  }
+
+.modal-content {
+  border-color: white;
+}
+
+  #fifthRightBorderAbout {
+    background-color: white;
+  
+    display: flex;
+  }
+
+.modal-backdrop {
+  background-color: transparent;
+}
+
+.modal-body {
+  padding: 0
+}
+
+.fade .modal .show {
+  padding: 0;
+}
+
+body {
+  overflow: hidden
+}
+
+#secondMaskImageRealAbout {
+    border-radius: 2%;
+    overflow: hidden;
+    background-color: white;
+    /* padding: 10px; */
+    /* background-color: red;
+    z-index: 102; */
+    padding-left: 3vw;
+    padding-right: 1vw;
+    display: flex;
+    height: 90%;
+  }
+
+#fourthMaskImageRealAbout {
+border-radius: 2%;
+overflow: hidden;
+background-color: gray;
+display: flex;
+
+height: 90%;
+}
+
+#firstLeftBorderAbout {
+  background-color: transparent;
+  display: flex;
+  opacity: 0;
+  border-color: white;
+}
+
+#thirdCentralAbout {
+  background-color: white;
+  display: flex;
+}
+
+#secondPartMaskAbout {
+  background-color: white;
+  height: 3%;
+  width: 100%;
+}
+
+#framTwoPagesAbout {
+  background-color: white;
+  height: 100vh;
+  position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+ 
+    #fourthMaskImageRealAbout {
+      height: 0;
+      width: 0;
+    }
+
+    #thirdCentral {
+        height: 0;
+        width: 0;
+      }
+}  

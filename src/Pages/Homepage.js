@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {AnimateSharedLayout } from 'framer-motion'
+import {Link} from 'react-router-dom'
 
 import './resources/style.css'
 import Image_1 from './resources/img/1.png'
@@ -14,7 +14,6 @@ import About  from './About'
 export const Homepage = () => {
   const [modalShow, setModalShow] = useState(false)
   return (
-    <AnimateSharedLayout type="crossfade">
     <div>
       <div className="container-fluid">
         <div className="row" id='titleHomepage'> 
@@ -42,7 +41,7 @@ export const Homepage = () => {
       <ul className="horizontal-slide">
         <li className="child col-sm-2 col-md-5">
           <div id="card"> 
-            <img alt='Not loaded'  className="image_dimension" src={Image_1} /> 
+          <Link to='/protocollo-1'> <img alt='Not loaded'  className="image_dimension" src={Image_1} /> </Link>
           </div>
           <div> 
             <h3 id="r3"> Algorithms are explorers </h3> 
@@ -54,7 +53,7 @@ export const Homepage = () => {
             id="card"
            
           > 
-            <img alt='Not loaded'  className="image_dimension" src={Image_5} /> 
+            <Link to='/protocollo-2'><img alt='Not loaded'  className="image_dimension" src={Image_2} /> </Link>
           </div>
           <div> 
             <h3 id="r3"> Algorithms are forgetful </h3>
@@ -86,8 +85,6 @@ export const Homepage = () => {
     </div>
       </div>
    </div>
-   
-   </AnimateSharedLayout>
 )}
 
 export default Homepage
