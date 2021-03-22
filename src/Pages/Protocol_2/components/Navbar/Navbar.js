@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 import navbarBack from './resources/img/navbarBack.svg'
 import navbarInfo from './resources/img/navbarInfo.svg'
@@ -11,9 +12,11 @@ export const Navbar = () => {
   const [modalShow, setModalShow] = useState(false)
   return (
     <div id='navbarFrameTwoPages'>
-      <div id='navbarBack'>
-        <img id='navbarBackSvg' src={navbarBack} alt='Not loaded' />
-      </div>
+        <Link to='/'>
+          <div id='navbarBack'>
+          <img id='navbarBackSvg' src={navbarBack} alt='Not loaded' />
+          </div>
+      </Link>
       <div id='navbarText'>
         Algorithms are forgetfull
       </div>
