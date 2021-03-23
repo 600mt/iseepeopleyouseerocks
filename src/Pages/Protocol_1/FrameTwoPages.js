@@ -23,7 +23,6 @@ import Navbar from './components/Navbar/Navbar'
 import ImageCarrousel from './components/ImageCarrousel/ImageCarrousel'
 import JinxTest from './imagesJinx/JinxTest/JinxTest'
 
-import Carousel from 'react-elastic-carousel'
 
 export const FrameTwoPages = () => {
   const state = {
