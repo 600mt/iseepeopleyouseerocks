@@ -121,7 +121,7 @@ p {
     width:auto;
     padding-bottom:0%;
     padding-left:2%;
-    padding-top:2%;
+    padding-top:1%;
     height:3%;
     text-align: left; /* orizzontale */
 }
@@ -142,7 +142,7 @@ p {
     width:auto;
     padding-bottom:0%;
     padding-right:2%;
-    padding-top:2%;
+    padding-top:1%;
     height:3%;
     text-align: right; /* orizzontale */
     display:block;

@@ -1,0 +1,43 @@
+
+.cards-slider-wrapper {
+    display: flex;
+    position: absolute;
+    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    .card {
+        flex: 1;
+        min-width: 300px;
+        opacity: 0.5;
+        transform: scale(0.7);
+        transition: opacity 300ms linear, transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      } 
+
+}
+
+.cards-slider.active-slide-1 #card-1 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.cards-slider.active-slide-2 #card-2 {
+    opacity: 1;
+    transform: scale(1);
+}
+.cards-slider.active-slide-3 #card-3 {
+    opacity: 1;
+    transform: scale(1);
+}
+.cards-slider.active-slide-4 #card-4 {
+    opacity: 1;
+    transform: scale(1);
+}
+.cards-slider.active-slide-5 #card-5 {
+    opacity: 1;
+    transform: scale(1);
+}
+
+  .cards-slider {
+    position: relative;
+    max-width: 226px;
+    height: 300px;
+    margin: 0 auto;
+  }
