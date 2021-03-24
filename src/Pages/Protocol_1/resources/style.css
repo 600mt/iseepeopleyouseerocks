@@ -153,8 +153,77 @@
   z-index: 1;
 }
 
+
+.cards-slider-wrapper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  /* padding-right: 100px; */
+  
+
+}
+
+.card {
+  flex: 1;
+  opacity: 0.5;
+  transform: scale(0.7);
+  transition: opacity 300ms linear, transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+} 
+
+.cards-slider.active-slide-1 #card-1 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cards-slider.active-slide-2 #card-2 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cards-slider.active-slide-3 #card-3 {
+  opacity: 1;
+  transform: scale(1);
+}
+.cards-slider.active-slide-4 #card-4 {
+  opacity: 1;
+  transform: scale(1);
+}
+.cards-slider.active-slide-5 #card-5 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cards-slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+
+
+#imageBackgroundProtocolloUno {
+  position: absolute;
+
+  /* Inline */
+  display: grid;
+  grid-template-columns: 1% 98% 1%; 
+
+  height: 100%;
+  width: 100%;
+
+  z-index: 1;
+}
+
 #firstLeftBorderImage {
  display: flex;
+}
+
+#centerArea {
+  width: 100px;
 }
 
 #secondMaskImageReal {
@@ -166,6 +235,29 @@
   z-index: 102; */
   display: flex;
   height: 90%;
+  width: 100%;
+}
+#secondMaskImageRealProtocolloUno {
+  border-radius: 2%;
+  overflow: hidden;
+  /* background-color: white; */
+  /* padding: 10px; */
+  /* background-color: red;
+  z-index: 102; */
+  display: flex;
+  height: 90%;
+  width:50%;
+  margin-right: 1%;
+}
+
+#secondMaskImageRealProtocolloUnoFocusImage {
+  border-radius: 2%;
+  overflow: hidden;
+  display: flex;
+  height: 90%;
+  width:50%;
+  margin-right: 1%;
+  position: relative;
 }
 
 #thirdCentralImage {

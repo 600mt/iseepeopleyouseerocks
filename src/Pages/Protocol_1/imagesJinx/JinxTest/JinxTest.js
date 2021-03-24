@@ -32,7 +32,7 @@ import Image_25 from './resources/img/25.png'
 
 import ImageJinx from './components/ImageJinx'
 
-export const JinxTest = () => {
+export const JinxTest = ({idCard}) => {
 
   const [indexAreaVerde, setIndexAreaVerde] = useState(0)
   const [indexAreaRossa, setIndexAreaRossa] = useState(0)
@@ -160,7 +160,7 @@ export const JinxTest = () => {
 
 
   return (
-    <div id="backgroundJinx">
+    <div id={`${idCard}`} className='card backgroundJinx' >
       <div id="areaCielo" ref={refAreaRossa}>
          {imageShowedAreaRossa.map((image, index) => (
               <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />

@@ -26,7 +26,7 @@ import JinxTest from './imagesJinx/JinxTest/JinxTest'
 
 export const FrameTwoPages = () => {
   const [prevBtn, setPrevBtn] = useState(0)
-  const [indexImg, setIndexImg] = useState(0)
+  const [indexImg, setIndexImg] = useState(2)
   const state = {
     items: [
       {id: 1, title: 'item #1'},
@@ -39,6 +39,7 @@ export const FrameTwoPages = () => {
   const datasetImages = [Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, Image_12, Image_13, Image_14, Image_15, Image_16, Image_17]
   return (
     <div>
+    <div>
       <button
         onClick={() => {
           setPrevBtn(prevBtn + 20)
@@ -48,7 +49,7 @@ export const FrameTwoPages = () => {
         prev
       </button>
 
-      <div className={`cards-slider active-slide-${indexImg}`}>
+      {/* <div className={`cards-slider active-slide-${indexImg}`}>
         <div className='cards-slider-wrapper' style= {{
           'transform': `translateX(-${prevBtn}%)`
         }}>
@@ -58,44 +59,68 @@ export const FrameTwoPages = () => {
            <img id='card-3' className='card' src={Image_2} width='340px' height='340px' />
            <img id='card-4' className='card' src={Image_2} width='340px' height='340px' />
         </div>
-      </div>
+      </div> */}
      
     </div>
     
-    // <div id='framTwoPages'>
-    //     <Navbar />
-    //     <Carousel itemsToShow={2} disableArrowsOnEnd={false}>
-    //        {state.items.map(item => <motion.div
-    //         onClick={() => console.log('ciao')} 
-    //         whileHover={{scale: 1.9}}
-    //        key={item.id}>{item.title}</motion.div>)}
-    //     </Carousel>
-    //     <div id='firstTopImages' />
-    //     <div id='imageAndMask'>
-    //       <div id='imageBackground'>
-    //         <div id='firstLeftBorderImage' />
-    //         <motion.div 
-    //           whileHover={{scale: 1}}
+    <div id='framTwoPages'>
+        <Navbar />
+        <div id='firstTopImages' />
+        <div id='imageAndMask'>
+          <div id='imageBackgroundProtocolloUno'>
+            <div id='firstLeftBorderImage' />
+            <div id='centerArea'>
+              <div className={`cards-slider active-slide-${indexImg}`}>
+                <div className='cards-slider-wrapper' style= {{
+                  'transform': `translateX(-${prevBtn}%)`
+                }}>
+                  {/* <img id='card-1' className='card' src={Image_1} width='340px' height='340px' /> */}
+           
+                  <div  id='secondMaskImageRealProtocolloUno'><JinxTest idCard={'card-1'} /> </div>
+                              
+                  <div  id='secondMaskImageRealProtocolloUnoFocusImage'>
+                    <div style={{position:'relative', width: '100%', height: '100%'}}>
+                      <JinxTest idCard={'card-2'} />
+                    </div>
+                    <div style={{position:'relative'}}>
+                      <JinxTest idCard={'card-3'} />
+                    </div>
+                  </div>             
+                  {/* <JinxTest idCard={'card-3'} /> */}
+                  </div>     
+              </div>     
+            </div>
+              
+            <div id='fifthRightBorderImage' />
+          </div>
+        </div>
+      </div>
 
-    //           id='secondMaskImageReal'
-    //         >
-    //               <ImageCarrousel
-    //                 id='imgPostion' datasetImages={datasetImages} startingIndexImage={0} 
-    //               />              
-    //         </motion.div>
-    //         <div id='thirdCentralImage' />
-    //         <motion.div 
-    //           whileHover={{scale: 1}}
-
-    //           id='fourthMaskImageReal'
-    //         > 
-    //           <JinxTest />
-    //         </motion.div>
-    //         <div id='fifthRightBorderImage' />
-    //       </div>
-    //     </div>
-    //   </div>
+      </div>
   )
 }
 
 export default FrameTwoPages
+
+
+{/* <div id='framTwoPages'>
+      <Navbar />
+      <div id='firstTopImages' />
+      <div id='imageAndMask'>
+        <div id='imageBackground'>
+          <div id='firstLeftBorderImage' />
+          <div  id='secondMaskImageReal'
+          >
+                <ImageCarrousel
+                  id='imgPostion' datasetImages={datasetImages} startingIndexImage={0} 
+                />              
+          </div>
+          <div id='thirdCentralImage' />
+          <div id='fourthMaskImageReal'
+          > 
+            <JinxTest />
+          </div>
+          <div id='fifthRightBorderImage' />
+        </div>
+      </div>
+    </div> */}

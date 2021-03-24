@@ -1,5 +1,6 @@
 
- #backgroundJinx {
+ .backgroundJinx {
+   border-radius: 2%;
   position: relative;
   height: auto;
   width: 100%;
