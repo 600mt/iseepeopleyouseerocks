@@ -18,7 +18,7 @@ export const Navbar = () => {
           </div>
       </Link>
       <div id='navbarText'>
-        Algorithms are forgetfull
+        Algorithms are forgetful
       </div>
       <div style={{cursor: 'pointer'}} onClick={() => setModalShow(true)} id='navbarInfo'>
         <img id='navbarInfoSvg' src={navbarInfo} alt='Not loaded'/>

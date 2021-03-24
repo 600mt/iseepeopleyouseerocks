@@ -32,7 +32,7 @@
 html,body
 {
 	/* font-weight: bold; */
-	background-color: white;
+	background-color: transparent;
     /* overflow:hidden; */
     overflow-x: hidden !important;
 }
@@ -44,6 +44,11 @@ html,body
   position:absolute;
   display:-webkit-box;
 }
+
+
+.modal-content {
+    border-color: transparent;
+  }
 
 mark {
     background-color: #efefef75;
@@ -69,6 +74,7 @@ mark:hover {
 }
 .modal-content {
   background-color: black !important;
+  border-color:transparent;
 }
 
 h3
@@ -97,7 +103,7 @@ p {
 		width: 100%;
         filter: blur(5px);
         object-fit:cover;
-        height:75vh;
+        height:70vh;
 
 		border-radius: 3vh;
 }
@@ -107,7 +113,7 @@ p {
 		width: 100%;
         filter: blur(1px);
         object-fit:cover;
-        height:75vh;
+        height:70vh;
         transition:2s;
 
 		border-radius: 3vh;
@@ -211,8 +217,8 @@ p {
     position: relative;
     width: auto;
     height:auto;
-    padding-right:1%;
-    padding-left: 1%;
+    padding-right:0.5%;
+    padding-left: 0.5%;
 }
 
 
@@ -242,7 +248,7 @@ ul.horizontal-slide {
 
 .child {
     scroll-snap-align: start;
-    margin-bottom:1%;
+    margin-bottom:0%;
 }
 
 ul.horizontal-slide li[class*="col"] {
@@ -256,6 +262,8 @@ ul.horizontal-slide li[class*="col"] {
     bottom: 0;
     padding-top:10%;
     padding-bottom:1%;
+    padding-left:2%;
+    padding-right:0;
 }
 
 .footer-loghi{
@@ -341,7 +349,7 @@ mark {
             width: 100%;
             filter: blur(5px);
             border-radius: 3vh;
-            height:83vh;
+            height:80vh;
             object-fit:cover;
             padding-top:3%;
     }
@@ -351,7 +359,7 @@ mark {
 		width: 100%;
         filter: blur(1px);
         object-fit:cover;
-        height:83vh;
+        height:80vh;
         transition:2s;
 
 		border-radius: 3vh;
@@ -481,6 +489,7 @@ ul.horizontal-slide {
 
 .child {
     scroll-snap-align: center;
+        margin-bottom:1%;
 }
 
 ul.horizontal-slide li[class*="col"] {
@@ -492,6 +501,7 @@ ul.horizontal-slide li[class*="col"] {
 #protocolli {
     position:fixed;
     padding-top:0%;
+    padding:0;
 }
 
 .footer-loghi{
