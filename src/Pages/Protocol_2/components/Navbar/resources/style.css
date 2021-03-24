@@ -29,10 +29,10 @@
 }
 
 #navbarText {
-  height: 7vh;
+  height: 10vh;
   align-items: center;
 
-  font-size: 2vh;
+  font-size: 2.5vh;
   text-align: center;
   font-family:sans-serif;
   display: flex;
@@ -40,7 +40,7 @@
 }
 
 #navbarInfo { 
-  height: 7vh;
+  height: 9vh;
 
   display: flex;
   justify-content: flex-end;
@@ -49,13 +49,15 @@
 }
 
 #navbarBackSvg {
-  width: 2.5%;
-  height: auto;
+  height: 2vh;
+  width: auto;
+  padding-top:8%;
 }
 
 #navbarInfoSvg {
-  width: 5%;
-  height: auto;
+  height: 10vh;
+  width: auto;
+  padding-top:0;
 }
 
 @media only screen and (max-width: 800px) {

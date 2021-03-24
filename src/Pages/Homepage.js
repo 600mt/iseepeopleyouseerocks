@@ -53,7 +53,7 @@ export const Homepage = () => {
             id="card"
            
           > 
-            <Link to='/protocollo-2'><img alt='Not loaded'  className="image_dimension" src={Image_2} /> </Link>
+            <Link to='/protocollo-2'><img alt='Not loaded'  className="image_dimension" src={Image_5} /> </Link>
           </div>
           <div> 
             <h3 id="r3"> Algorithms are forgetful </h3>

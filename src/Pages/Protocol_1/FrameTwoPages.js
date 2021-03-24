@@ -22,7 +22,6 @@ import Image_16 from './resources/img/16.png'
 import Image_17 from './resources/img/20.png'
 import Navbar from './components/Navbar/Navbar'
 import ImageCarrousel from './components/ImageCarrousel/ImageCarrousel'
-import JinxTest from './imagesJinx/JinxTest/JinxTest'
 
 export const FrameTwoPages = () => {
   const [prevBtn, setPrevBtn] = useState(0)

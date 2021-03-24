@@ -136,14 +136,16 @@
 #imageAndMaskProtocollo2 {
   height: 98%;
   position: relative;
+  
 }
 
 #imageBackground {
   /* background-color: white; */
   position: absolute;
+  object-fit:cover;
 
   /* Inline */
-  display: grid;
+  display: relative;
   grid-template-columns: 1% 48.5% 1% 48.5% 1%;
 
   height: 100%;
