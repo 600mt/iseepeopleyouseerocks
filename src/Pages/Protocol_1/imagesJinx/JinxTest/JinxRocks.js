@@ -29,10 +29,54 @@ import Image_23 from './resources/img/23.png'
 import Image_24 from './resources/img/24.png'
 import Image_25 from './resources/img/25.png'
 
-
+import Sfondo from   './resources/img/rocks.jpeg'
 import ImageJinx from './components/ImageJinx'
+import useDimensions from 'react-use-dimensions'
 
-export const JinxTest = () => {
+export const JinxStart = ({setNewImageCallback}) => {
+
+
+  const [ref, {width, height }] = useDimensions()
+
+
+  const [widthSquareOne, setWidthSquareOne] = useState('')
+  const [heightSquareOne, setHeightSquareOne] = useState('')
+
+  const [leftSquareOne, setLeftSquareOne] = useState('')
+  const [topSquareOne, setTopSquareOne] = useState('')
+
+  const [widthSquareTwo, setWidthSquareTwo] = useState('')
+  const [heightSquareTwo, setHeightSquareTwo] = useState('')
+
+  const [leftSquareTwo, setLeftSquareTwo] = useState('')
+  const [topSquareTwo, setTopSquareTwo] = useState('')
+
+
+  useEffect(() => {
+    console.log('height', height, 'squareone', heightSquareOne)
+    if (widthSquareOne === '' && !isNaN(width) && heightSquareOne === '' && !isNaN(height)) {      
+      setWidthSquareOne(width*1)
+      setHeightSquareOne(height*0.25)
+
+      setWidthSquareTwo(width*0.5)
+      setHeightSquareTwo(height*0.31)
+    } 
+    if(widthSquareOne !== '' && heightSquareOne !== '') {
+      setWidthSquareOne(width*1)
+      setHeightSquareOne(height*0.45)
+
+      setWidthSquareTwo(width*1)
+      setHeightSquareTwo(height*0.41)
+    }
+
+    setLeftSquareOne(width *0.06)
+    setTopSquareOne(width *0.02)
+
+    setLeftSquareTwo(width *0.06)
+    setTopSquareTwo(width *0.64)
+  }, [width])
+
+
 
   const [indexAreaVerde, setIndexAreaVerde] = useState(0)
   const [indexAreaRossa, setIndexAreaRossa] = useState(0)
@@ -71,7 +115,6 @@ export const JinxTest = () => {
  
   //Area Verde
   useEffect(() => {
-    console.log('MOUSE ENTER')
     if(
         (
           mouseAreaVerde.x < refAreaVerde.current.clientWidth && 
@@ -116,7 +159,6 @@ export const JinxTest = () => {
 
   //Area Rossa
   useEffect(() => {
-    console.log(mouseAreaRossa.x)
     if(
         (
           mouseAreaRossa.x < refAreaRossa.current.clientWidth && 
@@ -158,23 +200,61 @@ export const JinxTest = () => {
       }
   }, [imageShowedAreaRossa, mouseAreaRossa, indexAreaRossa, pastPositionAreaRossa])
 
+  function skyClick(e) {
+    e.preventDefault();
+    setImageShowedAreaRossa([])
+    setImageShowedAreaVerde([])
+    setNewImageCallback('start', 'rocks')
+  }
+
+  function peopleClick(e) {
+    e.preventDefault();
+    setImageShowedAreaRossa([])
+    setImageShowedAreaVerde([])
+    setNewImageCallback('grass', 'rocks')
+  }
 
   return (
-    <div id="backgroundJinx">
-      <div id="areaCielo" ref={refAreaRossa}>
-         {imageShowedAreaRossa.map((image, index) => (
+    // <div  className='backgroundJinxStart' >
+      
+    //   <div id="areaCielo" ref={refAreaRossa} onClick={skyClick}>
+    //      {imageShowedAreaRossa.map((image, index) => (
+    //           <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
+    //         ))}
+    //   </div>
+    //   <div id="areaCappello" ref={refAreaVerde} onClick={peopleClick}>
+    //     {
+    //       imageShowedAreaVerde.map((image, index) => (
+    //         <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
+    //       ))
+    //     }
+    //   </div>
+    // </div>
+
+    <div >
+      <img ref={ref}  src={Sfondo} className='backgroundJinxSky' />
+      {/* <div id="areaCielo" ref={refAreaRossa} > */}
+      <div ref={refAreaRossa}  onClick={skyClick}
+      style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne != '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
+      // style={{border: '2px solid white', width: '10vw', height: '10vh', position:'absolute', top: '10vh'}}
+      >
+      
+      
+        {imageShowedAreaRossa.map((image, index) => (
               <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
             ))}
       </div>
-      <div id="areaCappello" ref={refAreaVerde}>
+      <div id="areaCappello" ref={refAreaVerde} onClick={peopleClick}
+      style={{borderRadius: '15px', width: (widthSquareTwo !== '' ? widthSquareTwo : 0), height: (heightSquareTwo !== '' ? heightSquareTwo : 0), border: '2px solid white', position:'absolute', left: (leftSquareTwo != '' ? leftSquareTwo : 0), top: (topSquareTwo !== '' ? topSquareTwo : 0)}}
+      >
         {
           imageShowedAreaVerde.map((image, index) => (
             <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
           ))
         }
       </div>
-    </div>
+  </div>
   )
 }
 
-export default JinxTest
+export default JinxStart

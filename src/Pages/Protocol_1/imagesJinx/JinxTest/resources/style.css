@@ -1,12 +1,57 @@
 
- #backgroundJinx {
+ .backgroundJinx {
+   border-radius: 2%;
   position: relative;
-  height: auto;
+  height: 100%;
   width: 100%;
   background-image: url("./img/background.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
  }
+
+ .backgroundJinxT {
+  border-radius: 2%;
+ position: relative;
+ height: 100%;
+ width: 100%;
+ background-image: url("./img/1.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+.backgroundJinxStart {
+  border-radius: 2%;
+ position: relative;
+ height: 100%;
+ width: 100%;
+ background-image: url("./img/start.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+.backgroundJinxSky {
+  border-radius: 2%;
+ position: relative;
+ height: 100vh;
+ width: 100%;
+ /* left: 100px; */
+ /* top: -30px; */
+ /* transform: scale(1); */
+ /* background-image: url("./img/sky.png"); */
+ object-fit: cover;
+ /* background-repeat: no-repeat; */
+}
+
+.backgroundJinxPeople {
+  border-radius: 2%;
+ position: relative;
+ height: 100%;
+ width: 100%;
+ background-image: url("./img/people.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
 
  #areaCielo {
   border-width: 1px;
