@@ -60,31 +60,6 @@ export const FrameTwoPages = () => {
 
   return (
     <div>
-    <div>
-      <button
-        onClick={() => {
-          
-          setIndexImg(indexImg + 1)
-          
-        }}
-      >
-        prev
-      </button>
-
-      {/* <div className={`cards-slider active-slide-${indexImg}`}>
-        <div className='cards-slider-wrapper' style= {{
-          'transform': `translateX(-${prevBtn}%)`
-        }}>
-          <p className='card'>dd</p>
-           <img id='card-1' className='card' src={Image_1} width='340px' height='340px' />
-           <img id='card-2' className='card' src={Image_2} width='340px' height='340px' />
-           <img id='card-3' className='card' src={Image_2} width='340px' height='340px' />
-           <img id='card-4' className='card' src={Image_2} width='340px' height='340px' />
-        </div>
-      </div> */}
-     
-    </div>
-    
     <div id='framTwoPages'>
         <Navbar />
         <div id='firstTopImages' />
