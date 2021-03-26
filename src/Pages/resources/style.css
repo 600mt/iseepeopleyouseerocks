@@ -348,7 +348,7 @@ mark {
     {
             width: 100%;
             filter: blur(5px);
-            border-radius: 3vh;
+            border-radius: 30px;
             height:80vh;
             object-fit:cover;
             padding-top:3%;
@@ -362,7 +362,7 @@ mark {
         height:80vh;
         transition:2s;
 
-		border-radius: 3vh;
+		border-radius: 30px;
 }
 
 #r1
@@ -436,7 +436,7 @@ mark {
     width:85vw;
     height:auto;
     color:transparent;
-    border-radius: 2vh;
+    border-radius: 100vh;
     border:solid;
     border-width: 0%;
     border-color:transparent;
@@ -446,7 +446,7 @@ mark {
 
 #card:hover {
     border:display;
-    border-width: 1%;
+    border-width: 0%;
     border-color:transparent;
   }
 
