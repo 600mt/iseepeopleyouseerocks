@@ -51,11 +51,11 @@ html,body
   }
 
 mark {
-    background-color: #efefef75;
+    /* background-color: #efefef75;
     color: black;
     height: 2%;
-    border-radius: 1vh;
-    border-color:transparent;
+    border-radius: 1vh; */
+    /* border-color:transparent; */
 } 
 
 #titleHomepage {
@@ -63,6 +63,10 @@ mark {
   position: relative;
 }
 
+.fontTitoli{
+    font-size: 4vh;
+    font-weight: 500;
+}
 
 mark:hover {
     background-color: #d4d4d468;
@@ -209,7 +213,7 @@ p {
 .row
 {
     width: auto;
-    padding-top:1%;
+    /* padding-top:1%; */
 }
 
 

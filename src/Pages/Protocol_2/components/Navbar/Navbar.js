@@ -11,17 +11,19 @@ import About from '../../../AboutInsideProtocol/AboutInsideProtocol'
 export const Navbar = () => {
   const [modalShow, setModalShow] = useState(false)
   return (
-    <div id='navbarFrameTwoPagesProtocollo1'>
-        <Link to='/'>
-          <div id='navbarBack'>
-          <img id='navbarBackSvg' src={navbarBack} alt='Not loaded' />
-          </div>
-      </Link>
-      <div id='navbarText'>
+    <div id='navbarFrameTwoPagesProtocollo2'>
+        <div>
+          <Link to='/'>
+            <div id='navbarBackProtocol'>
+            <img id='navbarBackSvg' src={navbarBack} alt='Not loaded' />
+            </div>
+          </Link>
+        </div>
+      <div id='navbarTextProtocol2'>
         Algorithms are forgetful
       </div>
-      <div style={{cursor: 'pointer'}} onClick={() => setModalShow(true)} id='navbarInfo'>
-        <img id='navbarInfoSvg' src={navbarInfo} alt='Not loaded'/>
+      <div style={{cursor: 'pointer'}} onClick={() => setModalShow(true)} id='navbarInfoProtocol'>
+        <img id='navbarInfoSvgProtocol' src={navbarInfo} alt='Not loaded'/>
       </div>
       <About
           show={modalShow}
