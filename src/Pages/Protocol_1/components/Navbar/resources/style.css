@@ -1,4 +1,4 @@
-#navbarFrameTwoPages {
+#navbarFrameTwoPagesProtocollo1 {
   /* Position*/
   /* position: absolute; */
   top: 0.5vh;
@@ -6,6 +6,7 @@
 
   /* Dimension & background*/
   width: 100%;
+  height: 12vh;
 
   /* Inline */
   display: grid;

@@ -53,20 +53,26 @@ export const JinxStart = ({setNewImageCallback}) => {
 
 
   useEffect(() => {
-    console.log('height', height, 'squareone', heightSquareOne)
-    if (widthSquareOne === '' && !isNaN(width) && heightSquareOne === '' && !isNaN(height)) {      
+    console.log('START')
+    console.log('START', 'height', height, 'squareone', heightSquareOne)
+    // console.log('height', height, 'squareone', heightSquareOne)
+    // if (widthSquareOne === '' && !isNaN(width) && heightSquareOne === '' && !isNaN(height)) {      
+    //   setWidthSquareOne(width*0.82)
+    //   setHeightSquareOne(height*0.4)
+
+    //   setWidthSquareTwo(width*0.5)
+    //   setHeightSquareTwo(height*0.31)
+
+    //   console.log('INSIDE')
+    // } 
+    if(!isNaN(width) && !isNaN(height)) {
       setWidthSquareOne(width*0.82)
       setHeightSquareOne(height*0.4)
 
       setWidthSquareTwo(width*0.5)
       setHeightSquareTwo(height*0.31)
-    } 
-    if(widthSquareOne !== '' && heightSquareOne !== '') {
-      setWidthSquareOne(width*0.82)
-      setHeightSquareOne(height*0.4)
 
-      setWidthSquareTwo(width*0.5)
-      setHeightSquareTwo(height*0.31)
+      console.log('INSIDE')
     }
 
     setLeftSquareOne(width *0.26)

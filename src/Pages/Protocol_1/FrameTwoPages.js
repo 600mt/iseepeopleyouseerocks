@@ -63,7 +63,7 @@ export const FrameTwoPages = () => {
     <div id='framTwoPages'>
         <Navbar />
         <div id='firstTopImages' />
-        <div id='imageAndMask'>
+        <div id='imageAndMaskProtocollo1'>
           <div id='imageBackgroundProtocolloUno'>
             <div id='firstLeftBorderImage' />
             <div id='centerArea'>
@@ -71,16 +71,16 @@ export const FrameTwoPages = () => {
               {/* <div className={`cards-slider active-slide-${indexImg}`}> */}
                 
                 <div className='cards-slider-wrapper'>
-
+ 
                   <div id='card-1' style={{width: '50%', height: '100%', position:'relative'}}>
-                    {/* {/* <div style={{ width: '100%', height: '100%', position: 'absolute'}}> <JinxTest  /></div> */}
                     <div style={{ width: '100%', height: '100%', position: 'absolute'}}> <JinxPeople  /></div>
                   </div>
                   <div id='card-2' style={{width: '50%', height: '100%'}} >
                     
                     <div className='cards-slider-wrapper' 
                         style={{ zIndex:(shownImage === 'start' ? 2 : 0), width: '100%', height: '100%', position: 'absolute', 
-                        'transform': (originImage === 'start' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null)}}> 
+                        'transform': (originImage === 'start' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
+                        filter: (originImage === 'start' ? 'blur(5px)' : null)}}> 
                          <JinxStart  setNewImageCallback = {setNewImageCallback}/>
                     </div>
                     
@@ -92,32 +92,39 @@ export const FrameTwoPages = () => {
                    
                     <div  className='cards-slider-wrapper' 
                       style={{ zIndex: (shownImage === 'sky' ? 2 : 0), width: '100%', height: '100%', position: 'absolute', 
-                      'transform': (originImage === 'sky' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null)}}> 
+                      'transform': (originImage === 'sky' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
+                      filter: (originImage === 'sky' ? 'blur(5px)' : null)
+                      }}> 
                          <JinxSky  setNewImageCallback = {setNewImageCallback}/>
                     </div>
                     
                     <div className='cards-slider-wrapper'  
                       style={{ zIndex: (shownImage === 'edifice' ? 2 : 0), width: '100%', height: '100%', position: 'absolute',
-                      'transform': (originImage === 'edifice' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null)}}> 
+                      'transform': (originImage === 'edifice' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
+                      filter: (originImage === 'edifice' ? 'blur(5px)' : null)}}> 
                          <JinxEdifice  setNewImageCallback = {setNewImageCallback}/>
                     </div>
 
                     <div className='cards-slider-wrapper'  
                       style={{ zIndex: (shownImage === 'grass' ? 2 : 0), width: '100%', height: '100%', position: 'absolute',
-                      'transform': (originImage === 'grass' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null)}}> 
+                      'transform': (originImage === 'grass' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
+                      filter: (originImage === 'grass' ? 'blur(5px)' : null)}}> 
                          <JinxGrass  setNewImageCallback = {setNewImageCallback}/>
                     </div>
 
 
                     <div className='cards-slider-wrapper'  
                       style={{ zIndex: (shownImage === 'people' ? 2 : 0), width: '100%', height: '100%', position: 'absolute',
-                      'transform': (originImage === 'people' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null)}}> 
+                      'transform': (originImage === 'people' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
+                      filter: (originImage === 'people' ? 'blur(5px)' : null)}}> 
+                      {/* filter: 'blur(5px)'}}>  */}
                          <JinxPeople  setNewImageCallback = {setNewImageCallback}/>
                     </div>
 
                     <div className='cards-slider-wrapper'  
                       style={{ zIndex: (shownImage === 'rocks' ? 2 : 0), width: '100%', height: '100%', position: 'absolute',
-                      'transform': (originImage === 'rocks' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null)}}> 
+                      'transform': (originImage === 'rocks' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
+                      filter: (originImage === 'rocks' ? 'blur(5px)' : null)}}>
                          <JinxRocks  setNewImageCallback = {setNewImageCallback}/>
                     </div>
                   </div>

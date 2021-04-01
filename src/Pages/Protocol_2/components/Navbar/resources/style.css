@@ -1,8 +1,9 @@
-#navbarFrameTwoPages {
+#navbarFrameTwoPagesProtocollo2 {
   /* Position*/
   /* position: absolute; */
   top: 0.5vh;
   position: relative;
+  height: 11.3vh;
 
   /* Dimension & background*/
   width: 100%;
@@ -19,8 +20,8 @@
   /* https://css-tricks.com/flexbox-like-just-put-elements-in-a-row-with-css-grid/ */
 }
 
-#navbarBack {
-  height: 10vh;
+#navbarBackProtocol {
+  /* height: 10vh; */
 
   display: flex;
   justify-content: left;
@@ -28,27 +29,32 @@
   margin-left: 5vh;
 }
 
-#navbarText {
-  height: 10vh;
+#navbarTextProtocol2 {
+  height: 100%;
   align-items: center;
 
-  font-size: 2.5vh;
+  position: relative;
+  top: -12%;
+
+  font-size: 4vh;
+  font-weight: 500;
+
   text-align: center;
-  font-family:sans-serif;
+  /* font-family:sans-serif; */
   display: flex;
   justify-content: center;
 }
 
-#navbarInfo { 
-  height: 9vh;
-
+#navbarInfoProtocol { 
+  position: relative;
+  top: -8%;
   display: flex;
   justify-content: flex-end;
 
-  margin-right: 5vh;
+  margin-right: 6%;
 }
 
-#navbarBackSvg {
+#navbarBackSvgProtocol {
   height: 2vh;
   width: auto;
   padding-top:8%;
@@ -57,6 +63,12 @@
 #navbarInfoSvg {
   height: 10vh;
   width: auto;
+  padding-top:0;
+}
+
+#navbarInfoSvgProtocol{
+  height: 10vh;
+  width: 6%;
   padding-top:0;
 }
 

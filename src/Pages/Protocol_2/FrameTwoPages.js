@@ -27,14 +27,14 @@ export const FrameTwoPages = () => {
     <div id='framTwoPages'>
         <Navbar />
         <div id='firstTopImages' />
-        <div id='imageAndMask'>
+        <div id='imageAndMaskProtocollo2'>
           <div id='imageBackground'>
             <div id='firstLeftBorderImage' />
-            <div id='secondMaskImageReal'>
+            <div id='secondMaskImageRealProtocol2'>
               <ImageCarrousel id='imgPostion' datasetImages={datasetImages} startingIndexImage={0} />
             </div>
             <div id='thirdCentralImage' />
-            <div id='fourthMaskImageReal'> 
+            <div id='fourthMaskImageRealProtocol2'> 
               <ImageCarrousel datasetImages={datasetImages} startingIndexImage={9} />
             </div>
             <div id='fifthRightBorderImage' />
@@ -42,14 +42,10 @@ export const FrameTwoPages = () => {
           <div id='secondMask'>
             <div id='firstPartMask'>
               <div id='firstLeftBorder' />
-              {/* <duv id='backgrounColor' */}
               <div id='secondMaskImage' />
               <div id='thirdCentral' />
               <div id='fourthMaskImage' />
               <div id='fifthRightBorder' />
-            </div>
-            <div id='secondPartMask'>
-              {/* <div id='thirdBottomImages' /> */}
             </div>
           </div>
         </div>
