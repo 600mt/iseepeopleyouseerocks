@@ -53,7 +53,7 @@ export const JinxStart = ({setNewImageCallback}) => {
 
 
   useEffect(() => {
-    console.log('height', height, 'squareone', heightSquareOne)
+    // console.log('height', height, 'squareone', heightSquareOne)
     if (widthSquareOne === '' && !isNaN(width) && heightSquareOne === '' && !isNaN(height)) {      
       setWidthSquareOne(width*1.08)
       setHeightSquareOne(height*0.3)

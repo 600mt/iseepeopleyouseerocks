@@ -11,7 +11,7 @@ import About from '../../../AboutInsideProtocol/AboutInsideProtocol'
 export const Navbar = () => {
   const [modalShow, setModalShow] = useState(false)
   return (
-    <div id='navbarFrameTwoPages'>
+    <div id='navbarFrameTwoPagesProtocollo1'>
         <Link to='/'>
           <div id='navbarBack'>
           <img id='navbarBackSvg' src={navbarBack} alt='Not loaded' />

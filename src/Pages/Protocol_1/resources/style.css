@@ -134,8 +134,8 @@
 }
 
 
-#imageAndMask {
-  height: 90%;
+#imageAndMaskProtocollo1 {
+  height: 88vh;
   position: relative;
 }
 
@@ -172,7 +172,7 @@
 }
 
 #centerArea {
-  width: 100%;
+  width: 100vw;
 }
 
 #secondMaskImageReal {

@@ -1,8 +1,9 @@
-#navbarFrameTwoPages {
+#navbarFrameTwoPagesProtocollo1 {
   /* Position*/
   /* position: absolute; */
   top: 0.5vh;
   position: relative;
+  height: 12vh;
 
   /* Dimension & background*/
   width: 100%;
