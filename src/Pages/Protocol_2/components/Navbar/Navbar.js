@@ -26,6 +26,7 @@ export const Navbar = () => {
         <img id='navbarInfoSvgProtocol' src={navbarInfo} alt='Not loaded'/>
       </div>
       <About
+          animation={false}
           show={modalShow}
           clickMe={() => {}}
           onHide={() => setModalShow(false)}
