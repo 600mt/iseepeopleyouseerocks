@@ -162,7 +162,7 @@
 #secondMaskImageRealProtocol2 {
   border-radius: 2%;
   overflow: hidden;
-  background-color: white;
+  background-color: transparent;
   /* padding: 10px; */
   /* background-color: red;
   z-index: 102; */
@@ -177,7 +177,7 @@
 #fourthMaskImageRealProtocol2 {
   border-radius: 2%;
   overflow: hidden;
-  background-color: white;
+  background-color: transparent;
   display: flex;
 
   height: 99%;
