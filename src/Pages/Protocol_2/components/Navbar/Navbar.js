@@ -12,13 +12,13 @@ export const Navbar = () => {
   const [modalShow, setModalShow] = useState(false)
   return (
     <div id='navbarFrameTwoPagesProtocollo2'>
-        <div>
+        {/* <div> */}
           <Link to='/'>
             <div id='navbarBackProtocol'>
-            <img id='navbarBackSvg' src={navbarBack} alt='Not loaded' />
+                <img id='navbarBackSvgProtocol' src={navbarBack} alt='Not loaded' />
             </div>
           </Link>
-        </div>
+        {/* </div> */}
       <div id='navbarTextProtocol2'>
         Algorithms are forgetful
       </div>
