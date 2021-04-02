@@ -20,7 +20,16 @@
   /* https://css-tricks.com/flexbox-like-just-put-elements-in-a-row-with-css-grid/ */
 }
 
-#navbarBackProtocol {
+/* #navbarBackProtocol { */
+  /* height: 10vh; */
+
+  /* display: flex; */
+  /* justify-content: left; */
+
+  /* margin-left: 5vh; */
+/* } */
+
+#navbarBackProtocolInfo {
   /* height: 10vh; */
 
   display: flex;
@@ -47,17 +56,28 @@
 
 #navbarInfoProtocol { 
   position: relative;
-  top: -8%;
+  top: 0%;
   display: flex;
   justify-content: flex-end;
 
   margin-right: 6%;
 }
 
+#navbarBackProtocol{
+
+  position: relative;
+  top: 8%;
+  /* display: flex; */
+  justify-content: flex-end;
+
+  margin-left: 6%;
+}
+
+
 #navbarBackSvgProtocol {
-  height: 2vh;
+  /* height: 2vh;
   width: auto;
-  padding-top:8%;
+  padding-top:8%; */
 }
 
 #navbarInfoSvg {
@@ -69,6 +89,11 @@
 #navbarInfoSvgProtocol{
   height: 10vh;
   width: 6%;
+}
+
+#navbarBackSvgProtocol{
+  height: 8vh;
+  width: 2.7%;
   padding-top:0;
 }
 
