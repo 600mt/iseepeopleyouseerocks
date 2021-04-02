@@ -10,14 +10,8 @@ export const AboutInsideProtocol = (props) => {
         <Modal
         id='aboutHomepage'
         {...props}
-        // aria-labelledby="contained-modal-title-vcenter"
-        // centered
         style={{padding: 0}}
         >
-
-        {/* <Modal.Header closeButton id="backgroundPopup" style={{ }}>
-          <Modal.Title id="contained-modal-title-vcenter" style={{padding: 0}} />
-        </Modal.Header> */}
         <Modal.Body style={{backgroundColor: 'transparent'}}>
             <div id='framTwoPagesAbout'>
                 <Navbar onHide={props.onHide} />

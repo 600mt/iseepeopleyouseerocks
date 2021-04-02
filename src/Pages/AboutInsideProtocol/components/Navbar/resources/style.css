@@ -19,13 +19,49 @@
   /* https://css-tricks.com/flexbox-like-just-put-elements-in-a-row-with-css-grid/ */
 }
 
-#navbarBackAbout {
-  height: 10vh;
+#navbarBackSvgAbout{
+  height: 8vh;
+  width: 2.7%;
+  padding-top:0;
+}
 
+#navbarTextAbout {
+  height: 100%;
+  align-items: center;
+
+  position: relative;
+  top: -19%;
+
+  font-size: 4vh;
+  font-weight: 500;
+
+  text-align: center;
+  /* font-family:sans-serif; */
   display: flex;
-  justify-content: left;
+  justify-content: center;
+}
 
-  margin-left: 4vh;
+#navbarInfoAbout{
+  position: relative;
+  top: -10%;
+  display: flex;
+  justify-content: flex-end;
+
+  margin-right: 4.5%;
+}
+
+#navbarInfoSvgAbout{
+  height: 10vh;
+  width: 6%;
+}
+
+#navbarBackAbout {
+  position: relative;
+  top: -2%;
+  /* display: flex; */
+  justify-content: flex-end;
+
+  margin-left: 4.5%;
 }
 
 #navbarText {
