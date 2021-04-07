@@ -1,9 +1,8 @@
-#navbarFrameTwoPagesProtocollo2 {
+#navbarFrameTwoPagesAbout {
   /* Position*/
   /* position: absolute; */
   top: 0.5vh;
   position: relative;
-  height: 11.3vh;
 
   /* Dimension & background*/
   width: 100%;
@@ -13,37 +12,25 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 10px;
 
-  background-color: #ececec;
+  background-color: white;
   
 
   /*READ MORE ABOUT*/
   /* https://css-tricks.com/flexbox-like-just-put-elements-in-a-row-with-css-grid/ */
 }
 
-/* #navbarBackProtocol { */
-  /* height: 10vh; */
-
-  /* display: flex; */
-  /* justify-content: left; */
-
-  /* margin-left: 5vh; */
-/* } */
-
-#navbarBackProtocolInfo {
-  /* height: 10vh; */
-
-  display: flex;
-  justify-content: left;
-
-  margin-left: 5vh;
+#navbarBackSvgAbout{
+  height: 8vh;
+  width: 2.7%;
+  padding-top:0;
 }
 
-#navbarTextProtocol2 {
+#navbarTextAbout {
   height: 100%;
   align-items: center;
 
   position: relative;
-  top: -12%;
+  top: -19%;
 
   font-size: 3vh;
   font-weight: 500;
@@ -54,42 +41,57 @@
   justify-content: center;
 }
 
-#navbarInfoProtocol { 
+#navbarInfoAbout{
   position: relative;
-  top: 0%;
+  top: -10%;
   display: flex;
   justify-content: flex-end;
 
-  margin-right: 6%;
+  margin-right: 4.5%;
 }
 
-#navbarBackProtocol{
-
-  position: relative;
-  top: 8%;
-  /* display: flex; */
-  justify-content: flex-end;
-
-  margin-left: 6%;
-}
-
-
-
-#navbarInfoSvg {
-  height: 10vh;
-  width: auto;
-  padding-top:0;
-}
-
-#navbarInfoSvgProtocol{
+#navbarInfoSvgAbout{
   height: 10vh;
   width: 6%;
 }
 
-#navbarBackSvgProtocol{
-  height: 8vh;
-  width: 2.7%;
-  padding-top:0;
+#navbarBackAbout {
+  position: relative;
+  top: -2%;
+  /* display: flex; */
+  justify-content: flex-end;
+
+  margin-left: 4.5%;
+}
+
+#navbarText {
+  height: 7vh;
+  align-items: center;
+
+  font-size: 2vh;
+  text-align: center;
+  font-family:sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+#navbarInfo { 
+  height: 7vh;
+
+  display: flex;
+  justify-content: flex-end;
+
+  margin-right: 5vh;
+}
+
+#navbarBackSvg {
+  width: 2.5%;
+  height: auto;
+}
+
+#navbarInfoSvg {
+  width: 5%;
+  height: auto;
 }
 
 @media only screen and (max-width: 800px) {

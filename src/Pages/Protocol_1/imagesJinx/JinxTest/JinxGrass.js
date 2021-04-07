@@ -29,6 +29,32 @@ import Image_23 from './resources/img/23.png'
 import Image_24 from './resources/img/24.png'
 import Image_25 from './resources/img/25.png'
 
+import b1 from './resources/img/sky/b1.png'
+import b2 from './resources/img/sky/b2.png'
+import b3 from './resources/img/sky/b3.png'
+import b4 from './resources/img/sky/b4.png'
+import b5 from './resources/img/sky/b5.png'
+import b6 from './resources/img/sky/b6.png'
+import b7 from './resources/img/sky/b7.png'
+import b8 from './resources/img/sky/b8.png'
+import b9 from './resources/img/sky/b9.png'
+import b10 from './resources/img/sky/b10.png'
+import b11 from './resources/img/sky/b11.png'
+import b12 from './resources/img/sky/b12.png'
+
+import p1 from './resources/img/people/p1.jpeg'
+import p2 from './resources/img/people/p2.jpeg'
+import p3 from './resources/img/people/p3.jpeg'
+import p4 from './resources/img/people/p4.jpeg'
+import p5 from './resources/img/people/p5.jpeg'
+import p6 from './resources/img/people/p6.jpeg'
+import p7 from './resources/img/people/p7.jpeg'
+import p8 from './resources/img/people/p8.jpeg'
+import p9 from './resources/img/people/p9.jpeg'
+import p10 from './resources/img/people/p10.jpeg'
+import p11 from './resources/img/people/p11.jpeg'
+import p12 from './resources/img/people/p12.jpeg'
+
 import Sfondo from   './resources/img/grass.jpeg'
 import ImageJinx from './components/ImageJinx'
 import useDimensions from 'react-use-dimensions'
@@ -81,10 +107,40 @@ export const JinxStart = ({setNewImageCallback}) => {
   const [indexAreaVerde, setIndexAreaVerde] = useState(0)
   const [indexAreaRossa, setIndexAreaRossa] = useState(0)
   //Area Cielo
-  const imagesAreaRossa = [Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, Image_12, Image_13]
+  // const imagesAreaRossa = [Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, Image_12, Image_13]
   
+  const imagesAreaRossa = [
+    b1,
+    b2,
+    b3,
+    b4,
+    b5,
+    b6,
+    b7,
+    b8,
+    b9,
+    b10,
+    b11,
+    b12
+  ]
+
   //Area Cappello
-  const imagesAreaVerde = [Image_14, Image_15, Image_16, Image_17, Image_18, Image_19, Image_20, Image_21, Image_22, Image_23, Image_24, Image_25]
+  // const imagesAreaVerde = [Image_14, Image_15, Image_16, Image_17, Image_18, Image_19, Image_20, Image_21, Image_22, Image_23, Image_24, Image_25]
+  const imagesAreaVerde = [
+    p1,
+    p2,
+    p3,
+    p4,
+    p5,
+    p6,
+    p7,
+    p8,
+    p9,
+    p10,
+    p11,
+    p12
+  ]
+
 
   const [imageShowedAreaRossa, setImageShowedAreaRossa] = useState([])
   const [imageShowedAreaVerde, setImageShowedAreaVerde] = useState([])

@@ -3,7 +3,7 @@ import { Container, Modal, Row } from 'react-bootstrap'
 
 import './resources/style.css'
 import Logo from '../resources/img/polimi.png'
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/NavbarAbout/Navbar'
 
 export const AboutInsideProtocol = (props) => {
     return (

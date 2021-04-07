@@ -8,7 +8,7 @@ import './resources/style.css'
 import About from '../../../AboutInsideProtocol/AboutInsideProtocol'
 
 
-export const Navbar = () => {
+export const Navbar = ({ setShow, show}) => {
   const [modalShow, setModalShow] = useState(false)
   return (
     <div id='navbarFrameTwoPagesProtocollo2'>
@@ -22,15 +22,9 @@ export const Navbar = () => {
       <div id='navbarTextProtocol2'>
         Algorithms are forgetful
       </div>
-      <div style={{cursor: 'pointer'}} onClick={() => setModalShow(true)} id='navbarInfoProtocol'>
+      <div style={{cursor: 'pointer'}} onClick={() => setShow(!show)} id='navbarInfoProtocol'>
         <img id='navbarInfoSvgProtocol' src={navbarInfo} alt='Not loaded'/>
       </div>
-      <About
-          animation={false}
-          show={modalShow}
-          clickMe={() => {}}
-          onHide={() => setModalShow(false)}
-        />
     </div>
   )
 }
