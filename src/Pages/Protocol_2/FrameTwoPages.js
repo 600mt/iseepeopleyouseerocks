@@ -10,7 +10,7 @@ import Image_6 from './resources/img/6.png'
 import Image_7 from './resources/img/7.png'
 import Image_8 from './resources/img/8.png'
 import Image_9 from './resources/img/9.png'
-import Image_10 from './resources/img/10.jpeg'
+import Image_10 from './resources/img/10.png'
 import Image_11 from './resources/img/11.png'
 import Image_12 from './resources/img/12.png'
 import Image_13 from './resources/img/13.png'
@@ -42,16 +42,6 @@ export const FrameTwoPages = () => {
             <div id='thirdCentralImage' />
             <div id='fourthMaskImageRealProtocol2'> 
               <ImageCarrousel datasetImages={datasetImages} startingIndexImage={9} />
-            </div>
-            <div id='fifthRightBorderImage' />
-          </div>
-          <div id='secondMask'>
-            <div id='firstPartMask'>
-              <div id='firstLeftBorder' />
-              <div id='secondMaskImage' />
-              <div id='thirdCentral' />
-              <div id='fourthMaskImage' />
-              <div id='fifthRightBorder' />
             </div>
           </div>
         </div>
