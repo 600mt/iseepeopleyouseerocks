@@ -28,12 +28,19 @@ import JinxSky from './imagesJinx/JinxTest/JinxSky'
 import JinxEdifice from './imagesJinx/JinxTest/JinxEdifice'
 import JinxGrass from './imagesJinx/JinxTest/JinxGrass'
 import JinxRocks from './imagesJinx/JinxTest/JinxRocks'
+import JinxExample from './imagesJinx/JinxTest/JinxExample'
+import { Fragment } from 'react'
+import info_logo from '../resources/img/navbarInfo.svg'
+import back_logo from '../resources/img/navbarBack.svg'
 
 const translateXAxis = 111
 const translateYAcis = 2
 const scale = 0.9
 
 export const FrameTwoPages = () => {
+
+  const [activeImage, setActiveImage] = useState('start')
+
   const [prevBtn, setPrevBtn] = useState(0)
   const [indexImg, setIndexImg] = useState(2)
   const [scaleImg, setScaleImg] = useState(1)
@@ -58,10 +65,27 @@ export const FrameTwoPages = () => {
     console.log('origin ', origin)
   }
 
+  function setActiveCallBack(newActive) {
+    setActiveImage(newActive)
+  }
+
   return (
-    <div>
-    <div id='framTwoPages'>
-        <Navbar />
+    <Fragment style={{position: 'relative'}} >
+
+    <div className="container-fluid" style={{backgroundColor: '#ececec', height: '8vh'}}>
+      <div className="row" id='titleHomepage'> 
+          <div className="col-2 col-md-3" id="r3-long-back">
+             <h2 id="text-right" style={{cursor: 'pointer'}}><img id='iconBack' style={{cursor: 'pointer'}} src={back_logo} alt="info"></img></h2>
+          </div>
+          <div className="col-10 col-md-6 text-center" id="r1-protocol2">
+              <h2 className='fontTitoli'>Algorithms are explorers</h2>
+          </div>
+          <div className="col-2 col-md-3" id="r3-long">
+             <h2 id="text-right" style={{cursor: 'pointer'}}><img id='iconLeft' style={{cursor: 'pointer'}} src={info_logo} alt="info"></img></h2>
+          </div>
+        </div>
+      </div>
+      <div id='framTwoPages'>
         <div id='firstTopImages' />
         <div id='imageAndMaskProtocollo1'>
           <div id='imageBackgroundProtocolloUno'>
@@ -73,7 +97,7 @@ export const FrameTwoPages = () => {
                 <div className='cards-slider-wrapper'>
  
                   <div id='card-1' style={{width: '50%', height: '100%', position:'relative'}}>
-                    <div style={{ width: '100%', height: '100%', position: 'absolute'}}> <JinxPeople  /></div>
+                    <div style={{ width: '100%', height: '100%', position: 'absolute'}}> <JinxSky  /></div>
                   </div>
                   <div id='card-2' style={{width: '50%', height: '100%'}} >
                     
@@ -81,7 +105,7 @@ export const FrameTwoPages = () => {
                         style={{ zIndex:(shownImage === 'start' ? 2 : 0), width: '100%', height: '100%', position: 'absolute', 
                         'transform': (originImage === 'start' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
                         filter: (originImage === 'start' ? 'blur(5px)' : null)}}> 
-                         <JinxStart  setNewImageCallback = {setNewImageCallback}/>
+                         <JinxStart  setNewImageCallback = {setNewImageCallback} activeImage={activeImage} setActiveCallBack={setActiveCallBack} />
                     </div>
                     
                     {/* <div className='cards-slider-wrapper'  
@@ -95,21 +119,21 @@ export const FrameTwoPages = () => {
                       'transform': (originImage === 'sky' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
                       filter: (originImage === 'sky' ? 'blur(5px)' : null)
                       }}> 
-                         <JinxSky  setNewImageCallback = {setNewImageCallback}/>
+                         <JinxSky  setNewImageCallback = {setNewImageCallback} activeImage={activeImage} setActiveCallBack={setActiveCallBack}/>
                     </div>
                     
                     <div className='cards-slider-wrapper'  
                       style={{ zIndex: (shownImage === 'edifice' ? 2 : 0), width: '100%', height: '100%', position: 'absolute',
                       'transform': (originImage === 'edifice' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
                       filter: (originImage === 'edifice' ? 'blur(5px)' : null)}}> 
-                         <JinxEdifice  setNewImageCallback = {setNewImageCallback}/>
+                         <JinxEdifice  setNewImageCallback = {setNewImageCallback} activeImage={activeImage} setActiveCallBack={setActiveCallBack}/>
                     </div>
 
                     <div className='cards-slider-wrapper'  
                       style={{ zIndex: (shownImage === 'grass' ? 2 : 0), width: '100%', height: '100%', position: 'absolute',
                       'transform': (originImage === 'grass' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
                       filter: (originImage === 'grass' ? 'blur(5px)' : null)}}> 
-                         <JinxGrass  setNewImageCallback = {setNewImageCallback}/>
+                         <JinxGrass  setNewImageCallback = {setNewImageCallback} activeImage={activeImage} setActiveCallBack={setActiveCallBack}/>
                     </div>
 
 
@@ -118,14 +142,14 @@ export const FrameTwoPages = () => {
                       'transform': (originImage === 'people' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
                       filter: (originImage === 'people' ? 'blur(5px)' : null)}}> 
                       {/* filter: 'blur(5px)'}}>  */}
-                         <JinxPeople  setNewImageCallback = {setNewImageCallback}/>
+                         <JinxPeople  setNewImageCallback = {setNewImageCallback} activeImage={activeImage} setActiveCallBack={setActiveCallBack}/>
                     </div>
 
                     <div className='cards-slider-wrapper'  
                       style={{ zIndex: (shownImage === 'rocks' ? 2 : 0), width: '100%', height: '100%', position: 'absolute',
                       'transform': (originImage === 'rocks' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null),
                       filter: (originImage === 'rocks' ? 'blur(5px)' : null)}}>
-                         <JinxRocks  setNewImageCallback = {setNewImageCallback}/>
+                         <JinxRocks  setNewImageCallback = {setNewImageCallback} activeImage={activeImage} setActiveCallBack={setActiveCallBack}/>
                     </div>
                   </div>
                   </div>     
@@ -137,7 +161,7 @@ export const FrameTwoPages = () => {
         </div>
       </div>
 
-      </div>
+      </Fragment>
   )
 }
 

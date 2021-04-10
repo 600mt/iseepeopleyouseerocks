@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import useMouse from '@react-hook/mouse-position'
 
 import './resources/style.css'
@@ -55,14 +55,36 @@ import p10 from './resources/img/people/p10.jpeg'
 import p11 from './resources/img/people/p11.jpeg'
 import p12 from './resources/img/people/p12.jpeg'
 
+import g1 from './resources/img/grass/g1.jpeg'
+import g2 from './resources/img/grass/g2.jpeg'
+import g3 from './resources/img/grass/g3.jpeg'
+import g4 from './resources/img/grass/g4.jpeg'
+import g5 from './resources/img/grass/g5.jpeg'
+import g6 from './resources/img/grass/g6.jpeg'
+import g7 from './resources/img/grass/g7.jpeg'
+import g8 from './resources/img/grass/g8.jpeg'
+import g9 from './resources/img/grass/g9.jpeg'
+import g10 from './resources/img/grass/g10.jpeg'
+import g11 from './resources/img/grass/g11.jpeg'
+import g12 from './resources/img/grass/g12.jpeg'
+
 import Sfondo from   './resources/img/grass.jpeg'
 import ImageJinx from './components/ImageJinx'
-import useDimensions from 'react-use-dimensions'
+import useDimensions from 'react-cool-dimensions'
 
-export const JinxStart = ({setNewImageCallback}) => {
+import {useMediaQuery} from './utils'
 
+export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack}) => {
+  const [widthScreen, heightScreen] = useMediaQuery()
 
-  const [ref, {width, height }] = useDimensions()
+  const { observe, unobserve, width, height, entry } = useDimensions({
+    onResize: ({ observe, unobserve, width, height, entry }) => {
+      // Triggered whenever the size of the target is changed...
+
+      unobserve(); // To stop observing the current target element
+      observe(); // To re-start observing the current target element
+    },
+  });
 
 
   const [widthSquareOne, setWidthSquareOne] = useState('')
@@ -77,35 +99,62 @@ export const JinxStart = ({setNewImageCallback}) => {
   const [leftSquareTwo, setLeftSquareTwo] = useState('')
   const [topSquareTwo, setTopSquareTwo] = useState('')
 
+  const [widthSquareThree, setWidthSquareThree] = useState('')
+  const [heightSquareThree, setHeightSquareThree] = useState('')
+
+  const [leftSquareThree, setLeftSquareThree] = useState('')
+  const [topSquareThree, setTopSquareThree] = useState('')
 
   useEffect(() => {
-    console.log('height', height, 'squareone', heightSquareOne)
-    if (widthSquareOne === '' && !isNaN(width) && heightSquareOne === '' && !isNaN(height)) {      
-      setWidthSquareOne(width*1.08)
-      setHeightSquareOne(height*0.3)
-
-      setWidthSquareTwo(width*0.3)
-      setHeightSquareTwo(height*0.3)
-    } 
-    if(widthSquareOne !== '' && heightSquareOne !== '') {
-      setWidthSquareOne(width*1.08)
-      setHeightSquareOne(height*0.3)
-
-      setWidthSquareTwo(width*0.3)
-      setHeightSquareTwo(height*0.3)
+    if((widthScreen/heightScreen) !== (4/3)) { 
+      if(!isNaN(width) && !isNaN(height)) {
+        setWidthSquareOne(width*0.98)
+        setHeightSquareOne(height*0.3)
+  
+        setWidthSquareTwo(width*0.2)
+        setHeightSquareTwo(height*0.3)
+  
+        setWidthSquareThree(width * 0.97)
+        setHeightSquareThree(height*0.25)
+      }
+  
+      setLeftSquareOne(width *0.01)
+      setTopSquareOne(width *0.02)
+  
+      setLeftSquareTwo(width *0.35)
+      setTopSquareTwo(width *0.4)
+  
+      setLeftSquareThree(width *0.01)
+      setTopSquareThree(width *0.7)
+    } else {
+      if(!isNaN(width) && !isNaN(height)) {
+        setWidthSquareOne(width*0.98)
+        setHeightSquareOne(height*0.3)
+  
+        setWidthSquareTwo(width*0.2)
+        setHeightSquareTwo(height*0.2)
+  
+        setWidthSquareThree(width * 0.98)
+        setHeightSquareThree(height*0.36)
+      }
+  
+      setLeftSquareOne(width *0.01)
+      setTopSquareOne(width *0.01)
+  
+      setLeftSquareTwo(width *0.35)
+      setTopSquareTwo(width *0.6)
+  
+      setLeftSquareThree(width *0.01)
+      setTopSquareThree(width *0.9)
     }
-
-    setLeftSquareOne(width *0.01)
-    setTopSquareOne(width *0.02)
-
-    setLeftSquareTwo(width *0.35)
-    setTopSquareTwo(width *0.44)
+    
   }, [width])
 
 
 
   const [indexAreaVerde, setIndexAreaVerde] = useState(0)
   const [indexAreaRossa, setIndexAreaRossa] = useState(0)
+  const [indexAreaThree, setIndexAreaThree] = useState(0)
   //Area Cielo
   // const imagesAreaRossa = [Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, Image_12, Image_13]
   
@@ -142,8 +191,24 @@ export const JinxStart = ({setNewImageCallback}) => {
   ]
 
 
+  const imagesAreaThree = [
+    g1,
+    g2,
+    g3,
+    g4,
+    g5,
+    g6,
+    g7,
+    g8,
+    g9,
+    g10,
+    g11,
+    g12
+  ]
+
   const [imageShowedAreaRossa, setImageShowedAreaRossa] = useState([])
   const [imageShowedAreaVerde, setImageShowedAreaVerde] = useState([])
+  const [imageShowedAreaThree, setImageShowedAreaThree] = useState([])
 
   const [pastPositionAreaVerde, setPastPositionAreaVerde] = useState({
     x: 0,
@@ -155,8 +220,15 @@ export const JinxStart = ({setNewImageCallback}) => {
     y: 0
   })
 
+  const [pastPositionAreaThree, setPastPositionAreaThree] = useState({
+    x: 0,
+    y: 0
+  })
+
+
   const refAreaRossa = React.useRef(null)
   const refAreaVerde = React.useRef(null)
+  const refAreaThree = React.useRef(null)
   const mouseAreaRossa = useMouse(refAreaRossa, {
     fps: 60,
     enterDelay: 100,
@@ -164,6 +236,12 @@ export const JinxStart = ({setNewImageCallback}) => {
   })
 
   const mouseAreaVerde = useMouse(refAreaVerde, {
+    fps: 60,
+    enterDelay: 100,
+    leaveDelay: 100
+  })
+
+  const mouseAreaThree = useMouse(refAreaThree, {
     fps: 60,
     enterDelay: 100,
     leaveDelay: 100
@@ -256,10 +334,54 @@ export const JinxStart = ({setNewImageCallback}) => {
       }
   }, [imageShowedAreaRossa, mouseAreaRossa, indexAreaRossa, pastPositionAreaRossa])
 
+  //third area
+  useEffect(() => {
+    if(
+        (
+          mouseAreaThree.x < refAreaThree.current.clientWidth && 
+          mouseAreaThree.x > -1 &&
+          mouseAreaThree.y < refAreaThree.current.clientHeight &&
+          mouseAreaThree.y > -1
+        ) 
+        &&
+        (
+          Math.abs(mouseAreaThree.x - pastPositionAreaThree.x) > 10 ||
+          Math.abs(mouseAreaThree.y - pastPositionAreaThree.y) > 10
+        ) 
+      ) {
+        const newImage = {
+          src: imagesAreaThree[indexAreaThree],
+          inputZIndex: 10,
+          positionImage: mouseAreaThree
+        }
+
+        setIndexAreaThree(indexAreaThree + 1)
+
+        if(indexAreaThree === 14) {
+          setIndexAreaThree(0)
+        }
+
+        const temp = [...imageShowedAreaThree]
+        temp.push(newImage)
+        setImageShowedAreaThree(temp)
+
+        if(imageShowedAreaThree.length > 13) {
+          const tempArrayTwo = [...imageShowedAreaThree]
+          tempArrayTwo.shift()
+          setImageShowedAreaThree(tempArrayTwo)
+        }
+        setPastPositionAreaThree({
+          x: mouseAreaThree.x,
+          y: mouseAreaThree.y
+        })
+      }
+  }, [imageShowedAreaThree, mouseAreaThree, indexAreaThree, pastPositionAreaThree])
+
   function skyClick(e) {
     e.preventDefault();
     setImageShowedAreaRossa([])
     setImageShowedAreaVerde([])
+    setActiveCallBack('start')
     setNewImageCallback('start', 'grass')
   }
 
@@ -267,7 +389,19 @@ export const JinxStart = ({setNewImageCallback}) => {
     e.preventDefault();
     setImageShowedAreaRossa([])
     setImageShowedAreaVerde([])
+    setImageShowedAreaThree([])
+    setActiveCallBack('people')
     setNewImageCallback('people', 'grass')
+  }
+
+
+  function grassClick(e) {
+    e.preventDefault();
+    setImageShowedAreaRossa([])
+    setImageShowedAreaVerde([])
+    setImageShowedAreaThree([])
+    setActiveCallBack('sky')
+    setNewImageCallback('sky', 'grass')
   }
 
   return (
@@ -288,9 +422,12 @@ export const JinxStart = ({setNewImageCallback}) => {
     // </div>
 
     <div >
-      <img ref={ref}  src={Sfondo} className='backgroundJinxSky' />
+      <img ref={observe}  src={Sfondo} className='backgroundJinxSky' />
       {/* <div id="areaCielo" ref={refAreaRossa} > */}
-      <div ref={refAreaRossa}  onClick={skyClick}
+
+      {
+          (activeImage === 'grass') ? <Fragment>
+        <div ref={refAreaRossa}  onClick={skyClick}
       style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne != '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
       // style={{border: '2px solid white', width: '10vw', height: '10vh', position:'absolute', top: '10vh'}}
       >
@@ -309,6 +446,29 @@ export const JinxStart = ({setNewImageCallback}) => {
           ))
         }
       </div>
+
+      <div id="areaThree" ref={refAreaThree} onClick={grassClick}
+      style={{borderRadius: '15px', width: (widthSquareThree !== '' ? widthSquareThree : 0), height: (heightSquareThree !== '' ? heightSquareThree : 0), border: '2px solid white', position:'absolute', left: (leftSquareThree != '' ? leftSquareThree : 0), top: (topSquareThree !== '' ? topSquareThree : 0)}}
+      >
+        {
+          imageShowedAreaThree.map((image, index) => (
+            <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
+          ))
+        }
+      </div>
+
+          </Fragment> :  <Fragment>      <div ref={refAreaRossa}   onClick={skyClick} >
+          </div>
+          <div ref={refAreaVerde} onClick={peopleClick} >
+          </div>
+          <div  ref={refAreaThree} onClick={grassClick}>
+
+          </div>
+        </Fragment>
+        
+        }
+
+      
   </div>
   )
 }

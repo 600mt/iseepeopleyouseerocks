@@ -1,7 +1,16 @@
 #framTwoPages {
   background-color: #ececec;
-  height: 100vh;
+  height: 92vh;
+  padding-top: 3vh;
   position: relative;
+}
+
+#iconBack {
+  width: 2vh 
+}
+
+#iconLeft{
+  width: 4vh 
 }
 
 #navbarFrameTwoPages {

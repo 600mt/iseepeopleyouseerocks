@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import useMouse from '@react-hook/mouse-position'
-import useDimensions from 'react-use-dimensions'
+import useDimensions from 'react-cool-dimensions'
 
 import './resources/style.css'
 import Image_1 from './resources/img/1.png'
@@ -58,13 +58,22 @@ import e11 from './resources/img/edifice/e11.jpeg'
 import e12 from './resources/img/edifice/e12.jpeg'
 
 //  background-image: url("./img/sky.png")";
+import {useMediaQuery} from './utils'
 
 import ImageJinx from './components/ImageJinx'
 
 
-export const JinxSky = ({setNewImageCallback}) => {
+export const JinxSky = ({setNewImageCallback, activeImage, setActiveCallBack}) => {
+  const [widthScreen, heightScreen] = useMediaQuery()
+  const { observe, unobserve, width, height, entry } = useDimensions({
+    onResize: ({ observe, unobserve, width, height, entry }) => {
+      // Triggered whenever the size of the target is changed...
 
-  const [ref, {width, height }] = useDimensions()
+      unobserve(); // To stop observing the current target element
+      observe(); // To re-start observing the current target element
+    },
+  });
+
 
 
   const [widthSquareOne, setWidthSquareOne] = useState('')
@@ -81,27 +90,38 @@ export const JinxSky = ({setNewImageCallback}) => {
 
 
   useEffect(() => {
-    console.log('height', height, 'squareone', heightSquareOne)
-    if (widthSquareOne === '' && !isNaN(width) && heightSquareOne === '' && !isNaN(height)) {      
-      setWidthSquareOne(width*0.55)
-      setHeightSquareOne(height*0.30)
+    if((widthScreen/heightScreen) !== (4/3)) {
+      if(!isNaN(width) && !isNaN(height)) {
+        setWidthSquareOne(width*0.5)
+        setHeightSquareOne(height*0.3)
+  
+        setWidthSquareTwo(width*0.96)
+        setHeightSquareTwo(height*0.30)
+      }
+  
+      setLeftSquareOne(width *0.3)
+      setTopSquareOne(width *0.32)
+  
+      setLeftSquareTwo(width *0.02)
+      setTopSquareTwo(width *0.64)
 
-      setWidthSquareTwo(width*1.08)
-      setHeightSquareTwo(height*0.30)
-    } 
-    if(widthSquareOne !== '' && heightSquareOne !== '') {
-      setWidthSquareOne(width*0.55)
-      setHeightSquareOne(height*0.30)
-
-      setWidthSquareTwo(width*1.08)
-      setHeightSquareTwo(height*0.30)
+    } else {
+      if(!isNaN(width) && !isNaN(height)) {
+        setWidthSquareOne(width*0.48)
+        setHeightSquareOne(height*0.28)
+  
+        setWidthSquareTwo(width*0.96)
+        setHeightSquareTwo(height*0.35)
+      }
+  
+      setLeftSquareOne(width *0.3)
+      setTopSquareOne(width *0.48)
+  
+      setLeftSquareTwo(width *0.02)
+      setTopSquareTwo(width *0.9)
     }
 
-    setLeftSquareOne(width *0.3)
-    setTopSquareOne(width *0.42)
-
-    setLeftSquareTwo(width *0.02)
-    setTopSquareTwo(width *0.78)
+    
   }, [width])
 
 
@@ -129,7 +149,8 @@ export const JinxSky = ({setNewImageCallback}) => {
   //Area Cappello
   // const imagesAreaVerde = [Image_14, Image_15, Image_16, Image_17, Image_18, Image_19, Image_20, Image_21, Image_22, Image_23, Image_24, Image_25]
 
-  const imagesAreaVerde = [g1,
+  const imagesAreaVerde = [
+    g1,
     g2,
     g3,
     g4,
@@ -263,6 +284,7 @@ export const JinxSky = ({setNewImageCallback}) => {
     e.preventDefault();
     setImageShowedAreaRossa([])
     setImageShowedAreaVerde([])
+    setActiveCallBack('edifice')
     setNewImageCallback('edifice', 'sky')
   }
 
@@ -270,32 +292,43 @@ export const JinxSky = ({setNewImageCallback}) => {
     e.preventDefault();
     setImageShowedAreaRossa([])
     setImageShowedAreaVerde([])
+    setActiveCallBack('grass')
     setNewImageCallback('grass', 'sky')
   }
 
   return (
       <div >
-        <img ref={ref}  src={Sfondo} className='backgroundJinxSky' />
-        {/* <div id="areaCielo" ref={refAreaRossa} > */}
-        <div ref={refAreaRossa}   onClick={skyClick}
-        style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne != '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
-        // style={{border: '2px solid white', width: '10vw', height: '10vh', position:'absolute', top: '10vh'}}
-        >
-         
-         
-          {imageShowedAreaRossa.map((image, index) => (
+        <img ref={observe}  src={Sfondo} className='backgroundJinxSky' />
+
+        {
+          (activeImage === 'sky') ? <Fragment>
+          <div ref={refAreaRossa}   onClick={skyClick}
+          style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne != '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
+          // style={{border: '2px solid white', width: '10vw', height: '10vh', position:'absolute', top: '10vh'}}
+          >
+          
+          
+            {imageShowedAreaRossa.map((image, index) => (
+                  <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
+                ))}
+          </div>
+          <div id="areaCappello" ref={refAreaVerde} onClick={peopleClick}
+          style={{borderRadius: '15px', width: (widthSquareTwo !== '' ? widthSquareTwo : 0), height: (heightSquareTwo !== '' ? heightSquareTwo : 0), border: '2px solid white', position:'absolute', left: (leftSquareTwo != '' ? leftSquareTwo : 0), top: (topSquareTwo !== '' ? topSquareTwo : 0)}}
+          >
+            {
+              imageShowedAreaVerde.map((image, index) => (
                 <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
-              ))}
-        </div>
-        <div id="areaCappello" ref={refAreaVerde} onClick={peopleClick}
-        style={{borderRadius: '15px', width: (widthSquareTwo !== '' ? widthSquareTwo : 0), height: (heightSquareTwo !== '' ? heightSquareTwo : 0), border: '2px solid white', position:'absolute', left: (leftSquareTwo != '' ? leftSquareTwo : 0), top: (topSquareTwo !== '' ? topSquareTwo : 0)}}
-        >
-          {
-            imageShowedAreaVerde.map((image, index) => (
-              <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
-            ))
-          }
-        </div>
+              ))
+            }
+          </div>
+        </Fragment> : <Fragment>
+          <div ref={refAreaRossa}   onClick={skyClick} >
+          </div>
+          <div ref={refAreaVerde} onClick={peopleClick} >
+          </div>
+        </Fragment>
+        }
+        
       </div>
   )
 }

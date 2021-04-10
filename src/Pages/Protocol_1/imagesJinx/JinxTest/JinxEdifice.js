@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import useMouse from '@react-hook/mouse-position'
 
 import './resources/style.css'
@@ -97,12 +97,22 @@ import b12 from './resources/img/sky/b12.png'
 
 import Sfondo from   './resources/img/edifice.jpg'
 import ImageJinx from './components/ImageJinx'
-import useDimensions from 'react-use-dimensions'
-
-export const JinxStart = ({setNewImageCallback}) => {
+import useDimensions from 'react-cool-dimensions'
 
 
-  const [ref, {width, height }] = useDimensions()
+import {useMediaQuery} from './utils'
+
+export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack}) => {
+  const [widthScreen, heightScreen] = useMediaQuery()
+
+  const { observe, unobserve, width, height, entry } = useDimensions({
+    onResize: ({ observe, unobserve, width, height, entry }) => {
+      // Triggered whenever the size of the target is changed...
+
+      unobserve(); // To stop observing the current target element
+      observe(); // To re-start observing the current target element
+    },
+  });
 
 
   const [widthSquareOne, setWidthSquareOne] = useState('')
@@ -119,27 +129,36 @@ export const JinxStart = ({setNewImageCallback}) => {
 
 
   useEffect(() => {
-    console.log('height', height, 'squareone', heightSquareOne)
-    if (widthSquareOne === '' && !isNaN(width) && heightSquareOne === '' && !isNaN(height)) {      
-      setWidthSquareOne(width*0.98)
-      setHeightSquareOne(height*0.25)
-
-      setWidthSquareTwo(width*0.5)
-      setHeightSquareTwo(height*0.31)
-    } 
-    if(widthSquareOne !== '' && heightSquareOne !== '') {
-      setWidthSquareOne(width*0.98)
-      setHeightSquareOne(height*0.25)
-
-      setWidthSquareTwo(width*0.7)
-      setHeightSquareTwo(height*0.51)
+    if((widthScreen/heightScreen) !== (4/3)) {
+      if(!isNaN(width) && !isNaN(height)) {
+        setWidthSquareOne(width*0.87)
+        setHeightSquareOne(height*0.25)
+  
+        setWidthSquareTwo(width*0.5)
+        setHeightSquareTwo(height*0.51)
+      }
+  
+      setLeftSquareOne(width *0.1)
+      setTopSquareOne(width *0.02)
+  
+      setLeftSquareTwo(width *0.26)
+      setTopSquareTwo(width *0.10)
+    } else {
+      if(!isNaN(width) && !isNaN(height)) {
+        setWidthSquareOne(width*0.98)
+        setHeightSquareOne(height*0.25)
+  
+        setWidthSquareTwo(width*0.6)
+        setHeightSquareTwo(height*0.33)
+      }
+  
+      setLeftSquareOne(width *0.01)
+      setTopSquareOne(width *0.01)
+  
+      setLeftSquareTwo(width *0.22)
+      setTopSquareTwo(width *0.30)
     }
-
-    setLeftSquareOne(width *0.1)
-    setTopSquareOne(width *0.02)
-
-    setLeftSquareTwo(width *0.26)
-    setTopSquareTwo(width *0.14)
+    
   }, [width])
 
 
@@ -300,6 +319,7 @@ export const JinxStart = ({setNewImageCallback}) => {
     e.preventDefault();
     setImageShowedAreaRossa([])
     setImageShowedAreaVerde([])
+    setActiveCallBack('start')
     setNewImageCallback('start', 'edifice')
   }
 
@@ -307,6 +327,7 @@ export const JinxStart = ({setNewImageCallback}) => {
     e.preventDefault();
     setImageShowedAreaRossa([])
     setImageShowedAreaVerde([])
+    setActiveCallBack('sky')
     setNewImageCallback('sky', 'edifice')
   }
 
@@ -328,12 +349,17 @@ export const JinxStart = ({setNewImageCallback}) => {
     // </div>
 
     <div >
-      <img ref={ref}  src={Sfondo} className='backgroundJinxSky' />
+      <img ref={observe}  src={Sfondo} className='backgroundJinxSky' />
       {/* <div id="areaCielo" ref={refAreaRossa} > */}
-      <div ref={refAreaRossa}  onClick={skyClick}
+
+
+      {
+          (activeImage === 'edifice') ? <Fragment>
+ <div ref={refAreaRossa}  onClick={skyClick}
       style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne != '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
       // style={{border: '2px solid white', width: '10vw', height: '10vh', position:'absolute', top: '10vh'}}
       >
+      
       
       
         {imageShowedAreaRossa.map((image, index) => (
@@ -349,6 +375,17 @@ export const JinxStart = ({setNewImageCallback}) => {
           ))
         }
       </div>
+            
+          </Fragment>:<Fragment>
+          <div ref={refAreaRossa}   onClick={skyClick} >
+          </div>
+          <div ref={refAreaVerde} onClick={peopleClick} >
+          </div>
+        </Fragment>
+                        
+            }
+
+     
   </div>
   )
 }

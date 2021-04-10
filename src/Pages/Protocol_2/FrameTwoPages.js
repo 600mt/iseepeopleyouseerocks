@@ -22,6 +22,8 @@ import Navbar from './components/Navbar/Navbar'
 import ImageCarrousel from './components/ImageCarrousel/ImageCarrousel'
 import { Fragment } from 'react'
 
+import info_logo from '../resources/img/navbarInfo.svg'
+import back_logo from '../resources/img/navbarBack.svg'
 import NavbarAbout from './components/NavbarAbout/Navbar'
 
 export const FrameTwoPages = () => {
@@ -30,8 +32,24 @@ export const FrameTwoPages = () => {
   
   return (
   <Fragment style={{position: 'relative'}}>
+    
+    <div className="container-fluid" style={{backgroundColor: '#ececec', height: '8vh'}}>
+      <div className="row" id='titleHomepage'> 
+          <div className="col-2 col-md-3" id="r3-long-back">
+             <h2 id="text-right" style={{cursor: 'pointer'}}><img src={back_logo} alt="info"></img></h2>
+          </div>
+          <div className="col-10 col-md-6 text-center" id="r1-protocol2">
+              <h2 className='fontTitoli'>Algorithms are forgetfull</h2>
+          </div>
+          <div className="col-2 col-md-3" id="r3-long">
+             <h2 id="text-right" style={{cursor: 'pointer'}}><img src={info_logo} alt="info"></img></h2>
+          </div>
+        </div>
+      </div>
+
+
     <div id='framTwoPages'  style={{width: '100vw', position: 'absolute', zIndex: 0}}>
-        <Navbar setShow={setShow} show={show} />
+        {/* <Navbar setShow={setShow} show={show} /> */}
         <div id='firstTopImages' />
         <div id='imageAndMaskProtocollo2'>
           <div id='imageBackground'>
