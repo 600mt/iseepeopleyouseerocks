@@ -84,8 +84,8 @@ mark:hover {
 h3
 {
     color:black;
-    font-size:120%;
-    line-height: 130%;
+    font-size:100%;
+    line-height: 110%;
     font-family: "SF-medium";
     line-height: 2%;
 }
@@ -94,7 +94,7 @@ h4
 {
     color:grey;
     font-size:100%;
-    line-height: 130%;
+    line-height: 110%;
     font-family: "SF-medium";
 }
 
