@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef  } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import useMouse from '@react-hook/mouse-position'
 
 import './resources/style.css'
@@ -29,19 +29,6 @@ import Image_23 from './resources/img/23.png'
 import Image_24 from './resources/img/24.png'
 import Image_25 from './resources/img/25.png'
 
-import p1 from './resources/img/people/p1.jpeg'
-import p2 from './resources/img/people/p2.jpeg'
-import p3 from './resources/img/people/p3.jpeg'
-import p4 from './resources/img/people/p4.jpeg'
-import p5 from './resources/img/people/p5.jpeg'
-import p6 from './resources/img/people/p6.jpeg'
-import p7 from './resources/img/people/p7.jpeg'
-import p8 from './resources/img/people/p8.jpeg'
-import p9 from './resources/img/people/p9.jpeg'
-import p10 from './resources/img/people/p10.jpeg'
-import p11 from './resources/img/people/p11.jpeg'
-import p12 from './resources/img/people/p12.jpeg'
-
 import b1 from './resources/img/sky/b1.png'
 import b2 from './resources/img/sky/b2.png'
 import b3 from './resources/img/sky/b3.png'
@@ -55,17 +42,483 @@ import b10 from './resources/img/sky/b10.png'
 import b11 from './resources/img/sky/b11.png'
 import b12 from './resources/img/sky/b12.png'
 
+import p1 from './resources/img/people/p1.jpeg'
+import p2 from './resources/img/people/p2.jpeg'
+import p3 from './resources/img/people/p3.jpeg'
+import p4 from './resources/img/people/p4.jpeg'
+import p5 from './resources/img/people/p5.jpeg'
+import p6 from './resources/img/people/p6.jpeg'
+import p7 from './resources/img/people/p7.jpeg'
+import p8 from './resources/img/people/p8.jpeg'
+import p9 from './resources/img/people/p9.jpeg'
+import p10 from './resources/img/people/p10.jpeg'
+import p11 from './resources/img/people/p11.jpeg'
+import p12 from './resources/img/people/p12.jpeg'
+
+import g1 from './resources/img/grass/g1.jpeg'
+import g2 from './resources/img/grass/g2.jpeg'
+import g3 from './resources/img/grass/g3.jpeg'
+import g4 from './resources/img/grass/g4.jpeg'
+import g5 from './resources/img/grass/g5.jpeg'
+import g6 from './resources/img/grass/g6.jpeg'
+import g7 from './resources/img/grass/g7.jpeg'
+import g8 from './resources/img/grass/g8.jpeg'
+import g9 from './resources/img/grass/g9.jpeg'
+import g10 from './resources/img/grass/g10.jpeg'
+import g11 from './resources/img/grass/g11.jpeg'
+import g12 from './resources/img/grass/g12.jpeg'
+
 import Sfondo from   './resources/img/example.png'
 import ImageJinx from './components/ImageJinx'
 import useDimensions from 'react-cool-dimensions'
 
-export const JinxStart = () => {
+import {useMediaQuery} from './utils'
+
+export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack}) => {
+  const [widthScreen, heightScreen] = useMediaQuery()
+
+  const { observe, unobserve, width, height, entry } = useDimensions({
+    onResize: ({ observe, unobserve, width, height, entry }) => {
+      // Triggered whenever the size of the target is changed...
+
+      unobserve(); // To stop observing the current target element
+      observe(); // To re-start observing the current target element
+    },
+  });
+
+
+  const [widthSquareOne, setWidthSquareOne] = useState('')
+  const [heightSquareOne, setHeightSquareOne] = useState('')
+
+  const [leftSquareOne, setLeftSquareOne] = useState('')
+  const [topSquareOne, setTopSquareOne] = useState('')
+
+  const [widthSquareTwo, setWidthSquareTwo] = useState('')
+  const [heightSquareTwo, setHeightSquareTwo] = useState('')
+
+  const [leftSquareTwo, setLeftSquareTwo] = useState('')
+  const [topSquareTwo, setTopSquareTwo] = useState('')
+
+  const [widthSquareThree, setWidthSquareThree] = useState('')
+  const [heightSquareThree, setHeightSquareThree] = useState('')
+
+  const [leftSquareThree, setLeftSquareThree] = useState('')
+  const [topSquareThree, setTopSquareThree] = useState('')
+
+  useEffect(() => {
+    if((widthScreen/heightScreen) !== (4/3)) { 
+      if(!isNaN(width) && !isNaN(height)) {
+        setWidthSquareOne(width*0.98)
+        setHeightSquareOne(height*0.3)
+  
+        setWidthSquareTwo(width*0.2)
+        setHeightSquareTwo(height*0.3)
+  
+        setWidthSquareThree(width * 0.97)
+        setHeightSquareThree(height*0.25)
+      }
+  
+      setLeftSquareOne(width *0.01)
+      setTopSquareOne(width *0.02)
+  
+      setLeftSquareTwo(width *0.35)
+      setTopSquareTwo(width *0.4)
+  
+      setLeftSquareThree(width *0.01)
+      setTopSquareThree(width *0.7)
+    } else {
+      if(!isNaN(width) && !isNaN(height)) {
+        setWidthSquareOne(width*0.98)
+        setHeightSquareOne(height*0.3)
+  
+        setWidthSquareTwo(width*0.2)
+        setHeightSquareTwo(height*0.2)
+  
+        setWidthSquareThree(width * 0.98)
+        setHeightSquareThree(height*0.36)
+      }
+  
+      setLeftSquareOne(width *0.01)
+      setTopSquareOne(width *0.01)
+  
+      setLeftSquareTwo(width *0.35)
+      setTopSquareTwo(width *0.6)
+  
+      setLeftSquareThree(width *0.01)
+      setTopSquareThree(width *0.9)
+    }
+    
+  }, [width])
+
+
+
+  const [indexAreaVerde, setIndexAreaVerde] = useState(0)
+  const [indexAreaRossa, setIndexAreaRossa] = useState(0)
+  const [indexAreaThree, setIndexAreaThree] = useState(0)
+  //Area Cielo
+  // const imagesAreaRossa = [Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, Image_12, Image_13]
+  
+  const imagesAreaRossa = [
+    b1,
+    b2,
+    b3,
+    b4,
+    b5,
+    b6,
+    b7,
+    b8,
+    b9,
+    b10,
+    b11,
+    b12
+  ]
+
+  //Area Cappello
+  // const imagesAreaVerde = [Image_14, Image_15, Image_16, Image_17, Image_18, Image_19, Image_20, Image_21, Image_22, Image_23, Image_24, Image_25]
+  const imagesAreaVerde = [
+    p1,
+    p2,
+    p3,
+    p4,
+    p5,
+    p6,
+    p7,
+    p8,
+    p9,
+    p10,
+    p11,
+    p12
+  ]
+
+  const imagesAreaThree = [
+    g1,
+    g2,
+    g3,
+    g4,
+    g5,
+    g6,
+    g7,
+    g8,
+    g9,
+    g10,
+    g11,
+    g12
+  ]
+
+  const [imageShowedAreaRossa, setImageShowedAreaRossa] = useState([])
+  const [imageShowedAreaVerde, setImageShowedAreaVerde] = useState([])
+  const [imageShowedAreaThree, setImageShowedAreaThree] = useState([])
+
+  const [pastPositionAreaVerde, setPastPositionAreaVerde] = useState({
+    x: 0,
+    y: 0
+  })
+
+  const [pastPositionAreaRossa, setPastPositionAreaRossa] = useState({
+    x: 0,
+    y: 0
+  })
+
+  const [pastPositionAreaThree, setPastPositionAreaThree] = useState({
+    x: 0,
+    y: 0
+  })
+
+
+  const refAreaRossa = React.useRef(null)
+  const refAreaVerde = React.useRef(null)
+  const refAreaThree = React.useRef(null)
+  const mouseAreaRossa = useMouse(refAreaRossa, {
+    fps: 60,
+    enterDelay: 100,
+    leaveDelay: 100,
+  })
+
+  const mouseAreaVerde = useMouse(refAreaVerde, {
+    fps: 60,
+    enterDelay: 100,
+    leaveDelay: 100
+  })
+
+  const mouseAreaThree = useMouse(refAreaThree, {
+    fps: 60,
+    enterDelay: 100,
+    leaveDelay: 100
+  })
+ 
+  //Area Verde
+  useEffect(() => {
+    if(
+        (
+          mouseAreaVerde.x < refAreaVerde.current.clientWidth && 
+          mouseAreaVerde.x > -1 &&
+          mouseAreaVerde.y < refAreaVerde.current.clientHeight &&
+          mouseAreaVerde.y > -1
+        ) 
+        &&
+        (
+          Math.abs(mouseAreaVerde.x - pastPositionAreaVerde.x) > 10 ||
+          Math.abs(mouseAreaVerde.y - pastPositionAreaVerde.y) > 10
+        ) 
+      ) {
+        const newImage = {
+          src: imagesAreaVerde[indexAreaVerde],
+          inputZIndex: 5,
+          positionImage: mouseAreaVerde
+        }
+
+        setIndexAreaVerde(indexAreaVerde + 1)
+
+        if(indexAreaVerde === 14) {
+          setIndexAreaVerde(0)
+        }
+
+        const tempArray = [...imageShowedAreaVerde]
+        tempArray.push(newImage)
+        setImageShowedAreaVerde(tempArray)
+
+        if(imageShowedAreaVerde.length > 13) {
+          const tempArrayTwo = [...imageShowedAreaVerde]
+          tempArrayTwo.shift()
+          setImageShowedAreaVerde(tempArrayTwo)
+        }
+
+        setPastPositionAreaVerde({
+          x: mouseAreaVerde.x,
+          y: mouseAreaVerde.y
+        })
+      }
+  }, [imageShowedAreaVerde, mouseAreaVerde, indexAreaVerde, pastPositionAreaVerde])
+
+  //Area Rossa
+  useEffect(() => {
+    if(
+        (
+          mouseAreaRossa.x < refAreaRossa.current.clientWidth && 
+          mouseAreaRossa.x > -1 &&
+          mouseAreaRossa.y < refAreaRossa.current.clientHeight &&
+          mouseAreaRossa.y > -1
+        ) 
+        &&
+        (
+          Math.abs(mouseAreaRossa.x - pastPositionAreaRossa.x) > 10 ||
+          Math.abs(mouseAreaRossa.y - pastPositionAreaRossa.y) > 10
+        ) 
+      ) {
+        const newImage = {
+          src: imagesAreaRossa[indexAreaRossa],
+          inputZIndex: 10,
+          positionImage: mouseAreaRossa
+        }
+
+        setIndexAreaRossa(indexAreaRossa + 1)
+
+        if(indexAreaRossa === 14) {
+          setIndexAreaRossa(0)
+        }
+
+        const temp = [...imageShowedAreaRossa]
+        temp.push(newImage)
+        setImageShowedAreaRossa(temp)
+
+        if(imageShowedAreaRossa.length > 13) {
+          const tempArrayTwo = [...imageShowedAreaRossa]
+          tempArrayTwo.shift()
+          setImageShowedAreaRossa(tempArrayTwo)
+        }
+        setPastPositionAreaRossa({
+          x: mouseAreaRossa.x,
+          y: mouseAreaRossa.y
+        })
+      }
+  }, [imageShowedAreaRossa, mouseAreaRossa, indexAreaRossa, pastPositionAreaRossa])
+
+  //third area
+  useEffect(() => {
+    if(
+        (
+          mouseAreaThree.x < refAreaThree.current.clientWidth && 
+          mouseAreaThree.x > -1 &&
+          mouseAreaThree.y < refAreaThree.current.clientHeight &&
+          mouseAreaThree.y > -1
+        ) 
+        &&
+        (
+          Math.abs(mouseAreaThree.x - pastPositionAreaThree.x) > 10 ||
+          Math.abs(mouseAreaThree.y - pastPositionAreaThree.y) > 10
+        ) 
+      ) {
+        const newImage = {
+          src: imagesAreaThree[indexAreaThree],
+          inputZIndex: 10,
+          positionImage: mouseAreaThree
+        }
+
+        setIndexAreaThree(indexAreaThree + 1)
+
+        if(indexAreaThree === 14) {
+          setIndexAreaThree(0)
+        }
+
+        const temp = [...imageShowedAreaThree]
+        temp.push(newImage)
+        setImageShowedAreaThree(temp)
+
+        if(imageShowedAreaThree.length > 13) {
+          const tempArrayTwo = [...imageShowedAreaThree]
+          tempArrayTwo.shift()
+          setImageShowedAreaThree(tempArrayTwo)
+        }
+        setPastPositionAreaThree({
+          x: mouseAreaThree.x,
+          y: mouseAreaThree.y
+        })
+      }
+  }, [imageShowedAreaThree, mouseAreaThree, indexAreaThree, pastPositionAreaThree])
+
+  function skyClick(e) {
+    e.preventDefault();
+    setImageShowedAreaRossa([])
+    setImageShowedAreaVerde([])
+    setImageShowedAreaThree([])
+    setActiveCallBack('start')
+    setNewImageCallback('start', 'grass')
+  }
+
+  function peopleClick(e) {
+    e.preventDefault();
+    setImageShowedAreaRossa([])
+    setImageShowedAreaVerde([])
+    setImageShowedAreaThree([])
+    setActiveCallBack('people')
+    setNewImageCallback('people', 'grass')
+  }
+
+
+  function grassClick(e) {
+    e.preventDefault();
+    setImageShowedAreaRossa([])
+    setImageShowedAreaVerde([])
+    setImageShowedAreaThree([])
+    setActiveCallBack('sky')
+    setNewImageCallback('sky', 'grass')
+  }
 
   return (
-    <div>
-      <div>
-        <img  src={Sfondo} />
+
+    <div >
+      <img src={Sfondo} className='backgroundExample'/>
+      {/* <div ref={observe} className='backgroundJinxSky' style={{
+        backgroundColor: '#d7d7d7',
+        position: 'relative',
+        border: '10px solid hsla(0,0%,100%,.5)'
+      }}> 
+      
+      <div 
+        style={{
+          position: 'absolute',
+          left: '20%',
+          top: '45%',
+          color: 'black',
+          fontSize: '120%',
+          zIndex: 3
+        }}
+        className='text-center'
+      >
+        <b>Browse the images' catalogue <br /> by moving the cursor on a white box <br /> and then clicking it</b>
       </div>
+
+      <div  style={{
+        borderRadius: '15px', 
+        width: '30%', 
+        height: '90%', 
+        border: '2px solid white', 
+        position:'absolute', 
+        left: '63%', 
+        top: '3%',
+        zIndex: 1
+      }} />
+
+     <div  style={{
+        borderRadius: '15px', 
+        width: 230, 
+        height: 100, 
+        border: '2px solid white', 
+        position:'absolute', 
+        left: '40%', 
+        top: '30%',
+        zIndex: 1
+      }} />
+
+    <div  style={{
+        borderRadius: '15px', 
+        width: 130, 
+        height: 300, 
+        border: '2px solid white', 
+        position:'absolute', 
+        left: 120, 
+        top: 230,
+        zIndex: 1
+      }} />
+
+    <div  style={{
+        borderRadius: '15px', 
+        width: 430, 
+        height: 160, 
+        border: '2px solid white', 
+        position:'absolute', 
+        left: 40, 
+        top: 550,
+        zIndex: 1
+      }} />
+      
+      </div> */}
+      {/* <div id="areaCielo" ref={refAreaRossa} > */}
+
+      {
+          (activeImage === 'grass') ? <Fragment>
+        <div ref={refAreaRossa}  onClick={skyClick}
+      style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne != '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
+      // style={{border: '2px solid white', width: '10vw', height: '10vh', position:'absolute', top: '10vh'}}
+      >
+      
+      
+        {imageShowedAreaRossa.map((image, index) => (
+              <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
+            ))}
+      </div>
+      <div id="areaCappello" ref={refAreaVerde} onClick={peopleClick}
+      style={{borderRadius: '15px', width: (widthSquareTwo !== '' ? widthSquareTwo : 0), height: (heightSquareTwo !== '' ? heightSquareTwo : 0), border: '2px solid white', position:'absolute', left: (leftSquareTwo != '' ? leftSquareTwo : 0), top: (topSquareTwo !== '' ? topSquareTwo : 0)}}
+      >
+        {
+          imageShowedAreaVerde.map((image, index) => (
+            <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
+          ))
+        }
+      </div>
+
+      <div id="areaThree" ref={refAreaThree} onClick={grassClick}
+      style={{borderRadius: '15px', width: (widthSquareThree !== '' ? widthSquareThree : 0), height: (heightSquareThree !== '' ? heightSquareThree : 0), border: '2px solid white', position:'absolute', left: (leftSquareThree != '' ? leftSquareThree : 0), top: (topSquareThree !== '' ? topSquareThree : 0)}}
+      >
+        {
+          imageShowedAreaThree.map((image, index) => (
+            <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
+          ))
+        }
+      </div>
+
+          </Fragment> :  <Fragment>      <div ref={refAreaRossa}   onClick={skyClick} >
+          </div>
+          <div ref={refAreaVerde} onClick={peopleClick} >
+          </div>
+          <div  ref={refAreaThree} onClick={grassClick}>
+
+          </div>
+        </Fragment>
+        
+        }
+
+      
   </div>
   )
 }

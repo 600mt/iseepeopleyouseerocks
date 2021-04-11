@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 import './resources/style.css'
 import Image_1 from './resources/img/1.png'
@@ -36,13 +37,13 @@ export const FrameTwoPages = () => {
     <div className="container-fluid" style={{backgroundColor: '#ececec', height: '8vh'}}>
       <div className="row" id='titleHomepage'> 
           <div className="col-2 col-md-3" id="r3-long-back">
-             <h2 id="text-right" style={{cursor: 'pointer'}}><img src={back_logo} alt="info"></img></h2>
+          <Link to='/'> <h2 id="text-right" style={{cursor: 'pointer'}}><img id='iconBack' style={{cursor: 'pointer'}} src={back_logo} alt="info"></img></h2></Link>
           </div>
           <div className="col-10 col-md-6 text-center" id="r1-protocol2">
-              <h2 className='fontTitoli'>Algorithms are forgetfull</h2>
+              <h2 className='fontTitoli'>Algorithms are explorers</h2>
           </div>
           <div className="col-2 col-md-3" id="r3-long">
-             <h2 id="text-right" style={{cursor: 'pointer'}}><img src={info_logo} alt="info"></img></h2>
+             <h2 id="text-right" style={{cursor: 'pointer'}}><img id='iconLeft' style={{cursor: 'pointer'}} src={info_logo} alt="info"></img></h2>
           </div>
         </div>
       </div>
