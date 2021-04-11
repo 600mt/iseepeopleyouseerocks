@@ -18,7 +18,13 @@ import Image_13 from './resources/img/13.png'
 import Image_14 from './resources/img/14.png'
 import Image_15 from './resources/img/15.png'
 import Image_16 from './resources/img/16.png'
-import Image_17 from './resources/img/20.png'
+import Image_17 from './resources/img/17.png'
+import Image_18 from './resources/img/18.png'
+import Image_19 from './resources/img/19.png'
+import Image_20 from './resources/img/20.png'
+import Image_21 from './resources/img/21.png'
+import Image_22 from './resources/img/22.png'
+import Image_23 from './resources/img/23.png'
 import Navbar from './components/Navbar/Navbar'
 import ImageCarrousel from './components/ImageCarrousel/ImageCarrousel'
 import { Fragment } from 'react'
@@ -28,7 +34,10 @@ import back_logo from '../resources/img/navbarBack.svg'
 import NavbarAbout from './components/NavbarAbout/Navbar'
 
 export const FrameTwoPages = () => {
-  const datasetImages = [Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, Image_12, Image_13, Image_14, Image_15, Image_16, Image_17]
+  const datasetImages = [Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, 
+    Image_12, Image_13, Image_14, Image_15, Image_16, Image_17,
+  Image_18, Image_19, Image_20, Image_21, Image_22, Image_23]
+
   const [show, setShow] = useState(false)
   
   return (
@@ -56,11 +65,11 @@ export const FrameTwoPages = () => {
           <div id='imageBackground'>
             <div id='firstLeftBorderImage' />
             <div id='secondMaskImageRealProtocol2'>
-              <ImageCarrousel id='imgPostion' datasetImages={datasetImages} startingIndexImage={0} />
+              <ImageCarrousel id='imgPostion' datasetImages={datasetImages} startingIndexImage={3} />
             </div>
             <div id='thirdCentralImage' />
             <div id='fourthMaskImageRealProtocol2'> 
-              <ImageCarrousel datasetImages={datasetImages} startingIndexImage={9} />
+              <ImageCarrousel datasetImages={datasetImages} startingIndexImage={16} />
             </div>
           </div>
         </div>
