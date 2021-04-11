@@ -190,7 +190,6 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
     p12
   ]
 
-
   const imagesAreaThree = [
     g1,
     g2,
@@ -381,6 +380,7 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
     e.preventDefault();
     setImageShowedAreaRossa([])
     setImageShowedAreaVerde([])
+    setImageShowedAreaThree([])
     setActiveCallBack('start')
     setNewImageCallback('start', 'grass')
   }
@@ -405,21 +405,6 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
   }
 
   return (
-    // <div  className='backgroundJinxStart' >
-      
-    //   <div id="areaCielo" ref={refAreaRossa} onClick={skyClick}>
-    //      {imageShowedAreaRossa.map((image, index) => (
-    //           <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
-    //         ))}
-    //   </div>
-    //   <div id="areaCappello" ref={refAreaVerde} onClick={peopleClick}>
-    //     {
-    //       imageShowedAreaVerde.map((image, index) => (
-    //         <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
-    //       ))
-    //     }
-    //   </div>
-    // </div>
 
     <div >
       <img ref={observe}  src={Sfondo} className='backgroundJinxSky' />

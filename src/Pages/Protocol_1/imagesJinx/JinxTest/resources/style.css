@@ -42,6 +42,19 @@
  /* background-repeat: no-repeat; */
 }
 
+.backgroundExample {
+  border-radius: 2%;
+ position: relative;
+ height: 96vh;
+ width: 101%;
+ /* left: 100px; */
+ /* top: -30px; */
+ /* transform: scale(1); */
+ /* background-image: url("./img/sky.png"); */
+ object-fit: contain;
+ /* background-repeat: no-repeat; */
+}
+
 .backgroundJinxPeople {
   border-radius: 2%;
  position: relative;
