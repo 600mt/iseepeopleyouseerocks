@@ -14,21 +14,21 @@ import About  from './About'
 export const Homepage = () => {
   const [modalShow, setModalShow] = useState(false)
   return (
-    <div>
-      <div className="container-fluid">
-        <div className="row" id='titleHomepage'> 
+    <>
+     <div className="container-fluid" style={{ height: '8vh'}}>
+      <div className="row" id='titleHomepage'> 
           <div className="col-10 col-md-9" id="r1">
               <h2 className='fontTitoli'>I see people you see rocks </h2>
           </div>
           <div className="col-2 col-md-3" id="r2-long">
-             <h2 id="text-right" style={{cursor: 'pointer'}} onClick={() => setModalShow(true)}> <img src={info_logo} alt="info"></img> About </h2>
+             <h2 id="text-right" style={{cursor: 'pointer', fontSize: '4vh'}} onClick={() => setModalShow(true)}> <img src={info_logo} alt="info"></img> About </h2>
              <About
                   show={modalShow}
                   clickMe={() => {}}
                   onHide={() => setModalShow(false)}
               />
           </div>
-          <div className="col-2 col-md-3" id="r2-short">
+          <div className="col-2 col-md-3 d-md-none d-block" id="r2-short">
              <img id="text-right" onClick={() => setModalShow(true)} src={info_logo} alt="info"></img>
              <About
                   show={modalShow}
@@ -37,6 +37,8 @@ export const Homepage = () => {
               />
           </div>
         </div>
+      </div>
+      <div className="container-fluid">
         <div className="row col-md-12" id="protocolli" style={{zIndex:10}}>
       <ul className="horizontal-slide">
         <li className="child col-sm-2 col-md-5">
@@ -84,7 +86,7 @@ export const Homepage = () => {
      </div>
     </div>
       </div>
-   </div>
+   </>
 )}
 
 export default Homepage

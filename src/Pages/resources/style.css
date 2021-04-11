@@ -136,6 +136,18 @@ p {
     text-align: left; /* orizzontale */
 }
 
+#r1-protocol2
+{
+
+    background-color:transparent;
+    width:auto;
+    padding-bottom:0%;
+    padding-left:2%;
+    padding-top:1%;
+    height:3%;
+    text-align: left; /* orizzontale */
+}
+
 #r1-about {
     background-color:transparent;
     width:auto;
@@ -157,6 +169,33 @@ p {
     text-align: right; /* orizzontale */
     display:block;
 }
+
+#r3-long
+{
+
+    background-color:transparent;
+    width:auto;
+    padding-bottom:0%;
+    padding-right:2%;
+    padding-top:1%;
+    height:3%;
+    text-align: right; /* orizzontale */
+    display:block;
+}
+
+#r3-long-back
+{
+
+    background-color:transparent;
+    width:auto;
+    padding-bottom:0%;
+    padding-left:2%;
+    padding-top:1%;
+    height:3%;
+    text-align: left; /* orizzontale */
+    display:block;
+}
+
 
 #r2-short
 {
@@ -377,6 +416,7 @@ mark {
     width:auto;
     padding-bottom:0%;
     padding-left:5%;
+    padding-top:4%;
     padding-top:4%;
     height:3%;
     text-align: left; /* orizzontale */
