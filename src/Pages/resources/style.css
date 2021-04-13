@@ -64,8 +64,9 @@ mark {
 }
 
 .fontTitoli{
-    font-size: 4vh;
+    font-size: 3vh;
     font-weight: 500;
+    padding-top:0.5vh;
 }
 
 mark:hover {
@@ -553,6 +554,12 @@ ul.horizontal-slide li[class*="col"] {
     width:120%;
     height:auto;
     display:block;
+}
+
+.fontTitoli{
+    font-size: 3vh;
+    font-weight: 500;
+    padding-top:0.5vh;
 }
 
 }

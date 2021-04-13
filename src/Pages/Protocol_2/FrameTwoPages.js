@@ -43,12 +43,12 @@ export const FrameTwoPages = () => {
   return (
   <Fragment style={{position: 'relative'}}>
     
-    <div className="container-fluid" style={{backgroundColor: '#ececec', height: '8vh'}}>
+    <div className="container-fluid" style={{backgroundColor: 'white', height: '8vh'}}>
       <div className="row" id='titleHomepage'> 
           <div className="col-2 col-md-3" id="r3-long-back">
           <Link to='/'> <h2 id="text-right" style={{cursor: 'pointer'}}><img id='iconBack' style={{cursor: 'pointer'}} src={back_logo} alt="info"></img></h2></Link>
           </div>
-          <div className="col-10 col-md-6 text-center" id="r1-protocol2">
+          <div className="col-8 col-md-6 text-center" id="r1-protocol2">
               <h2 className='fontTitoli'>Algorithms are explorers</h2>
           </div>
           <div className="col-2 col-md-3" id="r3-long">
@@ -78,7 +78,7 @@ export const FrameTwoPages = () => {
       <div id='aboutProtocollo1' style={{position: 'absolute', zIndex: 2, display: (show ? 'block' : 'none')}} >
       {/* backdrop-filter: blur(10px); */}
       <div style={{position: 'relative'}}>
-      <div style={{position: 'absolute',  filter: 'blur(20px)', height: '100vh', width: '100vw', backgroundColor:  'rgba(255, 255, 255, 0.95)'}}>
+      <div style={{position: 'absolute',  filter: 'blur(20px)', height: '100vh', width: '100vw', backgroundColor:  'white'}}>
         
 
         </div>

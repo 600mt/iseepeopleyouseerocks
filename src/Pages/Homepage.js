@@ -20,7 +20,7 @@ export const Homepage = () => {
               <h2 className='fontTitoli'>I see people you see rocks </h2>
           </div>
           <div className="col-2 col-md-3" id="r2-long">
-             <h2 id="text-right" style={{cursor: 'pointer', fontSize: '4vh'}} onClick={() => setModalShow(true)}> <img src={info_logo} alt="info"></img> About </h2>
+             <h2 id="text-right" style={{cursor: 'pointer', fontSize: '3.5vh'}} onClick={() => setModalShow(true)}> <img src={info_logo} alt="info"></img> About </h2>
              <About
                   show={modalShow}
                   clickMe={() => {}}

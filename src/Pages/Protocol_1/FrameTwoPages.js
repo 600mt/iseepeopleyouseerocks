@@ -73,12 +73,12 @@ export const FrameTwoPages = () => {
   return (
     <Fragment style={{position: 'relative'}} >
 
-    <div className="container-fluid" style={{backgroundColor: '#ececec', height: '8vh'}}>
+    <div className="container-fluid" style={{backgroundColor: 'white', height: '8vh'}}>
       <div className="row" id='titleHomepage'> 
           <div className="col-2 col-md-3" id="r3-long-back">
           <Link to='/'> <h2 id="text-right" style={{cursor: 'pointer'}}><img id='iconBack' style={{cursor: 'pointer'}} src={back_logo} alt="info"></img></h2></Link>
           </div>
-          <div className="col-10 col-md-6 text-center" id="r1-protocol2">
+          <div className="col-8 col-md-6 text-center" id="r1-protocol2">
               <h2 className='fontTitoli'>Algorithms are explorers</h2>
           </div>
           <div className="col-2 col-md-3" id="r3-long">

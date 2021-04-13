@@ -1,16 +1,16 @@
 #framTwoPages {
-  background-color: #ececec;
+  background-color: white;
   height: 92vh;
   padding-top: 3vh;
   position: relative;
 }
 
 #iconBack {
-  width: 2vh 
+  width: 1.5vh 
 }
 
 #iconLeft{
-  width: 4vh 
+  width: 3.5vh 
 }
 
 #navbarFrameTwoPages {
@@ -61,7 +61,7 @@
 
 
 #firstTopImages {
-  background-color: #ececec;
+  background-color: white;
 
   height: 0%;
   width: 100%;
@@ -78,7 +78,7 @@
 }
 
 #secondPartMask {
-  background-color: #ececec;
+  background-color: white;
 
   height: 3%;
   width: 100%;
@@ -93,7 +93,7 @@
 }
 
 #thirdBottomImages {
-  background-color: #ececec;
+  background-color: white;
 
   height: 100%;
   width: 100%;
@@ -101,7 +101,7 @@
 }
 
 #firstLeftBorder {
-  background-color: #ececec;
+  background-color: white;
   display: flex;
 }
 
@@ -121,7 +121,7 @@
 }
 
 #thirdCentral {
-  background-color: #ececec;
+  background-color: white;
 
   display: flex;
 }
@@ -137,7 +137,7 @@
 }
 
 #fifthRightBorder {
-  background-color: #ececec;
+  background-color: white;
 
   display: flex;
 }
