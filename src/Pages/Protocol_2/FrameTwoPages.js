@@ -43,7 +43,7 @@ export const FrameTwoPages = () => {
   return (
   <Fragment style={{position: 'relative'}}>
     
-    <div className="container-fluid" style={{backgroundColor: 'white', height: '8vh'}}>
+    <div className="container-fluid" style={{zIndex: 0, backgroundColor: 'white', height: '8vh'}}>
       <div className="row" id='titleHomepage'> 
           <div className="col-2 col-md-3" id="r3-long-back">
           <Link to='/'> <h2 id="text-right" style={{cursor: 'pointer'}}><img id='iconBack' style={{cursor: 'pointer'}} src={back_logo} alt="info"></img></h2></Link>
@@ -52,11 +52,10 @@ export const FrameTwoPages = () => {
               <h2 className='fontTitoli'>Algorithms are explorers</h2>
           </div>
           <div className="col-2 col-md-3" id="r3-long">
-             <h2 id="text-right" style={{cursor: 'pointer'}}><img id='iconLeft' style={{cursor: 'pointer'}} src={info_logo} alt="info"></img></h2>
+             <h2 id="text-right" style={{cursor: 'pointer'}}><img onClick={() => setShow(!show)} id='iconLeft' style={{cursor: 'pointer'}} src={info_logo} alt="info"></img></h2>
           </div>
-        </div>
       </div>
-
+    </div>
 
     <div id='framTwoPages'  style={{width: '100vw', position: 'absolute', zIndex: 0}}>
         {/* <Navbar setShow={setShow} show={show} /> */}
@@ -75,22 +74,30 @@ export const FrameTwoPages = () => {
         </div>
       </div>
 
-      <div id='aboutProtocollo1' style={{position: 'absolute', zIndex: 2, display: (show ? 'block' : 'none')}} >
+    <div id='aboutProtocollo1' style={{position: 'absolute', zIndex: 2, display: (show ? 'block' : 'none')}} >
       {/* backdrop-filter: blur(10px); */}
       <div style={{position: 'relative'}}>
-      <div style={{position: 'absolute',  filter: 'blur(20px)', height: '100vh', width: '100vw', backgroundColor:  'white'}}>
-        
+        <div style={{position: 'absolute',  filter: 'blur(20px)', height: '300px', zIndex: 1, width: '300px', backgroundColor:  'white'}} />
+        <div style={{position: 'absolute', height: '100%', width: '100%'}}>
 
+          <div id='titleHomepageAbout'> 
+            <div className="col-2 col-md-3" id="r3-long-back" style={{paddingLeft: '1%', paddingTop: '1vh'}}>
+            <Link to='/'> <h2 id="text-right" style={{cursor: 'pointer'}}><img id='iconBack' style={{cursor: 'pointer'}} src={back_logo} alt="info"></img></h2></Link>
+            </div>
+            <div className="col-8 col-md-6 text-center" id="r1-protocol2" style={{paddingTop: '1vh'}}>
+                <h2 className='fontTitoli'>Algorithms are explorers</h2>
+            </div>
+            <div className="col-2 col-md-3" id="r3-long" style={{paddingRight: '1%', paddingTop: '1vh'}}>
+              <h2 id="text-right" style={{cursor: 'pointer'}}><img onClick={() => setShow(!show)} id='iconLeft' style={{cursor: 'pointer'}} src={info_logo} alt="info"></img></h2>
+            </div>
+          </div>
+
+          <p>
+            Object-recognition technologies, deployed via machine learning, analyse contents and label hundreds of pictures in a few moments every day on every iPhone. These technologies enable object-level categorisation and an easier image search by keyword. <br /><br />
+            By comparing human vision with what is recognized by the on-device feature extraction, the artifact displays what was labelled correctly and leaves few clues of what it was not. The limits of interpretation by the machine in object recognition mimics and amplifies the very human feature of forgetting the past. What is recognized by the algorithm is going to be saved for future research, making it browsable again in my gallery. On the other hand, the non-recognized objects cannot be found and could cause the whole picture to get lost in the huge amount of images we produce. <br /><br />
+            In this way multiple recognized fragments of past overlap and merge, becoming new pictures of what it has been. Losing details and contexts of single moments, they finally reach a new status: a continuous stream of partial memories.  
+          </p>
         </div>
-        <div style={{position: 'absolute', height: '100vh', width: '100vw'}}>
-        <p>
-        Object-recognition technologies, deployed via machine learning, analyse contents and label hundreds of pictures in a few moments every day on every iPhone. These technologies enable object-level categorisation and an easier image search by keyword. <br /><br />
-                By comparing human vision with what is recognized by the on-device feature extraction, the artifact displays what was labelled correctly and leaves few clues of what it was not. The limits of interpretation by the machine in object recognition mimics and amplifies the very human feature of forgetting the past. What is recognized by the algorithm is going to be saved for future research, making it browsable again in my gallery. On the other hand, the non-recognized objects cannot be found and could cause the whole picture to get lost in the huge amount of images we produce. <br /><br />
-                In this way multiple recognized fragments of past overlap and merge, becoming new pictures of what it has been. Losing details and contexts of single moments, they finally reach a new status: a continuous stream of partial memories.
-              
-        </p>
-
-      </div>
 
       </div>
         
