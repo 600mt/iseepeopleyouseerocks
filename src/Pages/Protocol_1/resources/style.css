@@ -1,7 +1,7 @@
 #framTwoPages {
   background-color: white;
   height: 92vh;
-  padding-top: 3vh;
+  margin-top: 3vh;
   position: relative;
 }
 
@@ -10,7 +10,7 @@
 }
 
 #iconLeft{
-  width: 3.5vh 
+  
 }
 
 #navbarFrameTwoPages {
