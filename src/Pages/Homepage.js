@@ -39,7 +39,12 @@ export const Homepage = () => {
               width: '100vw'
             }}
         >
-          <div className="row"> 
+          <div className="row"
+            style={{
+              position: 'relative',
+              top: '1.5vh'
+            }}
+          > 
               <div className="col-10 col-md-9" >
                   <h2
                     className='fontTitoli'
@@ -48,20 +53,32 @@ export const Homepage = () => {
                     }}
                   >I see people you see rocks  </h2>
               </div>
-              <div className="col-2 col-md-3">
+              <div className="col-2 col-md-3"
+                style={{
+                  position: 'relative'
+                }}
+              >
                 <h2
                   onClick={() => setShow(!show)}
                   style={{
+                   
                       cursor: 'pointer', 
-                      fontSize: '3.5vh',
-                      marginLeft: '58%'
+                      
+                      marginLeft: '58%',
+                      position: 'relative',
+                      top: '-19%'
                     }}
                   > <img 
                       onClick={() => setShow(!show)}
                       src={info_logo} 
-                      alt="info" 
-                      style={{cursor: 'pointer'}}  
-                    ></img> About </h2>
+                      alt="info"
+                      style={{cursor: 'pointer', fontSize: '3.5vh', marginRight: '6%'}}  
+                    /> 
+                    <span
+                      style={{
+                        fontSize:'3vh'
+                      }}
+                    >About</span> </h2>
               </div>
           </div>
         </div>
@@ -92,7 +109,7 @@ export const Homepage = () => {
                 </li>
                 <li className="child col-sm-2 col-md-5">
                   <div id="card"> 
-                    <img alt='Not loaded'  className="image_dimension" src={Image_3} /> 
+                    <Link to='/protocollo-3'><img alt='Not loaded'  className="image_dimension" src={Image_3} />  </Link>
                   </div>
                   <div> 
                     <h3 id="r3"> Algorithms are curators </h3>
@@ -143,7 +160,9 @@ export const Homepage = () => {
             // borderRadius: '20px'
           }}
         >
-          <div className="row"> 
+          <div className="row"
+            
+          > 
             <div className="col-10 col-md-10">
               <h2
                 className='fontTitoli'
@@ -159,9 +178,9 @@ export const Homepage = () => {
               onClick={() => setShow(!show)}
               style={{
                 cursor: 'pointer', 
-                width: '3.5vh', 
-                marginTop: '10%', 
-                marginLeft: '70%'
+                width: '3vh', 
+                marginTop: '8%', 
+                marginLeft: '73%'
               }} 
               
               src={close_logo} alt="info" />

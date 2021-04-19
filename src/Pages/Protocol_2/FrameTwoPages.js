@@ -54,7 +54,12 @@ export const FrameTwoPages = () => {
           width: '98vw',
         }}
       >
-        <div className="row"> 
+        <div className="row"
+          style={{
+            position: 'relative',
+            top: '1.5vh'
+          }}
+        > 
           <div className="col-2 col-md-3">
             <Link to='/'> 
               <img style={{cursor: 'pointer', width:'1.5vh', marginTop: '3.6%', marginLeft: '6%'}} src={back_logo} alt="info" />
@@ -106,7 +111,13 @@ export const FrameTwoPages = () => {
             borderRadius: '20px'
           }}
         >
-          <div className="row"> 
+          <div 
+            className="row"
+            style={{
+              position: 'relative',
+              top: '1.5vh'
+            }}
+          > 
             <div className="col-2 col-md-3">
               <Link to='/'> 
                 <img style={{cursor: 'pointer', width:'1.5vh', marginTop: '3.6%', marginLeft: '6%'}} src={back_logo} alt="info" />
@@ -121,7 +132,7 @@ export const FrameTwoPages = () => {
           </div>
           <div className='row'>
             <div className='col-10 offset-1'>
-              <p>
+              <p style={{marginTop: '10%'}}>
                 Object-recognition technologies, deployed via machine learning, analyse contents and label hundreds of pictures in a few moments every day on every iPhone. These technologies enable object-level categorisation and an easier image search by keyword. <br /><br />
                 By comparing human vision with what is recognized by the on-device feature extraction, the artifact displays what was labelled correctly and leaves few clues of what it was not. The limits of interpretation by the machine in object recognition mimics and amplifies the very human feature of forgetting the past. What is recognized by the algorithm is going to be saved for future research, making it browsable again in my gallery. On the other hand, the non-recognized objects cannot be found and could cause the whole picture to get lost in the huge amount of images we produce. <br /><br />
                 In this way multiple recognized fragments of past overlap and merge, becoming new pictures of what it has been. Losing details and contexts of single moments, they finally reach a new status: a continuous stream of partial memories.  
