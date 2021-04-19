@@ -161,7 +161,10 @@ export const Homepage = () => {
           }}
         >
           <div className="row"
-            
+            style={{
+              position: 'relative',
+              top: '1.5vh'
+            }}
           > 
             <div className="col-10 col-md-10">
               <h2
