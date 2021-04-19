@@ -7,6 +7,7 @@ import Image_2 from './resources/img/2.png'
 import Image_3 from './resources/img/3.png'
 import Image_4 from './resources/img/4.png'
 import info_logo from './resources/img/navbarInfo.svg'
+import close_logo from './resources/img/close.svg'
 
 import About  from './About'
 import { Fragment } from 'react'
@@ -14,9 +15,23 @@ import { Fragment } from 'react'
 export const Homepage = () => {
   const [modalShow, setModalShow] = useState(false)
   const [show, setShow] = useState(false)
+
+  function clickButton() {
+    console.log('show', show)
+    setShow(!show)
+  }
+
+  function handleClick() {
+    setShow(!show)
+  }
+  
   return (
-    <Fragment style={{position: 'relative'}}>
+    <Fragment 
+    style={{position: 'relative'}}
+    >
+     
       <div style={{position: 'absolute', zIndex: 0}}>
+        
         <div className="container-fluid" 
             style={{ 
               height: '8vh',
@@ -26,19 +41,32 @@ export const Homepage = () => {
         >
           <div className="row"> 
               <div className="col-10 col-md-9" >
-                  <h2 className='fontTitoli'>I see people you see rocks </h2>
+                  <h2
+                    className='fontTitoli'
+                    style={{
+                      marginLeft: '3%'
+                    }}
+                  >I see people you see rocks  </h2>
               </div>
               <div className="col-2 col-md-3">
-                <h2 style={{cursor: 'pointer', fontSize: '3.5vh'}}
+                <h2
                   onClick={() => setShow(!show)}
-                  > <img src={info_logo} alt="info"></img> About </h2>
+                  style={{
+                      cursor: 'pointer', 
+                      fontSize: '3.5vh',
+                      marginLeft: '58%'
+                    }}
+                  > <img 
+                      onClick={() => setShow(!show)}
+                      src={info_logo} 
+                      alt="info" 
+                      style={{cursor: 'pointer'}}  
+                    ></img> About </h2>
               </div>
-              {/* <div className="col-2 col-md-3 d-md-none d-block" id="r2-short">
-                <img id="text-right" onClick={() => setModalShow(true)} src={info_logo} alt="info"></img>
-              </div> */}
           </div>
         </div>
           <div className="container-fluid">
+          
             <div className="row col-md-12" id="protocolli" style={{zIndex:10}}>
               <ul className="horizontal-slide">
                 <li className="child col-sm-2 col-md-5">
@@ -57,7 +85,7 @@ export const Homepage = () => {
                   > 
                     <Link to='/protocollo-2'><img alt='Not loaded'  className="image_dimension" src={Image_2} /> </Link>
                   </div>
-                  <div> 
+                  <div>
                     <h3 id="r3"> Algorithms are forgetful </h3>
                     <h4 id="r4" className="text-wrap"> Automatic image annotation and pictures that you will never see again </h4>
                   </div>
@@ -91,42 +119,65 @@ export const Homepage = () => {
 
      
 
-    <div id='aboutProtocollo1' style={{position: 'absolute', zIndex: 2, display: (show ? 'block' : 'none')}} >
+    <div
+      id='aboutProtocollo1'
+      style={{
+        position: 'absolute',
+        zIndex: 5,
+        display: (show ? 'block' : 'none')
+        // display: 'block'
+      }} 
+    >
       {/* backdrop-filter: blur(10px); */}
         {/* <div style={{position: 'absolute',  filter: 'blur(20px)', height: '300px', zIndex: 1, width: '300px', backgroundColor:  'white'}} /> */}
       <div style={{position: 'absolute', height: '100%', width: '100%'}}>
         <div className="container-fluid" 
           style={{
             position: 'relative',
-            top: '1vh',
-            backgroundColor: 'yellow', 
-            height: '98vh', 
-            width: '98vw', 
+            // top: '1vh',
+            backgroundColor: 'black',
+            height: '100vh', 
+            width: '100vw', 
             // paddingTop: '2%',
             // marginTop: '2%',
-            borderRadius: '20px'
+            // borderRadius: '20px'
           }}
         >
           <div className="row"> 
-            <div className="col-2 col-md-3">
-              {/* <Link to='/'> 
-                <img style={{cursor: 'pointer', width:'1.5vh', marginTop: '3.6%', marginLeft: '6%'}} src={back_logo} alt="info" />
-              </Link> */}
+            <div className="col-10 col-md-10">
+              <h2
+                className='fontTitoli'
+                style={{
+                  marginLeft: '2.7%',
+                  marginTop: '1.4%',
+                  color: '#0a84ff'
+                }}
+                  >About  </h2>
             </div>
-            <div className="col-8 col-md-6 text-center">
-                <h2 className='fontTitoli' style={{paddingLeft: '3%',  marginTop: '1.2%'}}>Algorithms are explorers</h2>
-            </div>
-            <div className="col-2 col-md-3">
-              {/* <img onClick={() => setShow(!show)} style={{cursor: 'pointer', width: '3.5vh', marginTop: '2.6%', marginLeft: '86.5%'}} src={info_logo} alt="info" /> */}
+            <div className="col-2 col-md-2">
+              <img
+              onClick={() => setShow(!show)}
+              style={{
+                cursor: 'pointer', 
+                width: '3.5vh', 
+                marginTop: '10%', 
+                marginLeft: '70%'
+              }} 
+              
+              src={close_logo} alt="info" />
             </div>
           </div>
           <div className='row'>
-            <div className='col-10 offset-1'>
+            <div className='col-10'
+              style={{
+                marginLeft: '2.5%',
+                marginTop: '8%',
+                color: 'white',
+                fontSize: '190%'
+              }}
+            >
               <p>
-                Object-recognition technologies, deployed via machine learning, analyse contents and label hundreds of pictures in a few moments every day on every iPhone. These technologies enable object-level categorisation and an easier image search by keyword. <br /><br />
-                By comparing human vision with what is recognized by the on-device feature extraction, the artifact displays what was labelled correctly and leaves few clues of what it was not. The limits of interpretation by the machine in object recognition mimics and amplifies the very human feature of forgetting the past. What is recognized by the algorithm is going to be saved for future research, making it browsable again in my gallery. On the other hand, the non-recognized objects cannot be found and could cause the whole picture to get lost in the huge amount of images we produce. <br /><br />
-                In this way multiple recognized fragments of past overlap and merge, becoming new pictures of what it has been. Losing details and contexts of single moments, they finally reach a new status: a continuous stream of partial memories.  
-              </p>
+              I see people you see rocks is a research project investigating how algorithmic processes on an iOS device* can silently affect my memories by hierarchizing and curating pictures. Exploring both possibilities and limits of an algorithmic mediation through various qualitative observations, the project aims to open questions and create a space for further discussion. Four different approaches expose unexpected roles of algorithms in silently shaping users' memories. </p>
             </div>
           </div>
         </div>   
