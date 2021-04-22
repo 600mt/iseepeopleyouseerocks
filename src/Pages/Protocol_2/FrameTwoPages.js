@@ -29,6 +29,9 @@ import Navbar from './components/Navbar/Navbar'
 import ImageCarrousel from './components/ImageCarrousel/ImageCarrousel'
 import { Fragment } from 'react'
 
+import Gif from './resources/img/dx.gif'
+import Video from './resources/img/sx.mp4'
+
 import info_logo from '../resources/img/navbarInfo.svg'
 import back_logo from '../resources/img/navbarBack.svg'
 import close_logo from '../resources/img/close.svg'
@@ -146,17 +149,32 @@ export const FrameTwoPages = () => {
             </div>
             <div
               className='col-4'
+              
               style={{
-                marginLeft: '1.4%'
+                marginLeft: '1.4%',
+                display:'flex',
+                
               }}
             >
+              <video width="52%" height="auto" style={{
+                position:'relative',
+                marginTop: '17%',
+               
+              }} controls>
+                      <source src={Video} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
               <img 
-                style={{marginTop: '15%'}}
-                src={Image_23}
-                width={'50%'}
-                height={'80%'} 
+                style={{
+                marginLeft: '10px',
+                position:'relative',
+                marginTop: '17%'
+              }}
+                src={Gif}
+                width={'80%'}
+                height={'auto'} 
               />
-              <img 
+              {/* <img 
                 style= {{
                     marginTop: '15%',
                     paddingLeft: '4%'
@@ -164,7 +182,9 @@ export const FrameTwoPages = () => {
                 src={Image_23}
                 width={'50%'}
                 height={'80%'} 
-              />
+              /> */}
+
+                    
             </div>
           </div>
         </div>   
