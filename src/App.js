@@ -13,10 +13,10 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path='/iseepeopleyouseerocks/' component={Homepage} />
-        <Route exact path='/iseepeopleyouseerocks/protocollo-1' component={Protocol_1} />
-        <Route exact path='/iseepeopleyouseerocks/protocollo-2' component={Protocol_2} />
-        <Route exact path='/iseepeopleyouseerocks/protocollo-3' component={Protocol_3} />
+        <Route exact path='/' component={Homepage} />
+        <Route exact path='/protocollo-1' component={Protocol_1} />
+        <Route exact path='/protocollo-2' component={Protocol_2} />
+        <Route exact path='/protocollo-3' component={Protocol_3} />
         <Route exact path='/img' component={Jinx} />
       </Switch>
     </Router>
