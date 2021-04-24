@@ -37,15 +37,13 @@ export const ImageCarrousel = ({datasetImages, startingIndexImage}) => {
           changeImage()
         }, 2000);
         return () => clearInterval(interval);
-      });
-  
+      })
+
     return (
-      // <div id="img-container" onClick={() => changeImage()} className="col-6 overlapImages">
         <div id='imgPostion' onClick={() => changeImage()}>
           {firstPart.map((image, index) => (
             <ImageBuergerCarrousel key={index} src={image} inputZIndex={index}/>
           ))}
-        
       </div>
   )
 }

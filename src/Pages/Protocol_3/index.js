@@ -1,19 +1,12 @@
-import React, { Fragment, useState, useEffect } from 'react'
-import {Link} from 'react-router-dom'
-import useMouse from '@react-hook/mouse-position'
+import React, { Fragment, useEffect, useState } from 'react'
 import useDimensions from 'react-cool-dimensions'
-
-import info_logo from '../resources/img/navbarInfo.svg'
-import back_logo from '../resources/img/navbarBack.svg'
-import image_1 from './img/1.jpg'
+import { Link } from 'react-router-dom'
 import close_logo from '../resources/img/close.svg'
+import back_logo from '../resources/img/navbarBack.svg'
 import back_logo_blu from '../resources/img/navbarBackBlu.svg'
-
-
-import Gif from './img/dx.gif'
-import Video from './img/sx.gif'
-
+import info_logo from '../resources/img/navbarInfo.svg'
 import Image_0 from './img/1.jpg'
+import Image_9 from './img/10.jpg'
 import Image_1 from './img/2.jpg'
 import Image_2 from './img/3.jpg'
 import Image_3 from './img/4.jpg'
@@ -22,13 +15,14 @@ import Image_5 from './img/6.jpg'
 import Image_6 from './img/7.jpg'
 import Image_7 from './img/8.jpg'
 import Image_8 from './img/9.jpg'
-import Image_9 from './img/10.jpg'
+import Gif from './img/dx.gif'
+import Video from './img/sx.gif'
 
 
 export const Protocol_3 = () => {
   const [show, setShow] = useState(false)
-  const { observe, unobserve, width, height, entry } = useDimensions({
-    onResize: ({ observe, unobserve, width, height, entry }) => {
+  const { observe, width, height } = useDimensions({
+    onResize: ({ observe, unobserve}) => {
       // Triggered whenever the size of the target is changed...
 
       unobserve(); // To stop observing the current target element
@@ -81,7 +75,7 @@ export const Protocol_3 = () => {
       setLeftSquareTwo(width *0.126)
       setTopSquareTwo(width *0)
     
-  }, [width])
+  }, [width, height])
 
  function nextImage () {
     if (index === 9) {
@@ -112,10 +106,10 @@ export const Protocol_3 = () => {
         style={{
           position: 'absolute',
           backgroundColor: 'white',
-          zIndex: 0
+          zIndex: 0,
+          height: '100vh'
       }}>
-        <div 
-          className='container-fluid' 
+        <div className='container-fluid' 
           style={{
             backgroundColor: 'white',
             height: '7vh',
@@ -149,8 +143,7 @@ export const Protocol_3 = () => {
             </div>
            </div>
         </div>
-        <div
-          className='container-fluid'
+        <div className='container-fluid'
           style={{
             backgroundColor: 'white',
             height: '89vh', 
@@ -158,63 +151,55 @@ export const Protocol_3 = () => {
             display: 'grid',
             gridTemplateColumns: '10% 80% 10%'
           }}
-        > <div>
-
-<div  ref={refAreaRossa}
-onClick={() => prevImage()}
+        > 
+          <div>
+            <div  ref={refAreaRossa}
+              onClick={() => prevImage()}
+              style={{
+                zIndex:4,
+                position:'relative',
+                left: ((leftSquareTwo !== '' && !isNaN(leftSquareTwo) ) ? leftSquareTwo : 0), 
+                top: ((topSquareTwo !== ''  && !isNaN(topSquareTwo) )? topSquareTwo : 0),
+                borderRadius: '15px', 
+                width: (widthSquareTwo !== '' ? widthSquareTwo : 0), 
+                height: (heightSquareTwo !== '' ? heightSquareTwo : 0),
+                border: '2px solid transparent'
+              }}
+            />
+          </div>
+          <div
             style={{
-              zIndex:4,
-              position:'relative',
-              left: ((leftSquareTwo != '' && !isNaN(leftSquareTwo) ) ? leftSquareTwo : 0), 
-              top: ((topSquareTwo !== ''  && !isNaN(topSquareTwo) )? topSquareTwo : 0),
-              borderRadius: '15px', 
-              width: (widthSquareTwo !== '' ? widthSquareTwo : 0), 
-              height: (heightSquareTwo !== '' ? heightSquareTwo : 0),
-              border: '2px solid transparent'
+              width: '100%',
+              height: '100%',
             }}
-
-   
-          />
-
-        </div>
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            // position:'absolute'
-          }}
-        >
-        
-                <img 
-                  ref={observe} 
-                style={{
-                  objectFit: 'cover',
-                  borderRadius: '20px',
-                  maxWidth: '100%',
-                  maxHeight: '100%',
-                  display: 'block'
-                  }} src={images[index]} width='100%' height='100%' />
-                  </div>
-                <div>
-
-                <div 
-
-        ref={refAreaVerde}
-        onClick={() => nextImage()}
-            style={{
-              zIndex:4,
-              position:'relative',
-              left: -((leftSquareOne != '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), 
-              top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0),
-              borderRadius: '15px', 
-              width: (widthSquareOne !== '' ? widthSquareOne : 0), 
-              height: (heightSquareOne !== '' ? heightSquareOne : 0),
-              border: '2px solid transparent'
-            }}
-
-   
-          />
-                </div>
+          >
+            <img 
+              ref={observe} 
+              alt=''
+              style={{
+                objectFit: 'cover',
+                borderRadius: '20px',
+                maxWidth: '100%',
+                maxHeight: '89vh',
+                display: 'block'
+                }} src={images[index]} width='100%' height='100%' />
+          </div>
+          <div>
+            <div 
+              ref={refAreaVerde}
+              onClick={() => nextImage()}
+              style={{
+                zIndex:4,
+                position:'relative',
+                left: -((leftSquareOne !== '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), 
+                top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0),
+                borderRadius: '15px', 
+                width: (widthSquareOne !== '' ? widthSquareOne : 0), 
+                height: (heightSquareOne !== '' ? heightSquareOne : 0),
+                border: '2px solid transparent'
+              }}
+            />
+          </div>
         </div>
       </div>
       <div id='aboutProtocollo1' style={{position: 'absolute', zIndex: 2, display: (show ? 'block' : 'none')}} >
@@ -278,6 +263,7 @@ onClick={() => prevImage()}
             >
 
                     <img 
+                    alt=''
                 style={{
                 marginLeft: '10px',
                 position:'relative',
@@ -288,6 +274,7 @@ onClick={() => prevImage()}
                 height={'auto'} 
               />
               <img 
+              alt=''
                 style={{
                 marginLeft: '10px',
                 position:'relative',

@@ -1,7 +1,6 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
 import Homepage from './Pages/Homepage'
 import Protocol_2 from './Pages/Protocol_2/FrameTwoPages'
 import Protocol_1 from './Pages/Protocol_1/FrameTwoPages'
@@ -25,3 +24,11 @@ const App = () => {
 
 export default App
 
+
+// function App() {
+//   return (
+//     <Homepage />
+//   );
+// }
+
+// export default App;
