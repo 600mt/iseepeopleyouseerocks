@@ -106,10 +106,10 @@ export const Protocol_3 = () => {
         style={{
           position: 'absolute',
           backgroundColor: 'white',
-          zIndex: 0
+          zIndex: 0,
+          height: '100vh'
       }}>
-        <div 
-          className='container-fluid' 
+        <div className='container-fluid' 
           style={{
             backgroundColor: 'white',
             height: '7vh',
@@ -143,8 +143,7 @@ export const Protocol_3 = () => {
             </div>
            </div>
         </div>
-        <div
-          className='container-fluid'
+        <div className='container-fluid'
           style={{
             backgroundColor: 'white',
             height: '89vh', 
@@ -152,64 +151,55 @@ export const Protocol_3 = () => {
             display: 'grid',
             gridTemplateColumns: '10% 80% 10%'
           }}
-        > <div>
-
-<div  ref={refAreaRossa}
-onClick={() => prevImage()}
+        > 
+          <div>
+            <div  ref={refAreaRossa}
+              onClick={() => prevImage()}
+              style={{
+                zIndex:4,
+                position:'relative',
+                left: ((leftSquareTwo !== '' && !isNaN(leftSquareTwo) ) ? leftSquareTwo : 0), 
+                top: ((topSquareTwo !== ''  && !isNaN(topSquareTwo) )? topSquareTwo : 0),
+                borderRadius: '15px', 
+                width: (widthSquareTwo !== '' ? widthSquareTwo : 0), 
+                height: (heightSquareTwo !== '' ? heightSquareTwo : 0),
+                border: '2px solid transparent'
+              }}
+            />
+          </div>
+          <div
             style={{
-              zIndex:4,
-              position:'relative',
-              left: ((leftSquareTwo !== '' && !isNaN(leftSquareTwo) ) ? leftSquareTwo : 0), 
-              top: ((topSquareTwo !== ''  && !isNaN(topSquareTwo) )? topSquareTwo : 0),
-              borderRadius: '15px', 
-              width: (widthSquareTwo !== '' ? widthSquareTwo : 0), 
-              height: (heightSquareTwo !== '' ? heightSquareTwo : 0),
-              border: '2px solid transparent'
+              width: '100%',
+              height: '100%',
             }}
-
-   
-          />
-
-        </div>
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            // position:'absolute'
-          }}
-        >
-        
-                <img 
-                  ref={observe} 
-                  alt=''
-                style={{
-                  objectFit: 'cover',
-                  borderRadius: '20px',
-                  maxWidth: '100%',
-                  maxHeight: '100%',
-                  display: 'block'
-                  }} src={images[index]} width='100%' height='100%' />
-                  </div>
-                <div>
-
-                <div 
-
-        ref={refAreaVerde}
-        onClick={() => nextImage()}
-            style={{
-              zIndex:4,
-              position:'relative',
-              left: -((leftSquareOne !== '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), 
-              top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0),
-              borderRadius: '15px', 
-              width: (widthSquareOne !== '' ? widthSquareOne : 0), 
-              height: (heightSquareOne !== '' ? heightSquareOne : 0),
-              border: '2px solid transparent'
-            }}
-
-   
-          />
-                </div>
+          >
+            <img 
+              ref={observe} 
+              alt=''
+              style={{
+                objectFit: 'cover',
+                borderRadius: '20px',
+                maxWidth: '100%',
+                maxHeight: '89vh',
+                display: 'block'
+                }} src={images[index]} width='100%' height='100%' />
+          </div>
+          <div>
+            <div 
+              ref={refAreaVerde}
+              onClick={() => nextImage()}
+              style={{
+                zIndex:4,
+                position:'relative',
+                left: -((leftSquareOne !== '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), 
+                top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0),
+                borderRadius: '15px', 
+                width: (widthSquareOne !== '' ? widthSquareOne : 0), 
+                height: (heightSquareOne !== '' ? heightSquareOne : 0),
+                border: '2px solid transparent'
+              }}
+            />
+          </div>
         </div>
       </div>
       <div id='aboutProtocollo1' style={{position: 'absolute', zIndex: 2, display: (show ? 'block' : 'none')}} >

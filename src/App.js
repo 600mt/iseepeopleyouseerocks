@@ -7,7 +7,6 @@ import Protocol_1 from './Pages/Protocol_1/FrameTwoPages'
 import Protocol_3 from './Pages/Protocol_3'
 import Jinx from './Pages/Protocol_1/imagesJinx/JinxTest/JinxSky'
 import './App.css'
-import Test from './Pages/Test'
 
 const App = () => {
   return (
