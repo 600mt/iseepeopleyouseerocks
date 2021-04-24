@@ -1,5 +1,5 @@
 import useMouse from '@react-hook/mouse-position'
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState, useMemo } from 'react'
 import useDimensions from 'react-cool-dimensions'
 import ImageJinx from './components/ImageJinx'
 import Sfondo from './resources/img/edifice.jpg'
@@ -209,7 +209,7 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
           y: mouseAreaVerde.y
         })
       }
-  }, [imageShowedAreaVerde, mouseAreaVerde, indexAreaVerde,imagesAreaVerde,imagesAreaRossa, pastPositionAreaVerde])
+  }, [imageShowedAreaVerde, mouseAreaVerde, indexAreaVerde, pastPositionAreaVerde])
 
   //Area Rossa
   useEffect(() => {
@@ -252,7 +252,7 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
           y: mouseAreaRossa.y
         })
       }
-  }, [imageShowedAreaRossa, mouseAreaRossa, indexAreaRossa, pastPositionAreaRossa,imagesAreaRossa])
+  }, [imageShowedAreaRossa, mouseAreaRossa, indexAreaRossa, pastPositionAreaRossa])
 
   function skyClick(e) {
     e.preventDefault();
