@@ -74,7 +74,17 @@ export const Test = () => {
         
             <div className="container-fluid">
               <div className="row col-md-12" id="protocolli" style={{zIndex:10}}>
-                
+                <ul className="horizontal-slide">
+                    <li className="child col-sm-2 col-md-5">
+                        <div id="card"> 
+                        <Link to='/protocollo-1'> <img alt='Not loaded'  className="image_dimension" src={Image_1} /> </Link>
+                        </div>
+                        <div> 
+                            <h3 id="r3"> Algorithms are explorers </h3> 
+                            <h4 id="r4" className="text-wrap"> A demo archive for an object-driven past exploration </h4>
+                        </div>
+                    </li>
+                </ul>
                 </div>
               <div className="row">
                 <div className="col-12">
