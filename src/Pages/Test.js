@@ -15,9 +15,117 @@ import { Fragment } from 'react'
 export const Test = () => {
     const [show, setShow] = useState(false)
     return (
-        <Fragment>
+        <Fragment
+            style={{position: 'relative'}}
+        >
             TEST
-            <div
+            <div style={{position: 'absolute', zIndex: 0}}>
+        
+        <div className="container-fluid" 
+            style={{ 
+              height: '8vh',
+              marginTop:'2vh',
+              width: '100vw'
+            }}
+        >
+          <div className="row"
+            style={{
+              position: 'relative',
+              top: '1.5vh'
+            }}
+          > 
+              <div className="col-10 col-md-9" >
+                  <h2
+                    className='fontTitoli'
+                    style={{
+                      marginLeft: '3%'
+                    }}
+                  >I see people you see rocks  </h2>
+              </div>
+              <div className="col-2 col-md-3"
+                style={{
+                  position: 'relative'
+                }}
+              >
+                <h2
+                  onClick={() => setShow(!show)}
+                  style={{
+                   
+                      cursor: 'pointer', 
+                      
+                      marginLeft: '58%',
+                      position: 'relative',
+                      top: '-19%'
+                    }}
+                  > <img 
+                      onClick={() => setShow(!show)}
+                      src={info_logo} 
+                      alt="info"
+                      style={{cursor: 'pointer', fontSize: '3.5vh', marginRight: '6%'}}  
+                    /> 
+                    <span
+                      style={{
+                        fontSize:'3vh'
+                      }}
+                    >About</span> </h2>
+              </div>
+          </div>
+        </div>
+          <div className="container-fluid">
+          
+            <div className="row col-md-12" id="protocolli" style={{zIndex:10}}>
+              <ul className="horizontal-slide">
+                <li className="child col-sm-2 col-md-5">
+                  <div id="card"> 
+                  <Link to='/protocollo-1'> <img alt='Not loaded'  className="image_dimension" src={Image_1} /> </Link>
+                  </div>
+                  <div> 
+                    <h3 id="r3"> Algorithms are explorers </h3> 
+                    <h4 id="r4" className="text-wrap"> A demo archive for an object-driven past exploration </h4>
+                  </div>
+                </li>
+                <li className="child col-sm-2 col-md-5">
+                  <div 
+                    id="card"
+                  
+                  > 
+                    <Link to='/protocollo-2'><img alt='Not loaded'  className="image_dimension" src={Image_2} /> </Link>
+                  </div>
+                  <div>
+                    <h3 id="r3"> Algorithms are forgetful </h3>
+                    <h4 id="r4" className="text-wrap"> Automatic image annotation and pictures that you will never see again </h4>
+                  </div>
+                </li>
+                <li className="child col-sm-2 col-md-5">
+                  <div id="card"> 
+                    <Link to='/protocollo-3'><img alt='Not loaded'  className="image_dimension" src={Image_3} />  </Link>
+                  </div>
+                  <div> 
+                    <h3 id="r3"> Algorithms are curators </h3>
+                    <h4 id="r4" className="text-wrap"> Photo memory books designed by iOS </h4>
+                  </div>
+                </li>
+                <li className="child col-sm-2 col-md-5">
+                  <div id="card"> 
+                    <img alt='Not loaded'  className="image_dimension" src={Image_4} /> 
+                  </div>
+                  <h3 id="r3"> Algorithms are keen to adventures </h3>
+                  <h4 id="r4" className="text-wrap" > About why one third of my personal pictures are recognized as adventure, expedition and holidays and what they look like.</h4>
+                </li>
+              </ul>
+            </div>
+          <div className="row">
+            <div className="col-12">
+                <About />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+     
+        
+          <div
       id='aboutProtocollo1'
       style={{
         position: 'absolute',
@@ -86,7 +194,6 @@ export const Test = () => {
         </div>   
       </div>
     </div>
-   
         </Fragment>
     )
 }
