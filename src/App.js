@@ -9,19 +9,43 @@ import Protocol_3 from './Pages/Protocol_3'
 import Jinx from './Pages/Protocol_1/imagesJinx/JinxTest/JinxSky'
 import './App.css'
 
-const App = () => {
+// const App = () => {
+//   return (
+//     <Router>
+//       <Switch>
+//         <Route exact path='/' component={Homepage} />
+//         <Route exact path='/protocollo-1' component={Protocol_1} />
+//         <Route exact path='/protocollo-2' component={Protocol_2} />
+//         <Route exact path='/protocollo-3' component={Protocol_3} />
+//         <Route exact path='/img' component={Jinx} />
+//       </Switch>
+//     </Router>
+//   )
+// }
+
+// export default App
+
+
+function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/' component={Homepage} />
-        <Route exact path='/protocollo-1' component={Protocol_1} />
-        <Route exact path='/protocollo-2' component={Protocol_2} />
-        <Route exact path='/protocollo-3' component={Protocol_3} />
-        <Route exact path='/img' component={Jinx} />
-      </Switch>
-    </Router>
-  )
+    <div className="App">
+      <header className="App-header">
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        {/* <Homepage /> */}
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-export default App
-
+export default App;
