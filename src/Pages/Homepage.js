@@ -78,7 +78,7 @@ export const Homepage = () => {
               <ul className="horizontal-slide">
                 <li className="child col-sm-2 col-md-5">
                   <div id="card"> 
-                  {/* <Link to='/protocollo-1'> <img alt='Not loaded'  className="image_dimension" src={Image_1} /> </Link> */}
+                  <Link to='/protocollo-1'> <img alt='Not loaded'  className="image_dimension" src={Image_1} /> </Link>
                   </div>
                   <div> 
                     <h3 id="r3"> Algorithms are explorers </h3> 
@@ -90,7 +90,7 @@ export const Homepage = () => {
                     id="card"
                   
                   > 
-                    {/* <Link to='/protocollo-2'><img alt='Not loaded'  className="image_dimension" src={Image_2} /> </Link> */}
+                    <Link to='/protocollo-2'><img alt='Not loaded'  className="image_dimension" src={Image_2} /> </Link>
                   </div>
                   <div>
                     <h3 id="r3"> Algorithms are forgetful </h3>
@@ -99,7 +99,7 @@ export const Homepage = () => {
                 </li>
                 <li className="child col-sm-2 col-md-5">
                   <div id="card"> 
-                    {/* <Link to='/protocollo-3'><img alt='Not loaded'  className="image_dimension" src={Image_3} />  </Link> */}
+                    <Link to='/protocollo-3'><img alt='Not loaded'  className="image_dimension" src={Image_3} />  </Link>
                   </div>
                   <div> 
                     <h3 id="r3"> Algorithms are curators </h3>
