@@ -8,6 +8,7 @@ import Protocol_1 from './Pages/Protocol_1/FrameTwoPages'
 import Protocol_3 from './Pages/Protocol_3'
 import Jinx from './Pages/Protocol_1/imagesJinx/JinxTest/JinxSky'
 import './App.css'
+import Test from './Pages/Test'
 
 // const App = () => {
 //   return (
@@ -34,7 +35,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Homepage />
+        <Test />
         <a
           className="App-link"
           href="https://reactjs.org"
