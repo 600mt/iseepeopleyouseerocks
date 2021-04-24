@@ -1,50 +1,11 @@
-import React, { Fragment, useEffect, useState } from 'react'
 import useMouse from '@react-hook/mouse-position'
+import React, { Fragment, useEffect, useState } from 'react'
 import useDimensions from 'react-cool-dimensions'
-
-import './resources/style.css'
-import Image_1 from './resources/img/1.png'
-import Image_2 from './resources/img/2.png'
-import Image_3 from './resources/img/3.png'
-import Image_4 from './resources/img/4.png'
-import Image_5 from './resources/img/5.png'
-import Image_6 from './resources/img/6.png'
-import Image_7 from './resources/img/7.png'
-import Image_8 from './resources/img/8.png'
-import Image_9 from './resources/img/9.png'
-import Image_10 from './resources/img/10.jpeg'
-import Image_11 from './resources/img/11.png'
-import Image_12 from './resources/img/12.png'
-import Image_13 from './resources/img/13.png'
-
-import Image_14 from './resources/img/14.png'
-import Image_15 from './resources/img/15.png'
-import Image_16 from './resources/img/16.png'
-import Image_17 from './resources/img/17.png'
-import Image_18 from './resources/img/18.png'
-import Image_19 from './resources/img/19.png'
-import Image_20 from './resources/img/20.png'
-import Image_21 from './resources/img/21.png'
-import Image_22 from './resources/img/22.png'
-import Image_23 from './resources/img/23.png'
-import Image_24 from './resources/img/24.png'
-import Image_25 from './resources/img/25.png'
-import Sfondo from   './resources/img/sky.png'
-
-import g1 from './resources/img/grass/g1.jpeg'
-import g2 from './resources/img/grass/g2.jpeg'
-import g3 from './resources/img/grass/g3.jpeg'
-import g4 from './resources/img/grass/g4.jpeg'
-import g5 from './resources/img/grass/g5.jpeg'
-import g6 from './resources/img/grass/g6.jpeg'
-import g7 from './resources/img/grass/g7.jpeg'
-import g8 from './resources/img/grass/g8.jpeg'
-import g9 from './resources/img/grass/g9.jpeg'
-import g10 from './resources/img/grass/g10.jpeg'
-import g11 from './resources/img/grass/g11.jpeg'
-import g12 from './resources/img/grass/g12.jpeg'
-
+import ImageJinx from './components/ImageJinx'
 import e1 from './resources/img/edifice/e1.jpeg'
+import e10 from './resources/img/edifice/e10.jpeg'
+import e11 from './resources/img/edifice/e11.jpeg'
+import e12 from './resources/img/edifice/e12.jpeg'
 import e2 from './resources/img/edifice/e2.jpeg'
 import e3 from './resources/img/edifice/e3.jpeg'
 import e4 from './resources/img/edifice/e4.jpeg'
@@ -53,20 +14,34 @@ import e6 from './resources/img/edifice/e6.jpeg'
 import e7 from './resources/img/edifice/e7.jpeg'
 import e8 from './resources/img/edifice/e8.jpeg'
 import e9 from './resources/img/edifice/e9.jpeg'
-import e10 from './resources/img/edifice/e10.jpeg'
-import e11 from './resources/img/edifice/e11.jpeg'
-import e12 from './resources/img/edifice/e12.jpeg'
-
+import g1 from './resources/img/grass/g1.jpeg'
+import g10 from './resources/img/grass/g10.jpeg'
+import g11 from './resources/img/grass/g11.jpeg'
+import g12 from './resources/img/grass/g12.jpeg'
+import g2 from './resources/img/grass/g2.jpeg'
+import g3 from './resources/img/grass/g3.jpeg'
+import g4 from './resources/img/grass/g4.jpeg'
+import g5 from './resources/img/grass/g5.jpeg'
+import g6 from './resources/img/grass/g6.jpeg'
+import g7 from './resources/img/grass/g7.jpeg'
+import g8 from './resources/img/grass/g8.jpeg'
+import g9 from './resources/img/grass/g9.jpeg'
+import Sfondo from './resources/img/sky.png'
+import './resources/style.css'
 //  background-image: url("./img/sky.png")";
-import {useMediaQuery} from './utils'
+import { useMediaQuery } from './utils'
 
-import ImageJinx from './components/ImageJinx'
+
+
+
+
+
 
 
 export const JinxSky = ({setNewImageCallback, activeImage, setActiveCallBack}) => {
   const [widthScreen, heightScreen] = useMediaQuery()
-  const { observe, unobserve, width, height, entry } = useDimensions({
-    onResize: ({ observe, unobserve, width, height, entry }) => {
+  const { observe, width, height } = useDimensions({
+    onResize: ({ observe, unobserve }) => {
       // Triggered whenever the size of the target is changed...
 
       unobserve(); // To stop observing the current target element
@@ -122,7 +97,7 @@ export const JinxSky = ({setNewImageCallback, activeImage, setActiveCallBack}) =
     }
 
     
-  }, [width])
+  }, [width, height, heightScreen, widthScreen])
 
 
   const [indexAreaVerde, setIndexAreaVerde] = useState(0)
@@ -235,7 +210,7 @@ export const JinxSky = ({setNewImageCallback, activeImage, setActiveCallBack}) =
           y: mouseAreaVerde.y
         })
       }
-  }, [imageShowedAreaVerde, mouseAreaVerde, indexAreaVerde, pastPositionAreaVerde])
+  }, [imageShowedAreaVerde, mouseAreaVerde, indexAreaVerde, pastPositionAreaVerde, imagesAreaVerde])
 
   //Area Rossa
   useEffect(() => {
@@ -278,7 +253,7 @@ export const JinxSky = ({setNewImageCallback, activeImage, setActiveCallBack}) =
           y: mouseAreaRossa.y
         })
       }
-  }, [imageShowedAreaRossa, mouseAreaRossa, indexAreaRossa, pastPositionAreaRossa])
+  }, [imageShowedAreaRossa, mouseAreaRossa, indexAreaRossa, pastPositionAreaRossa, imagesAreaRossa])
 
   function skyClick(e) {
     e.preventDefault();
@@ -298,12 +273,12 @@ export const JinxSky = ({setNewImageCallback, activeImage, setActiveCallBack}) =
 
   return (
       <div >
-        <img ref={observe}  src={Sfondo} className='backgroundJinxSky' />
+        <img ref={observe}  src={Sfondo} className='backgroundJinxSky' alt='' />
 
         {
           (activeImage === 'sky') ? <Fragment>
           <div ref={refAreaRossa}   onClick={skyClick}
-          style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne != '' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
+          style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne !=='' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
           // style={{border: '2px solid white', width: '10vw', height: '10vh', position:'absolute', top: '10vh'}}
           >
           
@@ -313,7 +288,7 @@ export const JinxSky = ({setNewImageCallback, activeImage, setActiveCallBack}) =
                 ))}
           </div>
           <div id="areaCappello" ref={refAreaVerde} onClick={peopleClick}
-          style={{borderRadius: '15px', width: (widthSquareTwo !== '' ? widthSquareTwo : 0), height: (heightSquareTwo !== '' ? heightSquareTwo : 0), border: '2px solid white', position:'absolute', left: (leftSquareTwo != '' ? leftSquareTwo : 0), top: (topSquareTwo !== '' ? topSquareTwo : 0)}}
+          style={{borderRadius: '15px', width: (widthSquareTwo !== '' ? widthSquareTwo : 0), height: (heightSquareTwo !== '' ? heightSquareTwo : 0), border: '2px solid white', position:'absolute', left: (leftSquareTwo !=='' ? leftSquareTwo : 0), top: (topSquareTwo !== '' ? topSquareTwo : 0)}}
           >
             {
               imageShowedAreaVerde.map((image, index) => (

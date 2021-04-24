@@ -1,16 +1,11 @@
-import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
-
-import './resources/style.css'
+import React, { Fragment, useState } from 'react'
+import { Link } from 'react-router-dom'
+import close_logo from '../resources/img/close.svg'
+import back_logo from '../resources/img/navbarBack.svg'
+import back_logo_blu from '../resources/img/navbarBackBlu.svg'
+import info_logo from '../resources/img/navbarInfo.svg'
+import ImageCarrousel from './components/ImageCarrousel/ImageCarrousel'
 import Image_1 from './resources/img/1.png'
-import Image_2 from './resources/img/2.png'
-import Image_3 from './resources/img/3.png'
-import Image_4 from './resources/img/4.png'
-import Image_5 from './resources/img/5.png'
-import Image_6 from './resources/img/6.png'
-import Image_7 from './resources/img/7.png'
-import Image_8 from './resources/img/8.png'
-import Image_9 from './resources/img/9.png'
 import Image_10 from './resources/img/10.png'
 import Image_11 from './resources/img/11.png'
 import Image_12 from './resources/img/12.png'
@@ -21,23 +16,25 @@ import Image_16 from './resources/img/16.png'
 import Image_17 from './resources/img/17.png'
 import Image_18 from './resources/img/18.png'
 import Image_19 from './resources/img/19.png'
+import Image_2 from './resources/img/2.png'
 import Image_20 from './resources/img/20.png'
 import Image_21 from './resources/img/21.png'
 import Image_22 from './resources/img/22.png'
 import Image_23 from './resources/img/23.png'
-import Navbar from './components/Navbar/Navbar'
-import ImageCarrousel from './components/ImageCarrousel/ImageCarrousel'
-import { Fragment } from 'react'
-
+import Image_3 from './resources/img/3.png'
+import Image_4 from './resources/img/4.png'
+import Image_5 from './resources/img/5.png'
+import Image_6 from './resources/img/6.png'
+import Image_7 from './resources/img/7.png'
+import Image_8 from './resources/img/8.png'
+import Image_9 from './resources/img/9.png'
 import Gif from './resources/img/dx.gif'
 import Video from './resources/img/sx.mp4'
+import './resources/style.css'
 
-import info_logo from '../resources/img/navbarInfo.svg'
-import back_logo from '../resources/img/navbarBack.svg'
-import close_logo from '../resources/img/close.svg'
-import back_logo_blu from '../resources/img/navbarBackBlu.svg'
 
-import NavbarAbout from './components/NavbarAbout/Navbar'
+
+
 
 export const FrameTwoPages = () => {
   const datasetImages = [Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, 
@@ -170,6 +167,7 @@ export const FrameTwoPages = () => {
                 position:'relative',
                 marginTop: '17%'
               }}
+              alt=''
                 src={Gif}
                 width={'80%'}
                 height={'auto'} 

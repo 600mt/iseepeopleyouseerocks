@@ -13,18 +13,8 @@ import About  from './About'
 import { Fragment } from 'react'
 
 export const Homepage = () => {
-  const [modalShow, setModalShow] = useState(false)
   const [show, setShow] = useState(false)
 
-  function clickButton() {
-    console.log('show', show)
-    setShow(!show)
-  }
-
-  function handleClick() {
-    setShow(!show)
-  }
-  
   return (
     <Fragment 
     style={{position: 'relative'}}
