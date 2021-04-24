@@ -65,14 +65,14 @@ export const Protocol_3 = () => {
         setWidthSquareOne(width*0.5)
         setHeightSquareOne(height*1)
   
-        setWidthSquareTwo(width*0.50)
+        setWidthSquareTwo(width*0.5)
         setHeightSquareTwo(height*1)
       }
   
-      setLeftSquareOne(width *0.5)
+      setLeftSquareOne(width *0.95)
       setTopSquareOne(width *0)
   
-      setLeftSquareTwo(width *0.126)
+      setLeftSquareTwo(width *0.556)
       setTopSquareTwo(width *0)
     
   }, [width, height])
@@ -146,10 +146,11 @@ export const Protocol_3 = () => {
         <div className='container-fluid'
           style={{
             backgroundColor: 'white',
-            height: '89vh', 
+            height: '88vh', 
             width: '100vw',
             display: 'grid',
-            gridTemplateColumns: '10% 80% 10%'
+            marginTop: '4vh',
+            gridTemplateColumns: '5% 90% 5%'
           }}
         > 
           <div>
@@ -171,6 +172,9 @@ export const Protocol_3 = () => {
             style={{
               width: '100%',
               height: '100%',
+              display: 'flex',
+            justifyContent: 'center',
+            alignContent: 'center',
             }}
           >
             <img 
@@ -179,8 +183,8 @@ export const Protocol_3 = () => {
               style={{
                 objectFit: 'cover',
                 borderRadius: '20px',
-                maxWidth: '100%',
-                maxHeight: '89vh',
+                width: 'auto',
+                maxHeight: '85vh',
                 display: 'block'
                 }} src={images[index]} width='100%' height='100%' />
           </div>
