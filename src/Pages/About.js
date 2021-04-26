@@ -21,7 +21,7 @@ export const About = (props) => {
 
               <Container fluid style={{backgroundColor: 'black'}}>
                   <Row >
-                        <div className="col-10" style={{color:'#2d64af', fontSize:'18px', margin: 0, padding: 0}}>
+                        <div className="col-11" style={{color:'#2d64af', fontSize:'18px', margin: 0, padding: 0}}>
                             <h2>I see people you see rocks </h2>
                         </div>
                   </Row>
@@ -35,10 +35,10 @@ export const About = (props) => {
                     </div>
                 </Row>
                 <Row>
-                    <div className='col-10 offset-1 text-white' style={{fontSize: '2.4vh'}}>FEATURES</div>
+                    <div className='col-11 offset-1 text-white' style={{fontSize: '2.4vh'}}>FEATURES</div>
                 </Row>
                 <Row>
-                    <div className="col-10 offset-1 text-white" style={{fontSize: '2.3vh'}}>
+                    <div className="col-11 offset-1 text-white" style={{fontSize: '2.3vh'}}>
                     <p>I see  people  you see  rocks  is a research project investigating how algorithmic processes on an iOS device* can silently affect my memories by hierarchizing and curating pictures. Exploring both possibilities and limits of an algorithmic mediation through various qualitative observations, the project aims to open questions and create a space for further discussion. Four different approaches expose unexpected roles of algorithms in silently shaping users' memories.</p>    
                     </div>
                 </Row>
