@@ -108,7 +108,7 @@ export const Homepage = () => {
                 </li>
                 <li className="child col-sm-2 col-md-5">
                   <div id="card"> 
-                    <img alt='Not loaded'  className="image_dimension" src={Image_4} /> 
+                  <Link to='/protocollo-4'> <img alt='Not loaded'  className="image_dimension" src={Image_4} /> </Link>
                   </div>
                   <h3 id="r3"> Algorithms are keen to adventures </h3>
                   <h4 id="r4" className="text-wrap" > About why one third of my personal pictures are recognized as adventure, expedition and holidays and what they look like.</h4>

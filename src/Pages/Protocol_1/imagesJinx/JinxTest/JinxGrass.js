@@ -1,20 +1,7 @@
 import useMouse from '@react-hook/mouse-position'
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import useDimensions from 'react-cool-dimensions'
 import ImageJinx from './components/ImageJinx'
-import Sfondo from './resources/img/grass.jpeg'
-import g1 from './resources/img/grass/g1.jpeg'
-import g10 from './resources/img/grass/g10.jpeg'
-import g11 from './resources/img/grass/g11.jpeg'
-import g12 from './resources/img/grass/g12.jpeg'
-import g2 from './resources/img/grass/g2.jpeg'
-import g3 from './resources/img/grass/g3.jpeg'
-import g4 from './resources/img/grass/g4.jpeg'
-import g5 from './resources/img/grass/g5.jpeg'
-import g6 from './resources/img/grass/g6.jpeg'
-import g7 from './resources/img/grass/g7.jpeg'
-import g8 from './resources/img/grass/g8.jpeg'
-import g9 from './resources/img/grass/g9.jpeg'
 import p1 from './resources/img/people/p1.jpeg'
 import p10 from './resources/img/people/p10.jpeg'
 import p11 from './resources/img/people/p11.jpeg'
@@ -39,8 +26,21 @@ import b6 from './resources/img/sky/b6.png'
 import b7 from './resources/img/sky/b7.png'
 import b8 from './resources/img/sky/b8.png'
 import b9 from './resources/img/sky/b9.png'
+import Sfondo from './resources/img/grass.jpeg'
 import './resources/style.css'
 import { useMediaQuery } from './utils'
+import g1 from './resources/img/grass/g1.jpeg'
+import g10 from './resources/img/grass/g10.jpeg'
+import g11 from './resources/img/grass/g11.jpeg'
+import g12 from './resources/img/grass/g12.jpeg'
+import g2 from './resources/img/grass/g2.jpeg'
+import g3 from './resources/img/grass/g3.jpeg'
+import g4 from './resources/img/grass/g4.jpeg'
+import g5 from './resources/img/grass/g5.jpeg'
+import g6 from './resources/img/grass/g6.jpeg'
+import g7 from './resources/img/grass/g7.jpeg'
+import g8 from './resources/img/grass/g8.jpeg'
+import g9 from './resources/img/grass/g9.jpeg'
 
 
 
@@ -48,12 +48,11 @@ import { useMediaQuery } from './utils'
 
 
 
-
-export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack}) => {
+export const JinxGrass = ({setNewImageCallback, activeImage, setActiveCallBack}) => {
   const [widthScreen, heightScreen] = useMediaQuery()
 
   const { observe, width, height } = useDimensions({
-    onResize: ({ observe, unobserve }) => {
+    onResize: ({ observe, unobserve}) => {
       // Triggered whenever the size of the target is changed...
 
       unobserve(); // To stop observing the current target element
@@ -61,6 +60,8 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
     },
   });
 
+
+  const refImage1 =  useRef()
 
   const [widthSquareOne, setWidthSquareOne] = useState('')
   const [heightSquareOne, setHeightSquareOne] = useState('')
@@ -79,6 +80,7 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
 
   const [leftSquareThree, setLeftSquareThree] = useState('')
   const [topSquareThree, setTopSquareThree] = useState('')
+
 
   useEffect(() => {
     if((widthScreen/heightScreen) !== (4/3)) { 
@@ -125,14 +127,10 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
     
   }, [width, height, heightScreen, widthScreen])
 
-
-
   const [indexAreaVerde, setIndexAreaVerde] = useState(0)
   const [indexAreaRossa, setIndexAreaRossa] = useState(0)
   const [indexAreaThree, setIndexAreaThree] = useState(0)
-  //Area Cielo
-  // const imagesAreaRossa = [Image_1, Image_2, Image_3, Image_4, Image_5, Image_6, Image_7, Image_8, Image_9, Image_10, Image_11, Image_12, Image_13]
-  
+
   const imagesAreaRossa = [
     b1,
     b2,
@@ -148,8 +146,6 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
     b12
   ]
 
-  //Area Cappello
-  // const imagesAreaVerde = [Image_14, Image_15, Image_16, Image_17, Image_18, Image_19, Image_20, Image_21, Image_22, Image_23, Image_24, Image_25]
   const imagesAreaVerde = [
     p1,
     p2,
@@ -202,7 +198,9 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
 
   const refAreaRossa = React.useRef(null)
   const refAreaVerde = React.useRef(null)
+
   const refAreaThree = React.useRef(null)
+
   const mouseAreaRossa = useMouse(refAreaRossa, {
     fps: 60,
     enterDelay: 100,
@@ -223,6 +221,8 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
  
   //Area Verde
   useEffect(() => {
+    
+
     if(
         (
           mouseAreaVerde.x < refAreaVerde.current.clientWidth && 
@@ -236,6 +236,9 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
           Math.abs(mouseAreaVerde.y - pastPositionAreaVerde.y) > 10
         ) 
       ) {
+
+
+        console.log('area verde')
         const newImage = {
           src: imagesAreaVerde[indexAreaVerde],
           inputZIndex: 5,
@@ -267,6 +270,8 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
 
   //Area Rossa
   useEffect(() => {
+    
+
     if(
         (
           mouseAreaRossa.x < refAreaRossa.current.clientWidth && 
@@ -280,6 +285,7 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
           Math.abs(mouseAreaRossa.y - pastPositionAreaRossa.y) > 10
         ) 
       ) {
+        console.log('area rossa')
         const newImage = {
           src: imagesAreaRossa[indexAreaRossa],
           inputZIndex: 10,
@@ -308,8 +314,9 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
       }
   }, [imageShowedAreaRossa, mouseAreaRossa, indexAreaRossa, pastPositionAreaRossa, imagesAreaRossa])
 
-  //third area
+
   useEffect(() => {
+    
     if(
         (
           mouseAreaThree.x < refAreaThree.current.clientWidth && 
@@ -323,6 +330,7 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
           Math.abs(mouseAreaThree.y - pastPositionAreaThree.y) > 10
         ) 
       ) {
+        console.log('area third')
         const newImage = {
           src: imagesAreaThree[indexAreaThree],
           inputZIndex: 10,
@@ -379,35 +387,41 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
     setNewImageCallback('sky', 'grass')
   }
 
-  return (
+  // ref = (element) => {
+    if (refImage1.current) {
+      // this.props.getSize(element.getBoundingClientRect())
+    }
+  // }
 
-    <div >
-      <img ref={observe}  src={Sfondo} className='backgroundJinxSky' alt='' />
-      {/* <div id="areaCielo" ref={refAreaRossa} > */}
+  return (
+    <div>
+      
+      <div ref={refImage1}>
+        <img ref={observe} src={Sfondo} className='backgroundJinxSky' alt='' />
+      </div>
 
       {
-          (activeImage === 'grass') ? <Fragment>
-        <div ref={refAreaRossa}  onClick={skyClick}
-      style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne !=='' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
-      // style={{border: '2px solid white', width: '10vw', height: '10vh', position:'absolute', top: '10vh'}}
-      >
-      
-      
-        {imageShowedAreaRossa.map((image, index) => (
-              <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
-            ))}
-      </div>
-      <div id="areaCappello" ref={refAreaVerde} onClick={peopleClick}
-      style={{borderRadius: '15px', width: (widthSquareTwo !== '' ? widthSquareTwo : 0), height: (heightSquareTwo !== '' ? heightSquareTwo : 0), border: '2px solid white', position:'absolute', left: (leftSquareTwo !=='' ? leftSquareTwo : 0), top: (topSquareTwo !== '' ? topSquareTwo : 0)}}
-      >
-        {
-          imageShowedAreaVerde.map((image, index) => (
-            <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
-          ))
-        }
-      </div>
-
-      <div id="areaThree" ref={refAreaThree} onClick={grassClick}
+        (activeImage === 'grass') ? <Fragment><div ref={refAreaRossa}  onClick={skyClick}
+            style={{borderRadius: '15px', width: (widthSquareOne !== '' ? widthSquareOne : 0), height: (heightSquareOne !== '' ? heightSquareOne : 0), border: '2px solid white', position:'absolute', left: ((leftSquareOne !=='' && !isNaN(leftSquareOne) ) ? leftSquareOne : 0), top: ((topSquareOne !== ''  && !isNaN(topSquareOne) )? topSquareOne : 0)}}
+            // style={{border: '2px solid white', width: '10vw', height: '10vh', position:'absolute', top: '10vh'}}
+            >
+            
+            
+              {imageShowedAreaRossa.map((image, index) => (
+                    <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
+                  ))}
+            </div>
+            <div id="areaCappello" ref={refAreaVerde} onClick={peopleClick}
+            style={{borderRadius: '15px', width: (widthSquareTwo !== '' ? widthSquareTwo : 0), height: (heightSquareTwo !== '' ? heightSquareTwo : 0), border: '2px solid white', position:'absolute', left: (leftSquareTwo !=='' ? leftSquareTwo : 0), top: (topSquareTwo !== '' ? topSquareTwo : 0)}}
+            >
+              {
+                imageShowedAreaVerde.map((image, index) => (
+                  <ImageJinx width={'20%'} key={index} src={image.src} inputZIndex={image.inputZIndex} positionImage={image.positionImage} />
+                ))
+              }
+            </div>
+            
+            <div id="areaThree" ref={refAreaThree} onClick={grassClick}
       style={{borderRadius: '15px', width: (widthSquareThree !== '' ? widthSquareThree : 0), height: (heightSquareThree !== '' ? heightSquareThree : 0), border: '2px solid white', position:'absolute', left: (leftSquareThree !=='' ? leftSquareThree : 0), top: (topSquareThree !== '' ? topSquareThree : 0)}}
       >
         {
@@ -416,21 +430,21 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
           ))
         }
       </div>
+            </Fragment>
+        : <Fragment>
+          <div ref={refAreaRossa}  onClick={skyClick}>
+        </div>
+        <div ref={refAreaVerde} onClick={peopleClick} >
+        </div>
+        <div  ref={refAreaThree} onClick={grassClick}>
 
-          </Fragment> :  <Fragment>      <div ref={refAreaRossa}   onClick={skyClick} >
           </div>
-          <div ref={refAreaVerde} onClick={peopleClick} >
-          </div>
-          <div  ref={refAreaThree} onClick={grassClick}>
-
-          </div>
-        </Fragment>
         
-        }
-
+        </Fragment>
+      }
       
   </div>
   )
 }
 
-export default JinxStart
+export default JinxGrass

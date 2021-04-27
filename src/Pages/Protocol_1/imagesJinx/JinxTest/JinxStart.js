@@ -66,7 +66,6 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
 
 
   useEffect(() => {
-    console.log('SCREEN',widthScreen)
 
     if((widthScreen/heightScreen) !== (4/3)) {
       if(!isNaN(width) && !isNaN(height)) {
@@ -163,6 +162,8 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
  
   //Area Verde
   useEffect(() => {
+    
+
     if(
         (
           mouseAreaVerde.x < refAreaVerde.current.clientWidth && 
@@ -176,6 +177,9 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
           Math.abs(mouseAreaVerde.y - pastPositionAreaVerde.y) > 10
         ) 
       ) {
+
+
+        console.log('area verde')
         const newImage = {
           src: imagesAreaVerde[indexAreaVerde],
           inputZIndex: 5,
@@ -207,6 +211,8 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
 
   //Area Rossa
   useEffect(() => {
+    
+
     if(
         (
           mouseAreaRossa.x < refAreaRossa.current.clientWidth && 
@@ -220,6 +226,7 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
           Math.abs(mouseAreaRossa.y - pastPositionAreaRossa.y) > 10
         ) 
       ) {
+        console.log('area rossa')
         const newImage = {
           src: imagesAreaRossa[indexAreaRossa],
           inputZIndex: 10,
@@ -264,12 +271,9 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
     setNewImageCallback('people', 'start')
   }
 
-  console.log('DIMENSION', width)
-  
   // ref = (element) => {
     if (refImage1.current) {
       // this.props.getSize(element.getBoundingClientRect())
-      console.log('REF', refImage1.current.clientWidth)
     }
   // }
 

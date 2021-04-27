@@ -153,20 +153,20 @@ export const FrameTwoPages = () => {
                 
               }}
             >
-              <video width="52%" height="auto" style={{
-                position:'relative',
-                marginTop: '17%',
-               
+              <video 
+                id='aboutUpper'
+              width="57%" height="auto" style={{
+                objectFit: 'cover'               
               }}>
                       <source src={Video} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
               <img 
+              id='aboutUpper'
                 style={{
                 marginLeft: '10px',
-                position:'relative',
-                marginTop: '17%'
-              }}
+                objectFit: 'cover'
+                            }}
               alt=''
                 src={Gif}
                 width={'80%'}

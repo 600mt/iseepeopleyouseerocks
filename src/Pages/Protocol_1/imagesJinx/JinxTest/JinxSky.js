@@ -170,6 +170,7 @@ export const JinxSky = ({setNewImageCallback, activeImage, setActiveCallBack}) =
  
   //Area Verde
   useEffect(() => {
+    
     if(
         (
           mouseAreaVerde.x < refAreaVerde.current.clientWidth && 

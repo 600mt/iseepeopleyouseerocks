@@ -179,7 +179,7 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
           Math.abs(mouseAreaVerde.x - pastPositionAreaVerde.x) > 10 ||
           Math.abs(mouseAreaVerde.y - pastPositionAreaVerde.y) > 10
         ) 
-      ) {
+      ) {console.log('area verde')
         const newImage = {
           src: imagesAreaVerde[indexAreaVerde],
           inputZIndex: 5,

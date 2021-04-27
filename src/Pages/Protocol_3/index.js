@@ -267,22 +267,23 @@ export const Protocol_3 = () => {
             >
 
                     <img 
+                    id='aboutUpper'
                     alt=''
                 style={{
                 marginLeft: '10px',
-                position:'relative',
-                marginTop: '17%'
+                objectFit: 'cover'
               }}
                 src={Video}
-                width={'50%'}
+                width={'57%'}
                 height={'auto'} 
               />
               <img 
+              id='aboutUpper'
               alt=''
                 style={{
+                  objectFit: 'cover',
                 marginLeft: '10px',
                 position:'relative',
-                marginTop: '17%'
               }}
                 src={Gif}
                 width={'80%'}
