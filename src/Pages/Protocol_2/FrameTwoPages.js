@@ -69,7 +69,7 @@ export const FrameTwoPages = () => {
             </Link>
           </div>
           <div className="col-8 col-md-6 text-center">
-              <h2 className='fontTitoli' style={{paddingLeft: '3%',  marginTop: '1.2%'}}>Algorithms are explorers</h2>
+              <h2 className='fontTitoli' style={{paddingLeft: '3%',  marginTop: '1.2%'}}>Algorithms are forgetful</h2>
           </div>
           <div className="col-2 col-md-3">
             <img onClick={() => setShow(!show)} style={{cursor: 'pointer', width: '3.5vh', marginTop: '2.6%', marginLeft: '86.5%'}} src={info_logo} alt="info" />
