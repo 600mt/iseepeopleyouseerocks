@@ -74,7 +74,7 @@ export const Homepage = () => {
         </div>
           <div className="container-fluid"
             style={{ 
-              height: '92vh',
+              height: '62vh',
               width: '100vw'
             }}
           
