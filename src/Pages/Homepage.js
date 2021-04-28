@@ -72,7 +72,13 @@ export const Homepage = () => {
               </div>
           </div>
         </div>
-          <div className="container-fluid">
+          <div className="container-fluid"
+            style={{ 
+              height: '92vh',
+              width: '100vw'
+            }}
+          
+          >
           
             <div className="row col-md-12" id="protocolli" style={{zIndex:10}}>
               <ul className="horizontal-slide">
