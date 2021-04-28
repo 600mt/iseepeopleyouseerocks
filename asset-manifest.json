@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/iseepeopleyouseerocks/static/css/main.8c43aa1d.chunk.css",
-    "main.js": "/iseepeopleyouseerocks/static/js/main.f7e9199a.chunk.js",
-    "main.js.map": "/iseepeopleyouseerocks/static/js/main.f7e9199a.chunk.js.map",
+    "main.js": "/iseepeopleyouseerocks/static/js/main.a9f6f5b5.chunk.js",
+    "main.js.map": "/iseepeopleyouseerocks/static/js/main.a9f6f5b5.chunk.js.map",
     "runtime-main.js": "/iseepeopleyouseerocks/static/js/runtime-main.ff85282c.js",
     "runtime-main.js.map": "/iseepeopleyouseerocks/static/js/runtime-main.ff85282c.js.map",
     "static/css/2.fabbef47.chunk.css": "/iseepeopleyouseerocks/static/css/2.fabbef47.chunk.css",
@@ -134,6 +134,6 @@
     "static/css/2.fabbef47.chunk.css",
     "static/js/2.8d740a37.chunk.js",
     "static/css/main.8c43aa1d.chunk.css",
-    "static/js/main.f7e9199a.chunk.js"
+    "static/js/main.a9f6f5b5.chunk.js"
   ]
 }
