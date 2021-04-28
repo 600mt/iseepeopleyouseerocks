@@ -37,9 +37,9 @@ export const Homepage = () => {
           > 
               <div className="col-10 col-md-9" >
                   <h2
-                    className='fontTitoli'
+                  id="fontTitleHomepage"
                     style={{
-                      marginLeft: '3%'
+                      marginLeft: '3%',
                     }}
                   >I see people you see rocks  </h2>
               </div>
@@ -50,24 +50,24 @@ export const Homepage = () => {
               >
                 <h2
                   onClick={() => setShow(!show)}
-                  style={{
+                  id='containerAboutHomepage'
+                  // style={{
                    
-                      cursor: 'pointer', 
+                  //     cursor: 'pointer', 
                       
-                      marginLeft: '58%',
-                      position: 'relative',
-                      top: '-19%'
-                    }}
+                  //     marginLeft: '58%',
+                  //     position: 'relative',
+                  //     top: '-19%'
+                  //   }}
                   > <img 
                       onClick={() => setShow(!show)}
                       src={info_logo} 
                       alt="info"
-                      style={{cursor: 'pointer', fontSize: '3.5vh', marginRight: '6%'}}  
+                      id='infoHomepage'  
                     /> 
                     <span
-                      style={{
-                        fontSize:'3vh'
-                      }}
+                    id="aboutTitleHomepage"
+                      
                     >About</span> </h2>
               </div>
           </div>
@@ -93,8 +93,8 @@ export const Homepage = () => {
                     <Link to='/protocollo-2'><img alt='Not loaded'  className="image_dimension" src={Image_2} /> </Link>
                   </div>
                   <div>
-                    <h3 id="r3"> Algorithms are forgetful </h3>
-                    <h4 id="r4" className="text-wrap"> Automatic image annotation and pictures that you will never see again </h4>
+                    <h3 id="r3" style={{fontFamily: 'SF_medium'}}> Algorithms are forgetful </h3>
+                    <h4 id="r4" style={{fontFamily: 'SF_medium'}}  className="text-wrap"> Automatic image annotation and pictures that you will never see again </h4>
                   </div>
                 </li>
                 <li className="child col-sm-2 col-md-5">
@@ -158,29 +158,20 @@ export const Homepage = () => {
           > 
             <div className="col-10 col-md-10">
               <h2
-                className='fontTitoli'
-                style={{
-                  marginLeft: '2.7%',
-                  marginTop: '1.4%',
-                  color: '#0a84ff'
-                }}
+                id='fontHomePageAbout'
+                
                   >About  </h2>
             </div>
             <div className="col-2 col-md-2">
               <img
               onClick={() => setShow(!show)}
-              style={{
-                cursor: 'pointer', 
-                width: '3vh', 
-                marginTop: '8%', 
-                marginLeft: '73%'
-              }} 
-              
+              id='backXHomepage'
+                           
               src={close_logo} alt="info" />
             </div>
           </div>
           <div className='row'>
-            <div className='col-10'
+            <div className='col-12'
               style={{
                 marginLeft: '2.5%',
                 marginTop: '8%',
@@ -188,7 +179,7 @@ export const Homepage = () => {
                 fontSize: '190%'
               }}
             >
-              <p>
+              <p id='textAboutHomepage'>
               I see people you see rocks is a research project investigating how algorithmic processes on an iOS device* can silently affect my memories by hierarchizing and curating pictures. Exploring both possibilities and limits of an algorithmic mediation through various qualitative observations, the project aims to open questions and create a space for further discussion. Four different approaches expose unexpected roles of algorithms in silently shaping users' memories. </p>
             </div>
           </div>

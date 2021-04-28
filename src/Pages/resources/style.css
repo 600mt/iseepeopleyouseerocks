@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "SF-medium";
-    src: url("./font/SF-Pro-Display-Medium.otf") format("opentype");
+    font-family: "SF_medium";
+    src: url("./font/SF_Pro_Display_Medium.otf");
 }
 
 @font-face {
-    font-family: "SF-regular";
-    src: url("./font/SF-Pro-Display-Regular.otf") format("opentype");
+    font-family: "SF_regular";
+    src: url("./font/SF_Pro_Display_Regular.otf");
 }
 
 
@@ -86,7 +86,7 @@ h3
     color:black;
     font-size:100%;
     line-height: 110%;
-    font-family: "SF-medium";
+    font-family: "SF_medium";
     line-height: 2%;
 }
 
@@ -95,7 +95,7 @@ h4
     color:grey;
     font-size:100%;
     line-height: 110%;
-    font-family: "SF-medium";
+    font-family: "SF_medium";
 }
 
 p {
@@ -209,6 +209,7 @@ p {
     background-color:transparent;
     width:auto;
     height:auto;
+    font-size: 1.2rem;
     text-align: left; /* orizzontale */
     padding-bottom:0%;
     padding-left:2%;
@@ -218,7 +219,7 @@ p {
 
 #r4 
 {
-
+    font-size: 1rem;
     background-color:transparent;
     width:auto;
     padding-bottom:0%;
@@ -371,7 +372,7 @@ mark {
         color:black;
         font-size:160%;
         line-height: 150%;
-        font-family: "SF-medium";
+        font-family: "SF_medium";
     }
     
     h3
@@ -379,7 +380,7 @@ mark {
         color:black;
         font-size:115%;
         line-height: 100%;
-        font-family: "SF-medium";
+        font-family: "SF_medium";
     }
 
     p {

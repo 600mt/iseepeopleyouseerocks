@@ -67,7 +67,7 @@ export const FrameTwoPages = () => {
             </Link>
           </div>
           <div className="col-8 col-md-6 text-center">
-              <h2 className='fontTitoli' style={{paddingLeft: '3%',  marginTop: '1.2%'}}>Algorithms are explorers</h2>
+              <h2 id='fontTitleHomepage' style={{paddingLeft: '3%',  marginTop: '1.2%'}}>Algorithms are explorers</h2>
           </div>
           <div className="col-2 col-md-3">
             <img onClick={() => setShow(!show)} id='infoAboutPage' src={info_logo} alt="info" />
@@ -91,11 +91,10 @@ export const FrameTwoPages = () => {
               {/* <div className={`cards-slider active-slide-${indexImg}`}> */}
                 
                 <div className='cards-slider-wrapper'>
- 
-                  <div id='card-1' style={{width: '50%', height: '100%', position:'relative'}}>
+                  <div id='card-1'>
                     <div style={{ width: '100%', height: '100%', position: 'absolute'}}> <JinxExample  /></div>
                   </div>
-                  <div id='card-2' style={{width: '50%', height: '100%'}} >
+                  <div id='card-2'  >
                     
                     <div className='cards-slider-wrapper' 
                         style={{ zIndex:(shownImage === 'start' ? 2 : (originImage === 'start' ? 3 : 0)), width: '100%', height: '100%', position: 'absolute', 
@@ -107,11 +106,7 @@ export const FrameTwoPages = () => {
                          <JinxStart  setNewImageCallback = {setNewImageCallback} activeImage={activeImage} setActiveCallBack={setActiveCallBack} />
                     </div>
                     
-                    {/* <div className='cards-slider-wrapper'  
-                      style={{ zIndex: (shownImage === 'people' ? 2 : 0), width: '100%', height: '100%', position: 'absolute', 
-                      'transform': (originImage === 'people' ? `translateY(-${translateYAcis}%) translateX(-${translateXAxis}%) scale(${scale})`: null)}}> 
-                         <JinxPeople setNewImageCallback = {setNewImageCallback} />
-                    </div> */}
+                    
                    
                     <div  className='cards-slider-wrapper' 
                       style={{ 
@@ -177,7 +172,7 @@ export const FrameTwoPages = () => {
                          <JinxRocks  setNewImageCallback = {setNewImageCallback} activeImage={activeImage} setActiveCallBack={setActiveCallBack}/>
                     </div>
                   </div>
-                  </div>     
+                </div>     
               </div>     
             </div>
               
@@ -226,22 +221,22 @@ export const FrameTwoPages = () => {
             </Link>
           </div>
           <div className="col-8 col-md-6 text-center">
-              <h2 className='fontTitoli' style={{paddingLeft: '3%',  marginTop: '1.2%', color: '#0a84ff'}}>Algorithms are explorers</h2>
+              <h2  id='fontTitleHomepage' style={{paddingLeft: '3%',  marginTop: '1.2%', color: '#0a84ff', fontFamily: 'SF_medium'}}>Algorithms are explorers</h2>
           </div>
           <div className="col-2 col-md-3">
-            <img onClick={() => setShow(!show)} id='infoAboutPage' src={close_logo} alt="info" />
+            <img onClick={() => setShow(!show)} id='outAboutPage' src={close_logo} alt="info" />
           </div>
         </div>
         <div className='row'>
           <div
             className='col-12 col-md-6'
-            style={{marginLeft: '1.4%'}}
+            id='marginAboutText'
           >
             <p id='textAbout'>
-              Object-recognition technologies, deployed via machine learning, analyse contents and label hundreds of pictures in a few moments every day on every iPhone. These technologies enable object-level categorisation and an easier image search by keyword. <br /><br />
-              By comparing human vision with what is recognized by the on-device feature extraction, the artifact displays what was labelled correctly and leaves few clues of what it was not. The limits of interpretation by the machine in object recognition mimics and amplifies the very human feature of forgetting the past. What is recognized by the algorithm is going to be saved for future research, making it browsable again in my gallery. On the other hand, the non-recognized objects cannot be found and could cause the whole picture to get lost in the huge amount of images we produce. <br /><br />
-              In this way multiple recognized fragments of past overlap and merge, becoming new pictures of what it has been. Losing details and contexts of single moments, they finally reach a new status: a continuous stream of partial memories.  
-            </p>
+            Smartphone photography is characterized by a massive and constant production of images, no longer strictly linked to specific occurrences and important moments (Thomson, 2020), thanks to the simplicity with which we can shoot and the quality that we can achieve without any effort. The application of machine learning processes to annotate many images in a few moments allows them to be searched for identified objects and keywords, enabling new reading paths not limited to space and time only. Feature extraction transforms the linear stream of image production into a networked structure allowing us to place side by side images that previously would have been distant and now are linked by their content.              
+                <br/>
+                <br/>
+                The project is presented as a demo archive of my personal pictures in which it is possible to navigate through different object-related paths. Each shot, now divided into different areas, enables different pictures-sequences and brings to the surface memories in a wider and non-linear way. The picture is not anymore just a flat object for preserving the past, it is now an interface to explore hundreds of other shots.           </p>
           </div>
           
           <div
@@ -249,24 +244,14 @@ export const FrameTwoPages = () => {
             id='videosAbout'
           >
             <video 
-            id='aboutUpper'
-            width="57%" height="auto" style={{
-              objectFit: 'cover'
-              
-              
-            }}>
+            id='videoProtocol1'
+            >
                     <source src={Video} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
             <img 
-            id='aboutUpper'
-              style={{
-              marginLeft: '10px',
-              objectFit: 'cover'
-            }}
+            id='gifProtocol1'
               src={Gif}
-              width={'80%'}
-              height={'auto'} 
               alt=''
             />
             {/* <img 

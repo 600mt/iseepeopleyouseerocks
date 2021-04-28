@@ -69,7 +69,26 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
 
   useEffect(() => {
     if((widthScreen/heightScreen) !== (4/3)) {
+
+      if(widthScreen < 800) {
+        if(!isNaN(width) && !isNaN(height)) {
+        
+          setWidthSquareOne(width*0.98)
+          setHeightSquareOne(height*0.27)
+    
+          setWidthSquareTwo(width*0.7)
+          setHeightSquareTwo(height*0.37)
+        }
+    
+        setLeftSquareOne(width *0.01)
+        setTopSquareOne(width *0.02)
+    
+        setLeftSquareTwo(width *0.16)
+        setTopSquareTwo(width *0.3)
+      } else {
+
       if(!isNaN(width) && !isNaN(height)) {
+        
         setWidthSquareOne(width*0.87)
         setHeightSquareOne(height*0.25)
   
@@ -81,7 +100,7 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
       setTopSquareOne(width *0.02)
   
       setLeftSquareTwo(width *0.26)
-      setTopSquareTwo(width *0.10)
+      setTopSquareTwo(width *0.10)}
     } else {
       if(!isNaN(width) && !isNaN(height)) {
         setWidthSquareOne(width*0.98)

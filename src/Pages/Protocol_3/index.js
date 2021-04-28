@@ -69,10 +69,10 @@ export const Protocol_3 = () => {
         setHeightSquareTwo(height*1)
       }
   
-      setLeftSquareOne(width *0.95)
+      setLeftSquareOne(width *0.98)
       setTopSquareOne(width *0)
   
-      setLeftSquareTwo(width *0.556)
+      setLeftSquareTwo(width *0.62)
       setTopSquareTwo(width *0)
     
   }, [width, height])
@@ -125,28 +125,23 @@ export const Protocol_3 = () => {
           > 
             <div className="col-2 col-md-3">
               <Link to='/'> 
-                <img 
-                  style={{
-                    cursor: 'pointer',
-                    width:'1.5vh',
-                    marginTop: '3.6%',
-                    marginLeft: '6%'
-                  }} 
+                <img id='aboutBackPage'
+                  
                   src={back_logo} alt="info" />
               </Link>
             </div>
             <div className="col-8 col-md-6 text-center">
-                <h2 className='fontTitoli' style={{paddingLeft: '3%',  marginTop: '1.2%'}}>Algorithms are curators</h2>
+                <h2 id='fontTitleHomepage' style={{paddingLeft: '3%',  marginTop: '1.2%'}}>Algorithms are curators</h2>
             </div>
             <div className="col-2 col-md-3">
-                <img onClick={() => setShow(!show)} style={{cursor: 'pointer', width: '3.5vh', marginTop: '2.6%', marginLeft: '86.5%'}} src={info_logo} alt="info" />
+                <img id='infoAboutPage' onClick={() => setShow(!show)} src={info_logo} alt="info" />
             </div>
            </div>
         </div>
         <div className='container-fluid'
           style={{
             backgroundColor: 'white',
-            height: '88vh', 
+            height: 'auto', 
             width: '100vw',
             display: 'grid',
             marginTop: '4vh',
@@ -180,13 +175,8 @@ export const Protocol_3 = () => {
             <img 
               ref={observe} 
               alt=''
-              style={{
-                objectFit: 'cover',
-                borderRadius: '20px',
-                width: 'auto',
-                maxHeight: '85vh',
-                display: 'block'
-                }} src={images[index]} width='100%' height='100%' />
+              id='prot3Image'
+                 src={images[index]} width='100%' height='100%' />
           </div>
           <div>
             <div 
@@ -206,21 +196,12 @@ export const Protocol_3 = () => {
           </div>
         </div>
       </div>
-      <div id='aboutProtocollo1' style={{position: 'absolute', zIndex: 2, display: (show ? 'block' : 'none')}} >
+      <div id='aboutProtocollo3' style={{position: 'absolute', zIndex: 2, display: (show ? 'block' : 'none')}} >
       {/* backdrop-filter: blur(10px); */}
         {/* <div style={{position: 'absolute',  filter: 'blur(20px)', height: '300px', zIndex: 1, width: '300px', backgroundColor:  'white'}} /> */}
       <div style={{position: 'absolute', height: '100%', width: '100%'}}>
         <div className="container-fluid" 
-          style={{
-            position: 'relative',
-            top: '1vh',
-            backgroundColor: '#ececec', 
-            height: '98vh', 
-            width: '98.5vw', 
-            // paddingTop: '2%',
-            // marginTop: '2%',
-            borderRadius: '20px'
-          }}
+          id='aboutBackground'
         ><div 
         className="row"
         style={{
@@ -230,23 +211,24 @@ export const Protocol_3 = () => {
       > 
         <div className="col-2 col-md-3">
           <Link to='/'> 
-            <img style={{cursor: 'pointer', width:'1.5vh', marginTop: '3.6%', marginLeft: '6%'}} src={back_logo_blu} alt="info" />
+            <img id='aboutBackPage' src={back_logo_blu} alt="info" />
           </Link>
         </div>
         <div className="col-8 col-md-6 text-center">
-            <h2 className='fontTitoli' style={{paddingLeft: '3%',  marginTop: '1.2%', color: '#0a84ff'}}>Algorithms are curators</h2>
+            <h2 id='fontTitleHomepage' style={{paddingLeft: '3%',  marginTop: '1.2%', color: '#0a84ff'}}>Algorithms are curators</h2>
         </div>
         <div className="col-2 col-md-3">
-          <img onClick={() => setShow(!show)} style={{cursor: 'pointer', width: '3vh', marginTop: '2.6%', marginLeft: '86.5%'}} src={close_logo} alt="info" />
+          <img  id='outAboutPage' onClick={() => setShow(!show)}
+           src={close_logo} alt="info" />
         </div>
       </div>
 
           <div className='row'>
             <div
-              className='col-6'
-              style={{marginLeft: '1.4%'}}
+              className='col-12 col-md-6'
+              id='marginAboutText'
             >
-              <p style={{marginTop: '10%'}}>
+              <p id='textAbout'>
               {"Looking at every single image I took in the past two years just for three seconds would keep me almost ten hours in front of my screen. For this reason algorithms curate images by simplifying their reading, synthesizing contents, and selecting some moments instead of others. Their work is mainly visible in the “days” section of Photos where each image is resized and hidden based on parameters including quality of light, framing and composition to show just the best of each day. The perfect memory seems to exclude any kind of photographic mistake, omit stylistic smudges, and hide any kind of “screen-based” memory (e.g. screenshots, screen recording)." }
               <br />
               <br />
@@ -257,7 +239,8 @@ export const Protocol_3 = () => {
               </p>
             </div>
             <div
-              className='col-4'
+              className='col-12 col-md-4'
+              id='videosAbout'
               
               style={{
                 marginLeft: '1.4%',
@@ -267,27 +250,14 @@ export const Protocol_3 = () => {
             >
 
                     <img 
-                    id='aboutUpper'
+                     id='gifProtocol3'
                     alt=''
-                style={{
-                marginLeft: '10px',
-                objectFit: 'cover'
-              }}
-                src={Video}
-                width={'57%'}
-                height={'auto'} 
+                src={Video} 
               />
               <img 
-              id='aboutUpper'
+              id='gifProtocol1'
               alt=''
-                style={{
-                  objectFit: 'cover',
-                marginLeft: '10px',
-                position:'relative',
-              }}
                 src={Gif}
-                width={'80%'}
-                height={'auto'} 
               />
               {/* <img 
                 style= {{

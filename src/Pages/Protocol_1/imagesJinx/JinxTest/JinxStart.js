@@ -69,18 +69,34 @@ export const JinxStart = ({setNewImageCallback, activeImage, setActiveCallBack})
 
     if((widthScreen/heightScreen) !== (4/3)) {
       if(!isNaN(width) && !isNaN(height)) {
-        setWidthSquareOne(width*0.78)
+        if(widthScreen < 800){
+          setWidthSquareOne(width*0.78)
         setHeightSquareOne(height*0.44)
   
         setWidthSquareTwo(width*0.4)
-        setHeightSquareTwo(height*0.21)
-      }
+        setHeightSquareTwo(height*0.3)
+        }else
+        {setWidthSquareOne(width*0.78)
+        setHeightSquareOne(height*0.44)
   
+        setWidthSquareTwo(width*0.4)
+        setHeightSquareTwo(height*0.21)}
+      }
+
+      if(widthScreen < 800){
+        setLeftSquareOne(width *0.2)
+      setTopSquareOne(width *0.02)
+  
+      setLeftSquareTwo(width *0.59)
+      setTopSquareTwo(width *1.13)
+      
+      }else{
       setLeftSquareOne(width *0.2)
       setTopSquareOne(width *0.02)
   
       setLeftSquareTwo(width *0.56)
       setTopSquareTwo(width *0.78)
+    }
     } else {
       if(!isNaN(width) && !isNaN(height)) {
         setWidthSquareOne(width*0.78)

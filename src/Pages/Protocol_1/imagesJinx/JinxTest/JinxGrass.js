@@ -84,25 +84,48 @@ export const JinxGrass = ({setNewImageCallback, activeImage, setActiveCallBack})
 
   useEffect(() => {
     if((widthScreen/heightScreen) !== (4/3)) { 
-      if(!isNaN(width) && !isNaN(height)) {
+      if(widthScreen < 800) {
+       if(!isNaN(width) && !isNaN(height)) {
         setWidthSquareOne(width*0.98)
-        setHeightSquareOne(height*0.3)
+        setHeightSquareOne(height*0.33)
   
         setWidthSquareTwo(width*0.2)
-        setHeightSquareTwo(height*0.3)
+        setHeightSquareTwo(height*0.2)
   
         setWidthSquareThree(width * 0.97)
-        setHeightSquareThree(height*0.25)
+        setHeightSquareThree(height*0.37)
       }
   
       setLeftSquareOne(width *0.01)
       setTopSquareOne(width *0.02)
   
       setLeftSquareTwo(width *0.35)
-      setTopSquareTwo(width *0.4)
+      setTopSquareTwo(width *0.71)
   
       setLeftSquareThree(width *0.01)
-      setTopSquareThree(width *0.7)
+      setTopSquareThree(width *1.22)
+
+      }else{
+        if(!isNaN(width) && !isNaN(height)) {
+          setWidthSquareOne(width*0.98)
+          setHeightSquareOne(height*0.3)
+    
+          setWidthSquareTwo(width*0.2)
+          setHeightSquareTwo(height*0.3)
+    
+          setWidthSquareThree(width * 0.97)
+          setHeightSquareThree(height*0.25)
+        }
+    
+        setLeftSquareOne(width *0.01)
+        setTopSquareOne(width *0.02)
+    
+        setLeftSquareTwo(width *0.35)
+        setTopSquareTwo(width *0.4)
+    
+        setLeftSquareThree(width *0.01)
+        setTopSquareThree(width *0.7)
+      }
     } else {
       if(!isNaN(width) && !isNaN(height)) {
         setWidthSquareOne(width*0.98)

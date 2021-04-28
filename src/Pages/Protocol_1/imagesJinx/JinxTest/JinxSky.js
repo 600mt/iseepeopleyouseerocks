@@ -67,18 +67,34 @@ export const JinxSky = ({setNewImageCallback, activeImage, setActiveCallBack}) =
   useEffect(() => {
     if((widthScreen/heightScreen) !== (4/3)) {
       if(!isNaN(width) && !isNaN(height)) {
+        if(widthScreen < 800){
+          setWidthSquareOne(width*0.54)
+        setHeightSquareOne(height*0.25)
+  
+        setWidthSquareTwo(width*0.96)
+        setHeightSquareTwo(height*0.35)
+        } else{
         setWidthSquareOne(width*0.5)
         setHeightSquareOne(height*0.3)
   
         setWidthSquareTwo(width*0.96)
         setHeightSquareTwo(height*0.30)
+        } 
       }
-  
-      setLeftSquareOne(width *0.3)
-      setTopSquareOne(width *0.32)
-  
-      setLeftSquareTwo(width *0.02)
-      setTopSquareTwo(width *0.64)
+      if(widthScreen < 800){
+        setLeftSquareOne(width *0.28)
+        setTopSquareOne(width *0.61)
+    
+        setLeftSquareTwo(width *0.02)
+        setTopSquareTwo(width *1.05)
+      }else {
+        setLeftSquareOne(width *0.3)
+        setTopSquareOne(width *0.32)
+    
+        setLeftSquareTwo(width *0.02)
+        setTopSquareTwo(width *0.64)
+      }
+      
 
     } else {
       if(!isNaN(width) && !isNaN(height)) {

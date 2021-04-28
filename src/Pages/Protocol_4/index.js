@@ -8,7 +8,8 @@ export const Protocol_4 = () => {
             width: '100vw',
             height: '100vh',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            fontFamily: 'SF_medium'
         }}
         >
             <p>Coming Soon</p>
