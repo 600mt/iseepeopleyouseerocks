@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/iseepeopleyouseerocks/static/css/main.36a557ed.chunk.css",
-    "main.js": "/iseepeopleyouseerocks/static/js/main.fae40c9f.chunk.js",
-    "main.js.map": "/iseepeopleyouseerocks/static/js/main.fae40c9f.chunk.js.map",
+    "main.css": "/iseepeopleyouseerocks/static/css/main.2761dd00.chunk.css",
+    "main.js": "/iseepeopleyouseerocks/static/js/main.16e75915.chunk.js",
+    "main.js.map": "/iseepeopleyouseerocks/static/js/main.16e75915.chunk.js.map",
     "runtime-main.js": "/iseepeopleyouseerocks/static/js/runtime-main.ff85282c.js",
     "runtime-main.js.map": "/iseepeopleyouseerocks/static/js/runtime-main.ff85282c.js.map",
     "static/css/2.fabbef47.chunk.css": "/iseepeopleyouseerocks/static/css/2.fabbef47.chunk.css",
-    "static/js/2.5c0b593e.chunk.js": "/iseepeopleyouseerocks/static/js/2.5c0b593e.chunk.js",
-    "static/js/2.5c0b593e.chunk.js.map": "/iseepeopleyouseerocks/static/js/2.5c0b593e.chunk.js.map",
+    "static/js/2.8d740a37.chunk.js": "/iseepeopleyouseerocks/static/js/2.8d740a37.chunk.js",
+    "static/js/2.8d740a37.chunk.js.map": "/iseepeopleyouseerocks/static/js/2.8d740a37.chunk.js.map",
     "static/js/3.5e02264a.chunk.js": "/iseepeopleyouseerocks/static/js/3.5e02264a.chunk.js",
     "static/js/3.5e02264a.chunk.js.map": "/iseepeopleyouseerocks/static/js/3.5e02264a.chunk.js.map",
     "index.html": "/iseepeopleyouseerocks/index.html",
     "static/css/2.fabbef47.chunk.css.map": "/iseepeopleyouseerocks/static/css/2.fabbef47.chunk.css.map",
-    "static/css/main.36a557ed.chunk.css.map": "/iseepeopleyouseerocks/static/css/main.36a557ed.chunk.css.map",
-    "static/js/2.5c0b593e.chunk.js.LICENSE.txt": "/iseepeopleyouseerocks/static/js/2.5c0b593e.chunk.js.LICENSE.txt",
+    "static/css/main.2761dd00.chunk.css.map": "/iseepeopleyouseerocks/static/css/main.2761dd00.chunk.css.map",
+    "static/js/2.8d740a37.chunk.js.LICENSE.txt": "/iseepeopleyouseerocks/static/js/2.8d740a37.chunk.js.LICENSE.txt",
     "static/media/1.3163b534.png": "/iseepeopleyouseerocks/static/media/1.3163b534.png",
     "static/media/style.css": "/iseepeopleyouseerocks/static/media/start.bb48851f.png",
     "static/media/1.ee1d8bf4.png": "/iseepeopleyouseerocks/static/media/1.ee1d8bf4.png",
@@ -132,8 +132,8 @@
   "entrypoints": [
     "static/js/runtime-main.ff85282c.js",
     "static/css/2.fabbef47.chunk.css",
-    "static/js/2.5c0b593e.chunk.js",
-    "static/css/main.36a557ed.chunk.css",
-    "static/js/main.fae40c9f.chunk.js"
+    "static/js/2.8d740a37.chunk.js",
+    "static/css/main.2761dd00.chunk.css",
+    "static/js/main.16e75915.chunk.js"
   ]
 }
